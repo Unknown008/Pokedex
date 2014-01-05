@@ -29,7 +29,7 @@ namespace import ::msgcat::mc
 source "$pokeDir/lib.tcl"
 wm title . [mc "Pok\u00E9dex v%s" $version]
 wm iconname . [mc "Pok\u00E9dex"]
-wm iconbitmap . -default "favicon.ico"
+#wm iconbitmap . -default "favicon.ico"
 
 set menu .menu
 menu $menu -tearoff 0
@@ -37,7 +37,8 @@ menu $menu -tearoff 0
 set m $menu.file
 menu $m -tearoff 0
 $menu add cascade -label [mc "File"] -menu $m -underline 0
-$m add command -label [mc "Import mod"] -command {error "just testing"} -accelerator Ctrl+I
+$m add command -label [mc "Import mod"] -command {error "just testing"} \
+  -accelerator Ctrl+I
 $m add separator
 $m add command -label [mc "Close"] -command {exit} -accelerator Ctrl+Q
 
@@ -64,18 +65,20 @@ $m add command -label [mc "Credits"] -command poke_credits
 pack [ttk::frame .sidepane -padding 5] -fill y -side left
 
 pack [ttk::frame .sidepane.top] -fill x -side top
-pack [entry .sidepane.top.entry -width 16 -textvariable pokemonSpecies -validate all -validatecommand {poke_autocomplete %W %d %v %P $pokeList}] -pady {0 5} -expand 1 -fill x
+pack [entry .sidepane.top.entry -width 16 -textvariable pokemonSpecies \
+  -validate all -validatecommand {poke_autocomplete %W %d %v %P $pokeList}] \
+  -pady {0 5} -expand 1 -fill x
 
 set pokemonFile [open "${pokeDir}/pokemon.txt" r]
 set pokeList [split [read $pokemonFile] "\n"]
 close $pokemonFile
 
 pack [ttk::frame .sidepane.bottom] -fill both -side top -expand 1
-listbox .sidepane.bottom.list -yscrollcommand ".sidepane.bottom.scroll set" -listvariable $pokeList
+listbox .sidepane.bottom.list -yscrollcommand ".sidepane.bottom.scroll set" \
+  -listvariable $pokeList
 scrollbar .sidepane.bottom.scroll -command ".sidepane.bottom.list yview"
 pack .sidepane.bottom.list .sidepane.bottom.scroll -side left -fill y -expand 1
 .sidepane.bottom.list insert 0 {*}$pokeList
-bind .sidepane.bottom.list <Double-1> poke_populate
 
 ttk::frame .mainpane
 pack .mainpane -fill both -expand 1 -side right
@@ -107,17 +110,15 @@ $fr.note add $fr.note.gen5 -text "Gen V"
 ttk::frame $fr.note.gen6
 $fr.note add $fr.note.gen6 -text "Gen VI"
 
-update
-wm minsize . [winfo width .] [winfo height .]
-
-# http://www.pkparaiso.com/xy/sprites_pokemon.php
+after idle [wm minsize . [winfo width .] [winfo height .]]
 
 
 
-
-
-
-
+# Binds
+bind .sidepane.top.entry <KeyPress-Return> "poke_populate \$pokemonSpecies"
+bind .sidepane.top.entry <KeyPress-Down> "poke_showlist %W"
+bind .sidepane.bottom.list <KeyPress-Return> poke_entry
+bind .sidepane.bottom.list <Double-ButtonPress-1> poke_entry
 
 
 
