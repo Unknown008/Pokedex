@@ -75,7 +75,7 @@ close $pokemonFile
 
 pack [ttk::frame .sidepane.bottom] -fill both -side top -expand 1
 listbox .sidepane.bottom.list -yscrollcommand ".sidepane.bottom.scroll set" \
-  -listvariable $pokeList
+  -activestyle dotbox -selectmode browse -listvariable $pokeList
 scrollbar .sidepane.bottom.scroll -command ".sidepane.bottom.list yview"
 pack .sidepane.bottom.list .sidepane.bottom.scroll -side left -fill y -expand 1
 .sidepane.bottom.list insert 0 {*}$pokeList
@@ -117,8 +117,8 @@ after idle [wm minsize . [winfo width .] [winfo height .]]
 # Binds
 bind .sidepane.top.entry <KeyPress-Return> "poke_populate \$pokemonSpecies"
 bind .sidepane.top.entry <KeyPress-Down> "poke_showlist %W"
-bind .sidepane.bottom.list <KeyPress-Return> poke_entry
-bind .sidepane.bottom.list <Double-ButtonPress-1> poke_entry
+bind .sidepane.bottom.list <KeyPress-Return> [list poke_entry $pokeList]
+bind .sidepane.bottom.list <Double-ButtonPress-1> [list poke_entry $pokeList]
 
 
 
