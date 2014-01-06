@@ -1,4 +1,4 @@
-Bulbasaur
+﻿Bulbasaur
 Ivysaur
 Venusaur
 Charmander
@@ -26,10 +26,10 @@ Pikachu
 Raichu
 Sandshrew
 Sandslash
-Nidoran\u2640
+Nidoran♀
 Nidorina
 Nidoqueen
-Nidoran\u2642
+Nidoran♂
 Nidorino
 Nidoking
 Clefairy

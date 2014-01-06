@@ -70,6 +70,7 @@ pack [entry .sidepane.top.entry -width 16 -textvariable pokemonSpecies \
   -pady {0 5} -expand 1 -fill x
 
 set pokemonFile [open "${pokeDir}/pokemon.txt" r]
+fconfigure $pokemonFile -encoding utf-8
 set pokeList [split [read $pokemonFile] "\n"]
 close $pokemonFile
 
@@ -112,13 +113,12 @@ $fr.note add $fr.note.gen6 -text "Gen VI"
 
 after idle [wm minsize . [winfo width .] [winfo height .]]
 
-
+set lb .listbox
 
 # Binds
 bind .sidepane.top.entry <KeyPress-Return> "poke_populate \$pokemonSpecies"
-bind .sidepane.top.entry <KeyPress-Down> "poke_showlist %W"
-bind .sidepane.bottom.list <KeyPress-Return> [list poke_entry $pokeList]
-bind .sidepane.bottom.list <Double-ButtonPress-1> [list poke_entry $pokeList]
+bind .sidepane.top.entry <KeyPress-Down> [list focus .listbox.l]
+bind .sidepane.bottom.list <Double-ButtonPress-1> [list poke_entry %W $pokeList]
 
 
 
