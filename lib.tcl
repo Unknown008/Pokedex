@@ -12,7 +12,7 @@ proc poke_entry {entry pokeList} {
   for {set i 1} {$i < 7} {incr i} {
     catch {destroy [winfo children .mainpane.note.gen$i]}
   }
-  set pokemon [lindex $pokeList [$entry curselection]]
+  set pokemon [lindex $pokeList [$entry curselection]+1]
   .sidepane.top.entry delete 0 end
   .sidepane.top.entry insert 0 $pokemon
   poke_populate $pokemon
@@ -33,22 +33,15 @@ proc poke_autocomplete {entry action validation value list} {
   return 1
 }
 
-proc poke_populate {pokemon} {
-  catch {destroy [winfo children .mainpane.note.gen1]}
-  pack [label .mainpane.note.gen1.lab -text $pokemon]
-  if {[winfo exists .listbox]} {lb_remove}
-}
-
 proc poke_showlist {entry pokeList text} {
-  if {![winfo exists .listbox]} {
-    set miniList [lsearch -all -inline $pokeList $text*]
+  if {![winfo exists .sidepane.top.listbox]} {
+    set miniList [lsearch -all -inline -nocase $pokeList $text*]
     if {[llength $miniList] < 2} {
       lb_remove
-      return
+      return 0
     }
     catch {destroy [winfo children .mainpane.note.gen1]}
-
-    set lb .listbox
+    set lb .sidepane.top.listbox
     
     toplevel $lb
     wm withdraw $lb
@@ -84,27 +77,30 @@ proc poke_showlist {entry pokeList text} {
     wm attribute $lb -topmost 1
     wm deiconify $lb
     wm transient $lb .
-    
     raise $lb
     
     bind $lb <KeyPress-Escape> lb_remove
-    bind $lb <KeyPress-Return> [list lb_populate_entry %W $miniList]
+    bind $entry <KeyPress-Escape> lb_remove
+    bind . <ButtonPress-1> lb_remove
     bind $lb.l <FocusOut> lb_remove
     bind $lb <FocusOut> lb_remove
+    bind $lb <KeyPress-Return> [list lb_populate_entry %W $miniList]
     bind $lb <Motion> "poke_hover %W %x %y"
     bind $lb <ButtonPress-1> [list lb_populate_entry %W $miniList]
- 
+    
     return 1
   } else {
-    destroy .listbox
+    destroy .sidepane.top.listbox
     poke_showlist $entry $pokeList $text
   }
 }
 
 proc lb_remove {} {
-  if {[winfo exists .listbox]} {
-    wm withdraw .listbox
-    destroy .listbox
+  if {[winfo exists .sidepane.top.listbox]} {
+    wm withdraw .sidepane.top.listbox
+    destroy .sidepane.top.listbox
+    ttk::releaseGrab .sidepane.top.listbox.l
+    grab release .sidepane.top.listbox.l
   }
   focus -force .sidepane.top.entry
 }
@@ -123,4 +119,69 @@ proc poke_hover {w x y} {
     $w activate @$x,$y
     $w selection set @$x,$y
   }
+}
+
+proc poke_populate {pokemon} {
+  set w .mainpane.note
+  catch {destroy [winfo children $w.gen1]}
+  catch {destroy [winfo children $w.gen2]}
+  catch {destroy [winfo children $w.gen3]}
+  catch {destroy [winfo children $w.gen4]}
+  catch {destroy [winfo children $w.gen5]}
+  catch {destroy [winfo children $w.gen6]}
+  
+  if {[winfo exists .sidepane.top.listbox]} {lb_remove}
+  poke_populate_gen6 $w $pokemon
+}
+
+proc poke_focus {pokeList} {
+  set text [.sidepane.top.entry get]
+  if {$text == ""} {return}
+  if {![winfo exists .sidepane.top.listbox.l]} {
+    set text [string range [.sidepane.top.entry get] 0 [.sidepane.top.entry index insert]-1]
+  }
+  if {[poke_showlist .sidepane.top.entry $pokeList $text]} {
+    focus .sidepane.top.listbox.l
+    ttk::globalGrab .sidepane.top.listbox.l
+  }
+}
+
+proc get_frames {image} {
+  set idx 0
+  set results [list]
+  while {1} {
+    if {[catch {image create photo -file $image -format "gif -index $idx"} res]} {
+      return $results
+    }
+    lappend results $res
+    incr idx
+  }
+}
+
+proc animate_poke {w images interval} {
+  if {[catch {$w configure -image}]} {
+    pack [label $w -bd 0 -image [lindex $images 0]]
+  }
+  set img [lindex [$w configure -image] end]
+  
+  set idx [lsearch $images $img]
+  incr idx
+  if {$idx > [llength $images]-1} {
+    set idx 0
+  }
+  if {[catch {$w configure -image [lindex $images $idx]}]} {return}
+  after $interval "animate_poke $w \"$images\" $interval"
+}
+
+proc poke_populate_gen6 {w pokemon} {
+  global framesGen6 pokeDir
+  if {[info exists framesGen6]} {
+    foreach n $framesGen6 {rename $n {}}
+  }
+  set framesGen6 [get_frames "$pokeDir/data/sprites-6/$pokemon.gif"]
+  set framesGen6 [lreplace $framesGen6 end end]
+  if {![winfo exists $w.gen6.l]} {
+    pack [label $w.gen6.l -bd 0 -image [lindex $framesGen6 0]]
+  }
+  after idle "animate_poke $w.gen6.l \"$framesGen6\" 28"
 }

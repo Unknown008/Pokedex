@@ -1,4 +1,5 @@
-ï»¿Bulbasaur
+ï»¿
+Bulbasaur
 Ivysaur
 Venusaur
 Charmander
@@ -198,7 +199,7 @@ Umbreon
 Murkrow
 Slowking
 Misdreavus
-Unown A
+Unown
 Wobbuffet
 Girafarig
 Pineco
@@ -666,7 +667,7 @@ Spewpa
 Vivillon
 Litleo
 Pyroar
-Flabébé
+Flabb
 Floette
 Florges
 Skiddo

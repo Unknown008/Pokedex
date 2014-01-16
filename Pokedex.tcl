@@ -19,7 +19,7 @@ package require Tcl 8.5
 package require Tk  8.5
 package require Ttk
 package require msgcat
-
+package require Img
 
 set version 0.01
 catch {destroy [winfo children .]}
@@ -32,6 +32,7 @@ wm iconname . [mc "Pok\u00E9dex"]
 #wm iconbitmap . -default "favicon.ico"
 
 set menu .menu
+array set animationCallbacks {}
 menu $menu -tearoff 0
 
 set m $menu.file
@@ -62,6 +63,12 @@ $m add command -label [mc "Credits"] -command poke_credits
 
 . configure -menu $menu
 
+set pokemonFile [open "${pokeDir}/pokemon.txt" r]
+fconfigure $pokemonFile -encoding utf-8
+set pokeList [split [read $pokemonFile] "\n"]
+close $pokemonFile
+set frames [list]
+
 pack [ttk::frame .sidepane -padding 5] -fill y -side left
 
 pack [ttk::frame .sidepane.top] -fill x -side top
@@ -69,17 +76,12 @@ pack [entry .sidepane.top.entry -width 16 -textvariable pokemonSpecies \
   -validate all -validatecommand {poke_autocomplete %W %d %v %P $pokeList}] \
   -pady {0 5} -expand 1 -fill x
 
-set pokemonFile [open "${pokeDir}/pokemon.txt" r]
-fconfigure $pokemonFile -encoding utf-8
-set pokeList [split [read $pokemonFile] "\n"]
-close $pokemonFile
-
 pack [ttk::frame .sidepane.bottom] -fill both -side top -expand 1
 listbox .sidepane.bottom.list -yscrollcommand ".sidepane.bottom.scroll set" \
   -activestyle dotbox -selectmode browse -listvariable $pokeList
 scrollbar .sidepane.bottom.scroll -command ".sidepane.bottom.list yview"
 pack .sidepane.bottom.list .sidepane.bottom.scroll -side left -fill y -expand 1
-.sidepane.bottom.list insert 0 {*}$pokeList
+.sidepane.bottom.list insert 0 {*}[lreplace $pokeList 0 0]
 
 ttk::frame .mainpane
 pack .mainpane -fill both -expand 1 -side right
@@ -94,30 +96,29 @@ pack $fr.note -fill both -expand 1
 ttk::notebook::enableTraversal $fr.note
 
 ttk::frame $fr.note.gen1
-$fr.note add $fr.note.gen1 -text "Gen I"
+$fr.note add $fr.note.gen1 -text " Gen I "
 
 ttk::frame $fr.note.gen2
-$fr.note add $fr.note.gen2 -text "Gen II"
+$fr.note add $fr.note.gen2 -text " Gen II "
 
 ttk::frame $fr.note.gen3
-$fr.note add $fr.note.gen3 -text "Gen III"
+$fr.note add $fr.note.gen3 -text " Gen III "
 
 ttk::frame $fr.note.gen4
-$fr.note add $fr.note.gen4 -text "Gen IV"
+$fr.note add $fr.note.gen4 -text " Gen IV "
 
 ttk::frame $fr.note.gen5
-$fr.note add $fr.note.gen5 -text "Gen V"
+$fr.note add $fr.note.gen5 -text " Gen V "
 
 ttk::frame $fr.note.gen6
-$fr.note add $fr.note.gen6 -text "Gen VI"
+$fr.note add $fr.note.gen6 -text " Gen VI "
 
 after idle [wm minsize . [winfo width .] [winfo height .]]
 
-set lb .listbox
 
 # Binds
 bind .sidepane.top.entry <KeyPress-Return> "poke_populate \$pokemonSpecies"
-bind .sidepane.top.entry <KeyPress-Down> [list focus .listbox.l]
+bind .sidepane.top.entry <KeyPress-Down> [list poke_focus $pokeList]
 bind .sidepane.bottom.list <Double-ButtonPress-1> [list poke_entry %W $pokeList]
 
 
