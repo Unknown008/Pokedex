@@ -135,11 +135,8 @@ proc poke_populate {pokemon} {
 }
 
 proc poke_focus {pokeList} {
-  set text [.sidepane.top.entry get]
-  if {$text == ""} {return}
-  if {![winfo exists .sidepane.top.listbox.l]} {
-    set text [string range [.sidepane.top.entry get] 0 [.sidepane.top.entry index insert]-1]
-  }
+  if {[.sidepane.top.entry get] == ""} {return}
+  set text [string range [.sidepane.top.entry get] 0 [.sidepane.top.entry index insert]-1]
   if {[poke_showlist .sidepane.top.entry $pokeList $text]} {
     focus .sidepane.top.listbox.l
     ttk::globalGrab .sidepane.top.listbox.l
