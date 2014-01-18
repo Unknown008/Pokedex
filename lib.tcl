@@ -1,3 +1,4 @@
+### Credits window
 proc poke_credits {} {
   set w .pokecredits
   catch {destroy $w}
@@ -8,9 +9,10 @@ proc poke_credits {} {
   # http://www.pkparaiso.com/xy/sprites_pokemon.php
 }
 
+### Double click from list pane procedure
 proc poke_entry {entry pokeList} {
-  for {set i 1} {$i < 7} {incr i} {
-    catch {destroy [winfo children .mainpane.note.gen$i]}
+  foreach i {1 2 3 4 5 6} {
+    #catch {destroy [winfo children .mainpane.note.gen$i.lab]}
   }
   set pokemon [lindex $pokeList [$entry curselection]+1]
   .sidepane.top.entry delete 0 end
@@ -18,6 +20,17 @@ proc poke_entry {entry pokeList} {
   poke_populate $pokemon
 }
 
+### Pressing enter from list
+proc list_populate_entry {lb list} {
+  if {![catch {set pokemon [lindex $list [$lb curselection]+1]}]} {
+    .sidepane.top.entry delete 0 end
+    .sidepane.top.entry insert 0 $pokemon
+    poke_populate $pokemon
+  }
+  focus $lb
+}
+
+### Autocomplete of entry box
 proc poke_autocomplete {entry action validation value list} {
   if {$action == 1 && $value != {} && [set pop [lsearch -inline -nocase $list $value*]] != {}} {
     set cursorIndex [string length $value]
@@ -33,6 +46,7 @@ proc poke_autocomplete {entry action validation value list} {
   return 1
 }
 
+### Popup listbox when typing for suggestions
 proc poke_showlist {entry pokeList text} {
   if {![winfo exists .sidepane.top.listbox]} {
     set miniList [lsearch -all -inline -nocase $pokeList $text*]
@@ -40,7 +54,7 @@ proc poke_showlist {entry pokeList text} {
       lb_remove
       return 0
     }
-    catch {destroy [winfo children .mainpane.note.gen1]}
+    
     set lb .sidepane.top.listbox
     
     toplevel $lb
@@ -85,8 +99,8 @@ proc poke_showlist {entry pokeList text} {
     bind $lb.l <FocusOut> lb_remove
     bind $lb <FocusOut> lb_remove
     bind $lb <KeyPress-Return> [list lb_populate_entry %W $miniList]
-    bind $lb <Motion> "poke_hover %W %x %y"
     bind $lb <ButtonPress-1> [list lb_populate_entry %W $miniList]
+    bind $lb <Motion> "poke_hover %W %x %y"
     
     return 1
   } else {
@@ -95,6 +109,7 @@ proc poke_showlist {entry pokeList text} {
   }
 }
 
+### Removing the popup window
 proc lb_remove {} {
   if {[winfo exists .sidepane.top.listbox]} {
     wm withdraw .sidepane.top.listbox
@@ -105,6 +120,7 @@ proc lb_remove {} {
   focus -force .sidepane.top.entry
 }
 
+### Put selection from popup into entry box
 proc lb_populate_entry {lb mini} {
   if {![catch {set pokemon [lindex $mini [$lb curselection]]}]} {
     .sidepane.top.entry delete 0 end
@@ -114,6 +130,7 @@ proc lb_populate_entry {lb mini} {
   lb_remove
 }
 
+### Procedure for mouse hover over popup
 proc poke_hover {w x y} {
   if {![catch {$w selection clear 0 end}]} {
     $w activate @$x,$y
@@ -121,19 +138,28 @@ proc poke_hover {w x y} {
   }
 }
 
+###
 proc poke_populate {pokemon} {
+  global pokeList
+  set idx [lsearch $pokeList $pokemon]
+  # Disable certain tabs here
+  .sidepane.top.entry selection clear
+  .sidepane.top.entry icursor end
   set w .mainpane.note
-  catch {destroy [winfo children $w.gen1]}
-  catch {destroy [winfo children $w.gen2]}
-  catch {destroy [winfo children $w.gen3]}
-  catch {destroy [winfo children $w.gen4]}
-  catch {destroy [winfo children $w.gen5]}
-  catch {destroy [winfo children $w.gen6]}
+  foreach i {1 2 3 4 5 6} {
+    catch {destroy [winfo children $w.gen$i.lab]}
+  }
   
   if {[winfo exists .sidepane.top.listbox]} {lb_remove}
+  #poke_populate_gen1 $w $pokemon
+  #poke_populate_gen2 $w $pokemon
+  #poke_populate_gen3 $w $pokemon
+  #poke_populate_gen4 $w $pokemon
+  #poke_populate_gen5 $w $pokemon
   poke_populate_gen6 $w $pokemon
 }
 
+### Focus on popup when down arrow pressed
 proc poke_focus {pokeList} {
   if {[.sidepane.top.entry get] == ""} {return}
   set text [string range [.sidepane.top.entry get] 0 [.sidepane.top.entry index insert]-1]
@@ -143,6 +169,7 @@ proc poke_focus {pokeList} {
   }
 }
 
+### Get all frames of gif file
 proc get_frames {image} {
   set idx 0
   set results [list]
@@ -155,6 +182,7 @@ proc get_frames {image} {
   }
 }
 
+### Loop through each frame of gif file for animation
 proc animate_poke {w images interval} {
   if {[catch {$w configure -image}]} {
     pack [label $w -bd 0 -image [lindex $images 0]]
@@ -163,22 +191,38 @@ proc animate_poke {w images interval} {
   
   set idx [lsearch $images $img]
   incr idx
-  if {$idx > [llength $images]-1} {
-    set idx 0
-  }
-  if {[catch {$w configure -image [lindex $images $idx]}]} {return}
+  if {$idx > [llength $images]-1} {set idx 0}
+  if {[catch {$w configure -image [lindex $images $idx]} err]} {return}
   after $interval "animate_poke $w \"$images\" $interval"
 }
 
+### Get frame rate of gif file
+proc get_fps {file} {
+  set f [open $file r]
+  fconfigure $f -eof {}
+  set data [read $f]
+  close $f
+  binary scan $data H* hex
+  regexp -nocase -- {0021F904..(..)} $hex - time
+  scan $time %x dec
+  return [expr {$dec*10}]
+}
+
+### Fill main pane with details of Pokémon
 proc poke_populate_gen6 {w pokemon} {
   global framesGen6 pokeDir
   if {[info exists framesGen6]} {
     foreach n $framesGen6 {rename $n {}}
   }
   set framesGen6 [get_frames "$pokeDir/data/sprites-6/$pokemon.gif"]
-  set framesGen6 [lreplace $framesGen6 end end]
-  if {![winfo exists $w.gen6.l]} {
-    pack [label $w.gen6.l -bd 0 -image [lindex $framesGen6 0]]
+  set interval [get_fps "$pokeDir/data/sprites-6/$pokemon.gif"]
+  #set framesGen6 [lreplace $framesGen6 end end]
+  #pack [label $w.gen1.l -image [lindex $framesGen6 end] -bd 1]
+  if {![winfo exists $w.gen6.lab.sprite]} {
+    pack [label $w.gen6.lab.sprite -image [lindex $framesGen6 0] -bd 1]
+  } else {
+    $w.gen6.lab.sprite configure -image [lindex $framesGen6 0]
   }
-  after idle "animate_poke $w.gen6.l \"$framesGen6\" 28"
+  after idle "animate_poke $w.gen6.lab.sprite \"$framesGen6\" $interval"
+  #set button [tk_messageBox -title Bug -message ""]
 }
