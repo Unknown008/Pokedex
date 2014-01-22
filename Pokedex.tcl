@@ -132,10 +132,8 @@ foreach {a b} {1 I 2 II 3 III 4 IV 5 V 6 VI} {
   $note add $note.gen$a -text " Gen $b "
 }
 
-
 foreach i {2 3 4 5 6} {
-  labelframe $note.gen$i.lab -text "Pokemon" -labelanchor n -width 240 -height 211 \
-    -colormap new
+  labelframe $note.gen$i.lab -text "Pokemon" -labelanchor n
   pack [label $note.gen$i.lab.sprite -image ""]
   grid $note.gen$i.lab -row 0 -column 0 -sticky nw
   grid columnconfigure $note.gen$i 0 -weight 1 -minsize 211
