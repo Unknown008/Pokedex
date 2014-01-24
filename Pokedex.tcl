@@ -145,7 +145,7 @@ after idle [wm minsize . [winfo width .] [winfo height .]]
 
 
 # Binds
-bind .sidepane.top.entry <KeyPress-Return> "poke_populate \$pokemonSpecies"
+bind .sidepane.top.entry <KeyPress-Return> [list poke_populate $pokemonSpecies]
 bind .sidepane.top.entry <KeyPress-Down> [list poke_focus $pokeList]
 bind .sidepane.bottom.list <Double-ButtonPress-1> [list poke_entry %W $pokeList]
 bind .sidepane.bottom.list <KeyPress-Return> [list list_populate_entry %W $pokeList]
