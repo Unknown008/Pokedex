@@ -93,14 +93,14 @@ proc poke_showlist {entry pokeList text} {
     wm transient $lb .
     raise $lb
     
-    bind $lb <KeyPress-Escape> lb_remove
-    bind $entry <KeyPress-Escape> lb_remove
-    bind . <ButtonPress-1> lb_remove
-    bind $lb.l <FocusOut> lb_remove
-    bind $lb <FocusOut> lb_remove
+    bind $lb <KeyPress-Escape> {lb_remove}
+    bind $entry <KeyPress-Escape> {lb_remove}
+    bind . <ButtonPress-1> {lb_remove}
+    bind $lb.l <FocusOut> {lb_remove}
+    bind $lb <FocusOut> {lb_remove}
     bind $lb <KeyPress-Return> [list lb_populate_entry %W $miniList]
     bind $lb <ButtonPress-1> [list lb_populate_entry %W $miniList]
-    bind $lb <Motion> "poke_hover %W %x %y"
+    bind $lb <Motion> [list poke_hover %W %x %y]
     
     return 1
   } else {
@@ -208,7 +208,7 @@ proc get_fps {file} {
   return [expr {$dec*10}]
 }
 
-### Fill main pane with details of Pokémon
+### Fill main pane with details of Pokï¿½mon
 proc poke_populate_gen6 {w pokemon} {
   global framesGen6 pokeDir
   if {[info exists framesGen6]} {
