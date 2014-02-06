@@ -7,6 +7,7 @@ proc poke_credits {} {
   wm resizable $w 0 0
   focus $w
   # http://www.pkparaiso.com/xy/sprites_pokemon.php
+  # © 1995-2014 The Pokémon Company, Nintendo, Creatures Inc., Game Freak Inc.
 }
 
 ### Double click from list pane procedure
@@ -138,11 +139,15 @@ proc poke_hover {w x y} {
   }
 }
 
-###
+### 
 proc poke_populate {pokemon} {
   global pokeList
-  set idx [lsearch $pokeList $pokemon]
-  # Disable certain tabs here
+  set w .mainpane.note
+  
+  set idx [lsearch -nocase $pokeList $pokemon]
+  if {$idx == -1} {return}
+  tab_update $w $idx
+  
   .sidepane.top.entry selection clear
   .sidepane.top.entry icursor end
   set w .mainpane.note
@@ -151,17 +156,17 @@ proc poke_populate {pokemon} {
   }
   
   if {[winfo exists .sidepane.top.listbox]} {lb_remove}
-  #poke_populate_gen1 $w $pokemon
-  #poke_populate_gen2 $w $pokemon
-  #poke_populate_gen3 $w $pokemon
-  #poke_populate_gen4 $w $pokemon
-  #poke_populate_gen5 $w $pokemon
-  poke_populate_gen6 $w $pokemon
+  #poke_populate_gen1 $w $pokemon $idx
+  #poke_populate_gen2 $w $pokemon $idx
+  #poke_populate_gen3 $w $pokemon $idx
+  #poke_populate_gen4 $w $pokemon $idx
+  #poke_populate_gen5 $w $pokemon $idx
+  poke_populate_gen6 $w $pokemon $idx
 }
 
 ### Focus on popup when down arrow pressed
 proc poke_focus {pokeList} {
-  if {[.sidepane.top.entry get] == ""} {return}
+  if {[.sidepane.top.entry get] eq ""} {return}
   set text [string range [.sidepane.top.entry get] 0 [.sidepane.top.entry index insert]-1]
   if {[poke_showlist .sidepane.top.entry $pokeList $text]} {
     focus .sidepane.top.listbox.l
@@ -208,21 +213,116 @@ proc get_fps {file} {
   return [expr {$dec*10}]
 }
 
-### Fill main pane with details of Pokï¿½mon
-proc poke_populate_gen6 {w pokemon} {
+### Fill main pane with details of Pokémon
+proc poke_populate_gen1 {w pokemon idx} {
+  global pokeDir
+  
+  catch {image create photo gen1Sprite -file "$pokeDir/data/sprites-1/$pokemon.png" \
+    -format png} res
+  $w.gen1.lab configure -text $pokemon
+  $w.gen1.sprite configure -image gen1Sprite  
+  
+  # Populate details
+  #info_populate $w $pokemon $idx
+}
+
+proc poke_populate_gen2 {w pokemon idx} {
+  global pokeDir
+  
+  catch {image create photo gen2Sprite -file "$pokeDir/data/sprites-2/$pokemon.png" \
+    -format png} res
+  $w.gen2.lab configure -text $pokemon
+  $w.gen2.sprite configure -image gen2Sprite  
+  
+  # Populate details
+  #info_populate $w $pokemon $idx
+}
+
+proc poke_populate_gen3 {w pokemon idx} {
+  global pokeDir
+  
+  catch {image create photo gen3Sprite -file "$pokeDir/data/sprites-3/$pokemon.png" \
+    -format png} res
+  $w.gen3.lab configure -text $pokemon
+  $w.gen3.sprite configure -image gen3Sprite  
+  
+  # Populate details
+  #info_populate $w $pokemon $idx
+}
+
+proc poke_populate_gen4 {w pokemon idx} {
+  global pokeDir
+  
+  catch {image create photo gen4Sprite -file "$pokeDir/data/sprites-4/$pokemon.png" \
+    -format png} res
+  $w.gen4.lab configure -text $pokemon
+  $w.gen4.sprite configure -image gen4Sprite  
+  
+  # Populate details
+  #info_populate $w $pokemon $idx
+}
+
+proc poke_populate_gen5 {w pokemon idx} {
+  global framesGen5 pokeDir
+  if {[info exists framesGen5]} {
+    foreach n $framesGen5 {rename $n {}}
+  }
+  set framesGen5 [get_frames "$pokeDir/data/sprites-5/$pokemon.gif"]
+  set interval [get_fps "$pokeDir/data/sprites-5/$pokemon.gif"]
+
+  $w.gen5.lab configure -text $pokemon
+  $w.gen5.sprite configure -image [lindex $framesGen5 0]
+  
+  after idle "animate_poke $w.gen5.sprite \"$framesGen5\" $interval"
+  # Populate details
+  #info_populate $w $pokemon $idx
+}
+
+proc poke_populate_gen6 {w pokemon idx} {
   global framesGen6 pokeDir
   if {[info exists framesGen6]} {
     foreach n $framesGen6 {rename $n {}}
   }
   set framesGen6 [get_frames "$pokeDir/data/sprites-6/$pokemon.gif"]
   set interval [get_fps "$pokeDir/data/sprites-6/$pokemon.gif"]
-  #set framesGen6 [lreplace $framesGen6 end end]
-  #pack [label $w.gen1.l -image [lindex $framesGen6 end] -bd 1]
-  if {![winfo exists $w.gen6.lab.sprite]} {
-    pack [label $w.gen6.lab.sprite -image [lindex $framesGen6 0] -bd 1]
-  } else {
-    $w.gen6.lab.sprite configure -image [lindex $framesGen6 0]
+
+  $w.gen6.lab configure -text $pokemon
+  $w.gen6.sprite configure -image [lindex $framesGen6 0]
+  
+  after idle "animate_poke $w.gen6.sprite \"$framesGen6\" $interval"
+  # Populate details
+  info_populate $w $pokemon $idx 6
+}
+
+### Update tabs
+proc tab_update {w idx} {
+  foreach {a b} {0 151 1 251 2 386 3 493 4 650} {
+    if {$idx > $b && [$w tab $a -state] eq "normal"} {
+      $w tab $a -state disabled
+    } elseif {$idx <= $b && [$w tab $a -state] eq "disabled"} {
+      $w tab $a -state normal
+    }
   }
-  after idle "animate_poke $w.gen6.lab.sprite \"$framesGen6\" $interval"
-  #set button [tk_messageBox -title Bug -message ""]
+}
+
+### Add informations
+proc info_populate {w pokemon idx i} {
+  global pokeDir
+  set data [open "$pokeDir/data/info.txt" r]
+  fconfigure $data -encoding utf-8
+  while {[gets $data line] != -1} {
+    if {[lindex [split $line "|"] 0] eq [format "#%03d" $idx]} {break}
+  }
+  close $data
+  set datagroup [split $line "|"]
+  lassign $datagroup - - formname type genus ability hability gender egggroup height \
+    weight
+  $w.gen$i.info.formvar configure -text $formname
+  $w.gen$i.info.typevar configure -text $type
+  $w.gen$i.info.genuvar configure -text $genus
+  $w.gen$i.info.abilvar configure -text $ability
+  $w.gen$i.info.gendvar configure -text $gender
+  $w.gen$i.info.egggvar configure -text $egggroup
+  $w.gen$i.info.heigvar configure -text "$height m"
+  $w.gen$i.info.weigvar configure -text "$weight kg"
 }

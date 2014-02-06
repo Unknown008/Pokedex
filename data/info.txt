@@ -1,0 +1,719 @@
+﻿
+#001|Bulbasaur|Bulbasaur|Grass/Poison|Seed|Overgrow|Chlorophyll|87.5/12.5|Monster, Plant|0.70|6.90
+#002|Ivysaur|Ivysaur|Grass/Poison|Seed|Overgrow|Chlorophyll|87.5/12.5|Monster, Plant|1.00|13.00
+#003|Venusaur|Venusaur|Grass/Poison|Seed|Overgrow|Chlorophyll|87.5/12.5|Monster, Plant|2.00|100.00
+#004|Charmander|Charmander|Fire|Lizard|Blaze|Solar Power|87.5/12.5|Monster|0.60|8.50
+#005|Charmeleon|Charmeleon|Fire|Flame|Blaze|Solar Power|87.5/12.5|Monster|1.10|19.00
+#006|Charizard|Charizard|Fire/Flying|Flame|Blaze|Solar Power|87.5/12.5|Monster|1.70|90.50
+#007|Squirtle|Squirtle|Water|Tiny Turtle|Torrent|Rain Dish|87.5/12.5|Monster, Water 1|0.50|9.00
+#008|Wartortle|Wartortle|Water|Turtle|Torrent|Rain Dish|87.5/12.5|Monster, Water 1|1.00|22.50
+#009|Blastoise|Blastoise|Water|Shellfish|Torrent|Rain Dish|87.5/12.5|Monster, Water 1|1.60|85.50
+#010|Caterpie|Caterpie|Bug|Worm|Shield Dust|Run Away|50/50|Bug|0.30|2.90
+#011|Metapod|Metapod|Bug|Cocoon|Shed Skin|Shed Skin|50/50|Bug|0.70|9.90
+#012|Butterfree|Butterfree|Bug/Flying|Butterfly|Compoundeyes|Tinted Lens|50/50|Bug|1.10|32.00
+#013|Weedle|Weedle|Bug/Poison|Hairy Bug|Shield Dust|Run Away|50/50|Bug|0.30|3.20
+#014|Kakuna|Kakuna|Bug/Poison|Cocoon|Shed Skin|Shed Skin|50/50|Bug|0.60|10.00
+#015|Beedrill|Beedrill|Bug/Poison|Poison Bee|Swarm|Sniper|50/50|Bug|1.00|29.50
+#016|Pidgey|Pidgey|Normal/Flying|Tiny Bird|Keen Eye/Tangled Feet|Big Pecks|50/50|Field|0.30|1.80
+#017|Pidgeotto|Pidgeotto|Normal/Flying|Bird|Keen Eye/Tangled Feet|Big Pecks|50/50|Field|1.10|30.00
+#018|Pidgeot|Pidgeot|Normal/Flying|Bird|Keen Eye/Tangled Feet|Big Pecks|50/50|Field|1.50|39.50
+#019|Rattata|Rattata|Normal|Mouse|Run Away/Guts|Hustle|50/50|Field|0.30|3.50
+#020|Raticate|Raticate|Normal|Mouse|Run Away/Guts|Hustle|50/50|Field|0.70|18.50
+#021|Spearow|Spearow|Normal/Flying|Tiny Bird|Keen Eye|Sniper|50/50|Field|0.30|2.00
+#022|Fearow|Fearow|Normal/Flying|Beak|Keen Eye|Sniper|50/50|Field|1.20|38.00
+#023|Ekans|Ekans|Poison|Snake|Intimidate/Shed Skin|Unnerve|50/50|Field, Monster|2.00|6.90
+#024|Arbok|Arbok|Poison|Cobra|Intimidate/Shed Skin|Unnerve|50/50|Field, Monster|3.50|65.00
+#025|Pikachu|Pikachu|Electric|Mouse|Static|Lightningrod|50/50|Field, Plant|0.40|6.00
+#026|Raichu|Raichu|Electric|Mouse|Static|Lightningrod|50/50|Field, Plant|0.80|30.00
+#027|Sandshrew|Sandshrew|Ground|Mouse|Sand Veil|Sand Rush|50/50|Field|0.60|12.00
+#028|Sandslash|Sandslash|Ground|Mouse|Sand Veil|Sand Rush|50/50|Field|1.00|29.50
+#029|Nidoran♀|Nidoran♀|Poison|Poison Pin|Poison Point/Rivalry|Hustle|0/100|Monster, Field|0.40|7.00
+#030|Nidorina|Nidorina|Poison|Poison Pin|Poison Point/Rivalry|Hustle|0/100|Undiscovered|0.80|20.00
+#031|Nidoqueen|Nidoqueen|Poison/Ground|Drill|Poison Point/Rivalry|Sheer Force|0/100|Undiscovered|1.30|60.00
+#032|Nidoran♂|Nidoran♂|Poison|Poison Pin|Poison Point/Rivalry|Hustle|100/0|Monster, Field|0.50|9.00
+#033|Nidorino|Nidorino|Poison|Poison Pin|Poison Point/Rivalry|Hustle|100/0|Monster, Field|0.90|19.50
+#034|Nidoking|Nidoking|Poison/Ground|Drill|Poison Point/Rivalry|Sheer Force|100/0|Monster, Field|1.40|62.00
+#035|Clefairy|Clefairy|Normal|Fairy|Cute Charm/Magic Guard|Friend Guard|25/75|Plant|0.60|7.50
+#036|Clefable|Clefable|Normal|Fairy|Cute Charm/Magic Guard|Unaware|25/75|Plant|1.30|40.00
+#037|Vulpix|Vulpix|Fire|Fox|Flash Fire|Drought|25/75|Field|0.60|9.90
+#038|Ninetales|Ninetales|Fire|Fox|Flash Fire|Drought|25/75|Field|1.10|19.90
+#039|Jigglypuff|Jigglypuff|Normal/Fairy|Balloon|Cute Charm/Competitive|Friend Guard|25/75|Plant|0.50|5.50
+#040|Wigglytuff|Wigglytuff|Normal|Balloon|Cute Charm/Competitive|Frisk|25/75|Plant|1.00|12.00
+#041|Zubat|Zubat|Poison/Flying|Bat|Inner Focus|Infiltrator|50/50|Field|0.80|7.50
+#042|Golbat|Golbat|Poison/Flying|Bat|Inner Focus|Infiltrator|50/50|Field|1.60|55.00
+#043|Oddish|Oddish|Grass/Poison|Weed|Chlorophyll|Run Away|50/50|Plant|0.50|5.40
+#044|Gloom|Gloom|Grass/Poison|Weed|Chlorophyll|Stench|50/50|Plant|0.80|8.60
+#045|Vileplume|Vileplume|Grass/Poison|Flower|Chlorophyll|Effect Spore|50/50|Plant|1.20|18.60
+#046|Paras|Paras|Bug/Grass|Mushroom|Effect Spore/Dry Skin|Damp|50/50|Bug, Plant|0.30|5.40
+#047|Parasect|Parasect|Bug/Grass|Mushroom|Effect Spore/Dry Skin|Damp|50/50|Bug, Plant|1.00|29.50
+#048|Venonat|Venonat|Bug/Poison|Insect|Compoundeyes/Tinted Lens|Run Away|50/50|Bug|1.00|30.00
+#049|Venomoth|Venomoth|Bug/Poison|Poison Moth|Shield Dust/Tinted Lens|Wonder Skin|50/50|Bug|1.50|12.50
+#050|Diglett|Diglett|Ground|Mole|Sand Veil/Arena Trap|Sand Force|50/50|Field|0.20|0.80
+#051|Dugtrio|Dugtrio|Ground|Mole|Sand Veil/Arena Trap|Sand Force|50/50|Field|0.70|33.30
+#052|Meowth|Meowth|Normal|Scratch Cat|Pickup/Technician|Unnerve|50/50|Field|0.40|4.20
+#053|Persian|Persian|Normal|Classy Cat|Limber/Technician|Unnerve|50/50|Field|1.00|32.00
+#054|Psyduck|Psyduck|Water|Duck|Damp/Cloud Nine|Swift Swim|50/50|Water 1, Field|0.80|19.60
+#055|Golduck|Golduck|Water|Duck|Damp/Cloud Nine|Swift Swim|50/50|Water 1, Field|1.70|76.60
+#056|Mankey|Mankey|Fighting|Pig Monkey|Vital Spirit/Anger Point|Defiant|50/50|Field|0.50|28.00
+#057|Primeape|Primeape|Fighting|Pig Monkey|Vital Spirit/Anger Point|Defiant|50/50|Field|1.00|32.00
+#058|Growlithe|Growlithe|Fire|Puppy|Intimidate/Flash Fire|Justified|75/25|Field|0.70|19.00
+#059|Arcanine|Arcanine|Fire|Legendary|Intimidate/Flash Fire|Justified|75/25|Field|1.90|155.00
+#060|Poliwag|Poliwag|Water|Tadpole|Water Absorb/Damp|Swift Swim|50/50|Water 1|0.60|12.40
+#061|Poliwhirl|Poliwhirl|Water|Tadpole|Water Absorb/Damp|Swift Swim|50/50|Water 1|1.00|20.00
+#062|Poliwrath|Poliwrath|Water/Fighting|Tadpole|Water Absorb/Damp|Swift Swim|50/50|Water 1|1.30|54.00
+#063|Abra|Abra|Psychic|Psi|Synchronize/Inner Focus|Magic Guard|75/25|Humanshape|0.90|19.50
+#064|Kadabra|Kadabra|Psychic|Psi|Synchronize/Inner Focus|Magic Guard|75/25|Humanshape|1.30|56.50
+#065|Alakazam|Alakazam|Psychic|Psi|Synchronize/Inner Focus|Magic Guard|75/25|Humanshape|1.50|48.00
+#066|Machop|Machop|Fighting|Superpower|Guts/No Guard|Steadfast|75/25|Humanshape|0.80|19.50
+#067|Machoke|Machoke|Fighting|Superpower|Guts/No Guard|Steadfast|75/25|Humanshape|1.50|70.50
+#068|Machamp|Machamp|Fighting|Superpower|Guts/No Guard|Steadfast|75/25|Humanshape|1.60|130.00
+#069|Bellsprout|Bellsprout|Grass/Poison|Flower|Chlorophyll|Gluttony|50/50|Plant|0.70|4.00
+#070|Weepinbell|Weepinbell|Grass/Poison|Flycatcher|Chlorophyll|Gluttony|50/50|Plant|1.00|6.40
+#071|Victreebel|Victreebel|Grass/Poison|Flycatcher|Chlorophyll|Gluttony|50/50|Plant|1.70|15.50
+#072|Tentacool|Tentacool|Water/Poison|Jellyfish|Clear Body/Liquid Ooze|Rain Dish|50/50|Water 3|0.90|45.50
+#073|Tentacruel|Tentacruel|Water/Poison|Jellyfish|Clear Body/Liquid Ooze|Rain Dish|50/50|Water 3|1.60|55.00
+#074|Geodude|Geodude|Rock/Ground|Rock|Rock Head/Sturdy|Sand Veil|50/50|Mineral|0.40|20.00
+#075|Graveler|Graveler|Rock/Ground|Rock|Rock Head/Sturdy|Sand Veil|50/50|Mineral|1.00|105.00
+#076|Golem|Golem|Rock/Ground|Megaton|Rock Head/Sturdy|Sand Veil|50/50|Mineral|1.40|300.00
+#077|Ponyta|Ponyta|Fire|Fire Horse|Run Away/Flash Fire|Flame Body|50/50|Field|1.00|30.00
+#078|Rapidash|Rapidash|Fire|Fire Horse|Run Away/Flash Fire|Flame Body|50/50|Field|1.70|95.00
+#079|Slowpoke|Slowpoke|Water/Psychic|Dopey|Oblivious/Own Tempo|Regenerator|50/50|Monster, Water 1|1.20|36.00
+#080|Slowbro|Slowbro|Water/Psychic|Hermit Crab|Oblivious/Own Tempo|Regenerator|50/50|Monster, Water 1|1.60|78.50
+#081|Magnemite|Magnemite|Electric/Steel|Magnet|Magnet Pull/Sturdy|Analytic|N/A|Mineral|0.30|6.00
+#082|Magneton|Magneton|Electric/Steel|Magnet|Magnet Pull/Sturdy|Analytic|N/A|Mineral|1.00|60.00
+#083|Farfetch'd|Farfetch'd|Normal/Flying|Wild Duck|Keen Eye/Inner Focus|Defiant|50/50|Field|0.80|15.00
+#084|Doduo|Doduo|Normal/Flying|Twin Bird|Run Away/Early Bird|Tangled Feet|50/50|Field|1.40|39.20
+#085|Dodrio|Dodrio|Normal/Flying|Triple Bird|Run Away/Early Bird|Tangled Feet|50/50|Field|1.80|85.20
+#086|Seel|Seel|Water|Sea Lion|Thick Fat/Hydration|Ice Body|50/50|Water 1, Field|1.10|90.00
+#087|Dewgong|Dewgong|Water/Ice|Sea Lion|Thick Fat/Hydration|Ice Body|50/50|Water 1, Field|1.70|120.00
+#088|Grimer|Grimer|Poison|Sludge|Stench/Sticky Hold|Poison Touch|50/50|Amorphous|0.90|30.00
+#089|Muk|Muk|Poison|Sludge|Stench/Sticky Hold|Poison Touch|50/50|Amorphous|1.20|30.00
+#090|Shellder|Shellder|Water|Bivalve|Shell Armor/Skill Link|Overcoat|50/50|Water 3|0.30|4.00
+#091|Cloyster|Cloyster|Water/Ice|Bivalve|Shell Armor/Skill Link|Overcoat|50/50|Water 3|1.50|132.50
+#092|Gastly|Gastly|Ghost/Poison|Gas|Levitate||50/50|Amorphous|1.30|0.10
+#093|Haunter|Haunter|Ghost/Poison|Gas|Levitate||50/50|Amorphous|1.60|0.10
+#094|Gengar|Gengar|Ghost/Poison|Shadow|Levitate||50/50|Amorphous|1.50|40.50
+#095|Onix|Onix|Rock/Ground|Rock Snake|Rock Head/Sturdy|Weak Armor|50/50|Mineral|8.80|210.00
+#096|Drowzee|Drowzee|Psychic|Hypnosis|Insomnia/Forewarn|Inner Focus|50/50|Humanshape|1.00|32.40
+#097|Hypno|Hypno|Psychic|Hypnosis|Insomnia/Forewarn|Inner Focus|50/50|Humanshape|1.60|75.60
+#098|Krabby|Krabby|Water|River Crab|Hyper Cutter/Shell Armor|Sheer Force|50/50|Water 3|0.40|6.50
+#099|Kingler|Kingler|Water|Pincer|Hyper Cutter/Shell Armor|Sheer Force|50/50|Water 3|1.30|60.00
+#100|Voltorb|Voltorb|Electric|Ball|Soundproof/Static|Aftermath|N/A|Mineral|0.50|10.40
+#101|Electrode|Electrode|Electric|Ball|Soundproof/Static|Aftermath|N/A|Mineral|1.20|66.60
+#102|Exeggcute|Exeggcute|Grass/Psychic|Egg|Chlorophyll|Harvest|50/50|Plant|0.40|2.50
+#103|Exeggutor|Exeggutor|Grass/Psychic|Coconut|Chlorophyll|Harvest|50/50|Plant|2.00|120.00
+#104|Cubone|Cubone|Ground|Lonely|Rock Head/Lightningrod|Battle Armor|50/50|Monster|0.40|6.50
+#105|Marowak|Marowak|Ground|Bone Keeper|Rock Head/Lightningrod|Battle Armor|50/50|Monster|1.00|45.00
+#106|Hitmonlee|Hitmonlee|Fighting|Kicking|Limber/Reckless|Unburden|100/0|Humanshape|1.50|49.80
+#107|Hitmonchan|Hitmonchan|Fighting|Punching|Keen Eye/Iron Fist|Inner Focus|100/0|Humanshape|1.40|50.20
+#108|Lickitung|Lickitung|Normal|Licking|Own Tempo/Oblivious|Cloud Nine|50/50|Monster|1.20|65.50
+#109|Koffing|Koffing|Poison|Poison Gas|Levitate||50/50|Amorphous|0.60|1.00
+#110|Weezing|Weezing|Poison|Poison Gas|Levitate||50/50|Amorphous|1.20|9.50
+#111|Rhyhorn|Rhyhorn|Ground/Rock|Spikes|Lightningrod/Rock Head|Reckless|50/50|Monster, Field|1.00|115.00
+#112|Rhydon|Rhydon|Ground/Rock|Drill|Lightningrod/Rock Head|Reckless|50/50|Monster, Field|1.90|120.00
+#113|Chansey|Chansey|Normal|Egg|Natural Cure/Serene Grace|Healer|0/100|Plant|1.10|34.60
+#114|Tangela|Tangela|Grass|Vine|Chlorophyll/Leaf Guard|Regenerator|50/50|Plant|1.00|35.00
+#115|Kangaskhan|Kangaskhan|Normal|Parent|Early Bird/Scrappy|Inner Focus|0/100|Monster|2.20|80.00
+#116|Horsea|Horsea|Water|Dragon|Swift Swim/Sniper|Damp|50/50|Water 1, Monster|0.40|8.00
+#117|Seadra|Seadra|Water|Dragon|Poison Point/Sniper|Damp|50/50|Water 1, Monster|1.20|25.00
+#118|Goldeen|Goldeen|Water|Goldfish|Swift Swim/Water Veil|Lightningrod|50/50|Water 2|0.60|15.00
+#119|Seaking|Seaking|Water|Goldfish|Swift Swim/Water Veil|Lightningrod|50/50|Water 2|1.30|39.00
+#120|Staryu|Staryu|Water|Star Shape|Illuminate/Natural Cure|Analytic|N/A|Water 3|0.80|34.50
+#121|Starmie|Starmie|Water/Psychic|Mysterious|Illuminate/Natural Cure|Analytic|N/A|Water 3|1.10|80.00
+#122|Mr. Mime|Mr. Mime|Psychic|Barrier|Soundproof/Filter|Technician|50/50|Humanshape|1.30|54.50
+#123|Scyther|Scyther|Bug/Flying|Mantis|Swarm/Technician|Steadfast|50/50|Bug|1.50|56.00
+#124|Jynx|Jynx|Ice/Psychic|Human Shape|Oblivious/Forewarn|Dry Skin|0/100|Humanshape|1.40|40.60
+#125|Electabuzz|Electabuzz|Electric|Electric|Static|Vital Spirit|75/25|Humanshape|1.10|30.00
+#126|Magmar|Magmar|Fire|Spitfire|Flame Body|Vital Spirit|75/25|Humanshape|1.30|44.50
+#127|Pinsir|Pinsir|Bug|Stag Beetle|Hyper Cutter/Mold Breaker|Moxie|50/50|Bug|1.50|55.00
+#128|Tauros|Tauros|Normal|Wild Bull|Intimidate/Anger Point|Sheer Force|100/0|Field|1.40|88.40
+#129|Magikarp|Magikarp|Water|Fish|Swift Swim|Rattled|50/50|Water 2, Monster|0.90|10.00
+#130|Gyarados|Gyarados|Water/Flying|Atrocious|Intimidate|Moxie|50/50|Water 2, Monster|6.50|235.00
+#131|Lapras|Lapras|Water/Ice|Transport|Water Absorb/Shell Armor|Hydration|50/50|Monster, Water 1|2.50|220.00
+#132|Ditto|Ditto|Normal|Transform|Limber|Imposter|N/A|Ditto|0.30|4.00
+#133|Eevee|Eevee|Normal|Evolution|Run Away/Adaptability|Anticipation|87.5/12.5|Field|0.30|6.50
+#134|Vaporeon|Vaporeon|Water|Bubble Jet|Water Absorb|Hydration|87.5/12.5|Field|1.00|29.00
+#135|Jolteon|Jolteon|Electric|Lightning|Volt Absorb|Quick Feet|87.5/12.5|Field|0.80|24.50
+#136|Flareon|Flareon|Fire|Flame|Flash Fire|Guts|87.5/12.5|Field|0.90|25.00
+#137|Porygon|Porygon|Normal|Virtual|Trace/Download|Analytic|N/A|Mineral|0.80|36.50
+#138|Omanyte|Omanyte|Rock/Water|Spiral|Swift Swim/Shell Armor|Weak Armor|87.5/12.5|Water 1, Water 3|0.40|7.50
+#139|Omastar|Omastar|Rock/Water|Spiral|Swift Swim/Shell Armor|Weak Armor|87.5/12.5|Water 1, Water 3|1.00|35.00
+#140|Kabuto|Kabuto|Rock/Water|Shellfish|Swift Swim/Battle Armor|Weak Armor|87.5/12.5|Water 1, Water 3|0.50|11.50
+#141|Kabutops|Kabutops|Rock/Water|Shellfish|Swift Swim/Battle Armor|Weak Armor|87.5/12.5|Water 1, Water 3|1.30|40.50
+#142|Aerodactyl|Aerodactyl|Rock/Flying|Fossil|Rock Head/Pressure|Unnerve|87.5/12.5|Field|1.80|59.00
+#143|Snorlax|Snorlax|Normal|Sleeping|Immunity/Thick Fat|Gluttony|87.5/12.5|Monster|2.10|460.00
+#144|Articuno|Articuno|Ice/Flying|Freeze|Pressure|Snow Cloak|N/A|Undiscovered|1.70|55.40
+#145|Zapdos|Zapdos|Electric/Flying|Electric|Pressure|Lightningrod|N/A|Undiscovered|1.60|52.60
+#146|Moltres|Moltres|Fire/Flying|Flame|Pressure|Flame Body|N/A|Undiscovered|2.00|60.00
+#147|Dratini|Dratini|Dragon|Dragon|Shed Skin|Marvel Scale|50/50|Water 1, Monster|1.80|3.30
+#148|Dragonair|Dragonair|Dragon|Dragon|Shed Skin|Marvel Scale|50/50|Water 1, Monster|4.00|16.50
+#149|Dragonite|Dragonite|Dragon/Flying|Dragon|Inner Focus|Multiscale|50/50|Water 1, Monster|2.20|210.00
+#150|Mewtwo|Mewtwo|Psychic|Genetic|Pressure|Unnerve|N/A|Undiscovered|2.00|122.00
+#151|Mew|Mew|Psychic|New Species|Synchronize||N/A|Undiscovered|0.40|4.00
+#152|Chikorita|Chikorita|Grass|Leaf|Overgrow|Leaf Guard|87.5/12.5|Monster, Plant|0.90|6.40
+#153|Bayleef|Bayleef|Grass|Leaf|Overgrow|Leaf Guard|87.5/12.5|Monster, Plant|1.20|15.80
+#154|Meganium|Meganium|Grass|Herb|Overgrow|Leaf Guard|87.5/12.5|Monster, Plant|1.80|100.50
+#155|Cyndaquil|Cyndaquil|Fire|Fire Mouse|Blaze|Flash Fire|87.5/12.5|Field|0.50|7.90
+#156|Quilava|Quilava|Fire|Volcano|Blaze|Flash Fire|87.5/12.5|Field|0.90|19.00
+#157|Typhlosion|Typhlosion|Fire|Volcano|Blaze|Flash Fire|87.5/12.5|Field|1.70|79.50
+#158|Totodile|Totodile|Water|Big Jaw|Torrent|Sheer Force|87.5/12.5|Monster, Water 1|0.60|9.50
+#159|Croconaw|Croconaw|Water|Big Jaw|Torrent|Sheer Force|87.5/12.5|Monster, Water 1|1.10|25.00
+#160|Feraligatr|Feraligatr|Water|Big Jaw|Torrent|Sheer Force|87.5/12.5|Monster, Water 1|2.30|88.80
+#161|Sentret|Sentret|Normal|Scout|Run Away/Keen Eye|Frisk|50/50|Field|0.80|6.00
+#162|Furret|Furret|Normal|Long Body|Run Away/Keen Eye|Frisk|50/50|Field|1.80|32.50
+#163|Hoothoot|Hoothoot|Normal/Flying|Owl|Insomnia/Keen Eye|Tinted Lens|50/50|Field|0.70|21.20
+#164|Noctowl|Noctowl|Normal/Flying|Owl|Insomnia/Keen Eye|Tinted Lens|50/50|Field|1.60|40.80
+#165|Ledyba|Ledyba|Bug/Flying|Five Star|Swarm/Early Bird|Rattled|50/50|Bug|1.00|10.80
+#166|Ledian|Ledian|Bug/Flying|Five Star|Swarm/Early Bird|Iron Fist|50/50|Bug|1.40|35.60
+#167|Spinarak|Spinarak|Bug/Poison|String Spit|Swarm/Insomnia|Sniper|50/50|Bug|0.50|8.50
+#168|Ariados|Ariados|Bug/Poison|Long Leg|Swarm/Insomnia|Sniper|50/50|Bug|1.10|33.50
+#169|Crobat|Crobat|Poison/Flying|Bat|Inner Focus|Infiltrator|50/50|Field|1.80|75.00
+#170|Chinchou|Chinchou|Water/Electric|Angler|Volt Absorb/Illuminate|Water Absorb|50/50|Water 2|0.50|12.00
+#171|Lanturn|Lanturn|Water/Electric|Light|Volt Absorb/Illuminate|Water Absorb|50/50|Water 2|1.20|22.50
+#172|Pichu|Pichu|Electric|Tiny Mouse|Static|Lightningrod|50/50|Undiscovered|0.30|2.00
+#173|Cleffa|Cleffa|Normal|Star Shape|Cute Charm/Magic Guard|Friend Guard|25/75|Undiscovered|0.30|3.00
+#174|Igglybuff|Igglybuff|Normal|Balloon|Cute Charm/Competitive|Friend Guard|25/75|Undiscovered|0.30|1.00
+#175|Togepi|Togepi|Normal|Spike Ball|Hustle/Serene Grace|Super Luck|87.5/12.5|Undiscovered|0.30|1.50
+#176|Togetic|Togetic|Normal/Flying|Happiness|Hustle/Serene Grace|Super Luck|87.5/12.5|Field, Plant|0.60|3.20
+#177|Natu|Natu|Psychic/Flying|Tiny Bird|Synchronize/Early Bird|Magic Bounce|50/50|Field|0.20|2.00
+#178|Xatu|Xatu|Psychic/Flying|Mystic|Synchronize/Early Bird|Magic Bounce|50/50|Field|1.50|15.00
+#179|Mareep|Mareep|Electric|Wool|Static|Plus|50/50|Monster, Field|0.60|7.80
+#180|Flaaffy|Flaaffy|Electric|Wool|Static|Plus|50/50|Monster, Field|0.80|13.30
+#181|Ampharos|Ampharos|Electric|Light|Static|Plus|50/50|Monster, Field|1.40|61.50
+#182|Bellossom|Bellossom|Grass|Flower|Chlorophyll|Healer|50/50|Plant|0.40|5.80
+#183|Marill|Marill|Water/Fairy|Aqua Mouse|Thick Fat/Huge Power|Sap Sipper|50/50|Water 1, Plant|0.40|8.50
+#184|Azumarill|Azumarill|Water|Aqua Rabbit|Thick Fat/Huge Power|Sap Sipper|50/50|Water 1, Plant|0.80|28.50
+#185|Sudowoodo|Sudowoodo|Rock|Imitation|Sturdy/Rock Head|Rattled|50/50|Mineral|1.20|38.00
+#186|Politoed|Politoed|Water|Frog|Water Absorb/Damp|Drizzle|50/50|Water 1|1.10|33.90
+#187|Hoppip|Hoppip|Grass/Flying|Cottonweed|Chlorophyll/Leaf Guard|Infiltrator|50/50|Plant|0.40|0.50
+#188|Skiploom|Skiploom|Grass/Flying|Cottonweed|Chlorophyll/Leaf Guard|Infiltrator|50/50|Plant|0.60|1.00
+#189|Jumpluff|Jumpluff|Grass/Flying|Cottonweed|Chlorophyll/Leaf Guard|Infiltrator|50/50|Plant|0.80|3.00
+#190|Aipom|Aipom|Normal|Long Tail|Run Away/Pickup|Skill Link|50/50|Field|0.80|11.50
+#191|Sunkern|Sunkern|Grass|Seed|Chlorophyll/Solar Power|Early Bird|50/50|Plant|0.30|1.80
+#192|Sunflora|Sunflora|Grass|Sun|Chlorophyll/Solar Power|Early Bird|50/50|Plant|0.80|8.50
+#193|Yanma|Yanma|Bug/Flying|Clear Wing|Speed Boost/Compoundeyes|Frisk|50/50|Bug|1.20|38.00
+#194|Wooper|Wooper|Water/Ground|Water Fish|Damp/Water Absorb|Unaware|50/50|Water 1, Field|0.40|8.50
+#195|Quagsire|Quagsire|Water/Ground|Water Fish|Damp/Water Absorb|Unaware|50/50|Water 1, Field|1.40|75.00
+#196|Espeon|Espeon|Psychic|Sun|Synchronize|Magic Bounce|87.5/12.5|Field|0.90|26.50
+#197|Umbreon|Umbreon|Dark|Moonlight|Synchronize|Inner Focus|87.5/12.5|Field|1.00|27.00
+#198|Murkrow|Murkrow|Dark/Flying|Darkness|Insomnia/Super Luck|Prankster|50/50|Field|0.50|2.10
+#199|Slowking|Slowking|Water/Psychic|Royal|Oblivious/Own Tempo|Regenerator|50/50|Monster, Water 1|2.00|79.50
+#200|Misdreavus|Misdreavus|Ghost|Screech|Levitate||50/50|Amorphous|0.70|1.00
+#201|Unown|Unown A|Psychic|Symbol|Levitate||N/A|Undiscovered|0.50|5.00
+#202|Wobbuffet|Wobbuffet|Psychic|Patient|Shadow Tag|Telepathy|50/50|Amorphous|1.30|28.50
+#203|Girafarig|Girafarig|Normal/Psychic|Long Neck|Inner Focus/Early Bird|Sap Sipper|50/50|Field|1.50|41.50
+#204|Pineco|Pineco|Bug|Bagworm|Sturdy|Overcoat|50/50|Bug|0.60|7.20
+#205|Forretress|Forretress|Bug/Steel|Bagworm|Sturdy|Overcoat|50/50|Bug|1.20|125.80
+#206|Dunsparce|Dunsparce|Normal|Land Snake|Serene Grace/Run Away|Rattled|50/50|Field|1.50|14.00
+#207|Gligar|Gligar|Ground/Flying|FlyScorpion|Hyper Cutter/Sand Veil|Immunity|50/50|Bug|1.10|64.80
+#208|Steelix|Steelix|Steel/Ground|Iron Snake|Rock Head/Sturdy|Sheer Force|50/50|Mineral|9.20|400.00
+#209|Snubbull|Snubbull|Normal|Fairy|Intimidate/Run Away|Rattled|25/75|Field, Plant|0.60|7.80
+#210|Granbull|Granbull|Normal|Fairy|Intimidate/Quick Feet|Rattled|25/75|Field, Plant|1.40|48.70
+#211|Qwilfish|Qwilfish|Water/Poison|Balloon|Poison Point/Swift Swim|Intimidate|50/50|Water 2|0.50|3.90
+#212|Scizor|Scizor|Bug/Steel|Pincer|Swarm/Technician|Light Metal|50/50|Bug|1.80|118.00
+#213|Shuckle|Shuckle|Bug/Rock|Mold|Sturdy/Gluttony|Contrary|50/50|Bug|0.60|20.50
+#214|Heracross|Heracross|Bug/Fighting|Single Horn|Swarm/Guts|Moxie|50/50|Bug|1.50|54.00
+#215|Sneasel|Sneasel|Dark/Ice|Sharp Claw|Inner Focus/Keen Eye|Pickpocket|50/50|Field|0.90|28.00
+#216|Teddiursa|Teddiursa|Normal|Little Bear|Pickup/Quick Feet|Honey Gather|50/50|Field|0.60|8.80
+#217|Ursaring|Ursaring|Normal|Hibernator|Guts/Quick Feet|Unnerve|50/50|Field|1.80|125.80
+#218|Slugma|Slugma|Fire|Lava|Magma Armor/Flame Body|Weak Armor|50/50|Amorphous|0.70|35.00
+#219|Magcargo|Magcargo|Fire/Rock|Lava|Magma Armor/Flame Body|Weak Armor|50/50|Amorphous|0.80|55.00
+#220|Swinub|Swinub|Ice/Ground|Pig|Oblivious/Snow Cloak|Thick Fat|50/50|Field|0.40|6.50
+#221|Piloswine|Piloswine|Ice/Ground|Swine|Oblivious/Snow Cloak|Thick Fat|50/50|Field|1.10|55.80
+#222|Corsola|Corsola|Water/Rock|Coral|Hustle/Natural Cure|Regenerator|25/75|Water 1, Water 3|0.60|5.00
+#223|Remoraid|Remoraid|Water|Jet|Hustle/Sniper|Moody|50/50|Water 1, Water 2|0.60|12.00
+#224|Octillery|Octillery|Water|Jet|Suction Cups/Sniper|Moody|50/50|Water 1, Water 2|0.90|28.50
+#225|Delibird|Delibird|Ice/Flying|Delivery|Vital Spirit/Hustle|Insomnia|50/50|Water 1, Field|0.90|16.00
+#226|Mantine|Mantine|Water/Flying|Kite|Swift Swim/Water Absorb|Water Veil|50/50|Water 1|2.10|220.00
+#227|Skarmory|Skarmory|Steel/Flying|Armor Bird|Keen Eye/Sturdy|Weak Armor|50/50|Field|1.70|50.50
+#228|Houndour|Houndour|Dark/Fire|Dark|Early Bird/Flash Fire|Unnerve|50/50|Field|0.60|10.80
+#229|Houndoom|Houndoom|Dark/Fire|Dark|Early Bird/Flash Fire|Unnerve|50/50|Field|1.40|35.00
+#230|Kingdra|Kingdra|Water/Dragon|Dragon|Swift Swim/Sniper|Damp|50/50|Water 1, Monster|1.80|152.00
+#231|Phanpy|Phanpy|Ground|Long Nose|Pickup|Sand Veil|50/50|Field|0.50|33.50
+#232|Donphan|Donphan|Ground|Armor|Sturdy|Sand Veil|50/50|Field|1.10|120.00
+#233|Porygon2|Porygon2|Normal|Virtual|Trace/Download|Analytic|N/A|Mineral|0.60|32.50
+#234|Stantler|Stantler|Normal|Big Horn|Intimidate/Frisk|Sap Sipper|50/50|Field|1.40|71.20
+#235|Smeargle|Smeargle|Normal|Painter|Own Tempo/Technician|Moody|50/50|Field|1.20|58.00
+#236|Tyrogue|Tyrogue|Fighting|Scuffle|Guts/Steadfast|Vital Spirit|100/0|Undiscovered|0.70|21.00
+#237|Hitmontop|Hitmontop|Fighting|Handstand|Intimidate/Technician|Steadfast|100/0|Humanshape|1.40|48.00
+#238|Smoochum|Smoochum|Ice/Psychic|Kiss|Oblivious/Forewarn|Hydration|0/100|Undiscovered|0.40|6.00
+#239|Elekid|Elekid|Electric|Electric|Static|Vital Spirit|75/25|Undiscovered|0.60|23.50
+#240|Magby|Magby|Fire|Live Coal|Flame Body|Vital Spirit|75/25|Undiscovered|0.70|21.40
+#241|Miltank|Miltank|Normal|Milk Cow|Thick Fat/Scrappy|Sap Sipper|0/100|Field|1.20|75.50
+#242|Blissey|Blissey|Normal|Happiness|Natural Cure/Serene Grace|Healer|0/100|Plant|1.50|46.80
+#243|Raikou|Raikou|Electric|Thunder|Pressure|Volt Absorb|N/A|Undiscovered|1.90|178.00
+#244|Entei|Entei|Fire|Volcano|Pressure|Flash Fire|N/A|Undiscovered|2.10|198.00
+#245|Suicune|Suicune|Water|Aurora|Pressure|Water Absorb|N/A|Undiscovered|2.00|187.00
+#246|Larvitar|Larvitar|Rock/Ground|Rock Skin|Guts|Sand Veil|50/50|Monster|0.60|72.00
+#247|Pupitar|Pupitar|Rock/Ground|Hard Shell|Shed Skin|Shed Skin|50/50|Monster|1.20|152.00
+#248|Tyranitar|Tyranitar|Rock/Dark|Armor|Sand Stream|Unnerve|50/50|Monster|2.00|202.00
+#249|Lugia|Lugia|Psychic/Flying|Diving|Pressure|Multiscale|N/A|Undiscovered|5.20|216.00
+#250|Ho-oh|Ho-oh|Fire/Flying|Rainbow|Pressure|Regenerator|N/A|Undiscovered|3.80|199.00
+#251|Celebi|Celebi|Psychic/Grass|Time Travel|Natural Cure||N/A|Undiscovered|0.60|5.00
+#252|Treecko|Treecko|Grass|Wood Gecko|Overgrow|Unburden|87.5/12.5|Monster|0.50|5.00
+#253|Grovyle|Grovyle|Grass|Wood Gecko|Overgrow|Unburden|87.5/12.5|Monster|0.90|21.60
+#254|Sceptile|Sceptile|Grass|Forest|Overgrow|Unburden|87.5/12.5|Monster|1.70|52.20
+#255|Torchic|Torchic|Fire|Chick|Blaze|Speed Boost|87.5/12.5|Field|0.40|2.50
+#256|Combusken|Combusken|Fire/Fighting|Young Fowl|Blaze|Speed Boost|87.5/12.5|Field|0.90|19.50
+#257|Blaziken|Blaziken|Fire/Fighting|Blaze|Blaze|Speed Boost|87.5/12.5|Field|1.90|52.00
+#258|Mudkip|Mudkip|Water|Mud Fish|Torrent|Damp|87.5/12.5|Monster, Water 1|0.40|7.60
+#259|Marshtomp|Marshtomp|Water/Ground|Mud Fish|Torrent|Damp|87.5/12.5|Monster, Water 1|0.70|28.00
+#260|Swampert|Swampert|Water/Ground|Mud Fish|Torrent|Damp|87.5/12.5|Monster, Water 1|1.50|81.90
+#261|Poochyena|Poochyena|Dark|Bite|Run Away/Quick Feet|Rattled|50/50|Field|0.50|13.60
+#262|Mightyena|Mightyena|Dark|Bite|Intimidate/Quick Feet|Moxie|50/50|Field|1.00|37.00
+#263|Zigzagoon|Zigzagoon|Normal|TinyRaccoon|Pickup/Gluttony|Quick Feet|50/50|Field|0.40|17.50
+#264|Linoone|Linoone|Normal|Rushing|Pickup/Gluttony|Quick Feet|50/50|Field|0.50|32.50
+#265|Wurmple|Wurmple|Bug|Worm|Shield Dust|Run Away|50/50|Bug|0.30|3.60
+#266|Silcoon|Silcoon|Bug|Cocoon|Shed Skin|Shed Skin|50/50|Bug|0.60|10.00
+#267|Beautifly|Beautifly|Bug/Flying|Butterfly|Swarm|Rivalry|50/50|Bug|1.00|28.40
+#268|Cascoon|Cascoon|Bug|Cocoon|Shed Skin|Shed Skin|50/50|Bug|0.70|11.50
+#269|Dustox|Dustox|Bug/Poison|Poison Moth|Shield Dust|Compoundeyes|50/50|Bug|1.20|31.60
+#270|Lotad|Lotad|Water/Grass|Water Weed|Swift Swim/Rain Dish|Own Tempo|50/50|Water 1, Plant|0.50|2.60
+#271|Lombre|Lombre|Water/Grass|Jolly|Swift Swim/Rain Dish|Own Tempo|50/50|Water 1, Plant|1.20|32.50
+#272|Ludicolo|Ludicolo|Water/Grass|Carefree|Swift Swim/Rain Dish|Own Tempo|50/50|Water 1, Plant|1.50|55.00
+#273|Seedot|Seedot|Grass|Acorn|Chlorophyll/Early Bird|Pickpocket|50/50|Field, Plant|0.50|4.00
+#274|Nuzleaf|Nuzleaf|Grass/Dark|Wily|Chlorophyll/Early Bird|Pickpocket|50/50|Field, Plant|1.00|28.00
+#275|Shiftry|Shiftry|Grass/Dark|Wicked|Chlorophyll/Early Bird|Pickpocket|50/50|Field, Plant|1.30|59.60
+#276|Taillow|Taillow|Normal/Flying|TinySwallow|Guts|Scrappy|50/50|Field|0.30|2.30
+#277|Swellow|Swellow|Normal/Flying|Swallow|Guts|Scrappy|50/50|Field|0.70|19.80
+#278|Wingull|Wingull|Water/Flying|Seagull|Keen Eye|Rain Dish|50/50|Water 1, Field|0.60|9.50
+#279|Pelipper|Pelipper|Water/Flying|Water Bird|Keen Eye|Rain Dish|50/50|Water 1, Field|1.20|28.00
+#280|Ralts|Ralts|Psychic|Feeling|Synchronize/Trace|Telepathy|50/50|Amorphous|0.40|6.60
+#281|Kirlia|Kirlia|Psychic|Emotion|Synchronize/Trace|Telepathy|50/50|Amorphous|0.80|20.20
+#282|Gardevoir|Gardevoir|Psychic/Fairy|Embrace|Synchronize/Trace|Telepathy|50/50|Amorphous|1.60|48.40
+#283|Surskit|Surskit|Bug/Water|Pond Skater|Swift Swim|Rain Dish|50/50|Water 1, Bug|0.50|1.70
+#284|Masquerain|Masquerain|Bug/Flying|Eyeball|Intimidate|Unnerve|50/50|Water 1, Bug|0.80|3.60
+#285|Shroomish|Shroomish|Grass|Mushroom|Effect Spore/Poison Heal|Quick Feet|50/50|Plant|0.40|4.50
+#286|Breloom|Breloom|Grass/Fighting|Mushroom|Effect Spore/Poison Heal|Technician|50/50|Plant|1.20|39.20
+#287|Slakoth|Slakoth|Normal|Slacker|Truant||50/50|Field|0.80|24.00
+#288|Vigoroth|Vigoroth|Normal|Wild Monkey|Vital Spirit||50/50|Field|1.40|46.50
+#289|Slaking|Slaking|Normal|Lazy|Truant||50/50|Field|2.00|130.50
+#290|Nincada|Nincada|Bug/Ground|Trainee|Compoundeyes|Run Away|50/50|Bug|0.50|5.50
+#291|Ninjask|Ninjask|Bug/Flying|Ninja|Speed Boost|Infiltrator|50/50|Bug|0.80|12.00
+#292|Shedinja|Shedinja|Bug/Ghost|Shed|Wonder Guard|Wonder Guard|N/A|Mineral|0.80|1.20
+#293|Whismur|Whismur|Normal|Whisper|Soundproof|Rattled|50/50|Monster, Field|0.60|16.30
+#294|Loudred|Loudred|Normal|Big Voice|Soundproof|Scrappy|50/50|Monster, Field|1.00|40.50
+#295|Exploud|Exploud|Normal|Loud Noise|Soundproof|Scrappy|50/50|Monster, Field|1.50|84.00
+#296|Makuhita|Makuhita|Fighting|Guts|Thick Fat/Guts|Sheer Force|75/25|Humanshape|1.00|86.40
+#297|Hariyama|Hariyama|Fighting|Arm Thrust|Thick Fat/Guts|Sheer Force|75/25|Humanshape|2.30|253.80
+#298|Azurill|Azurill|Normal|Polka Dot|Thick Fat/Huge Power|Sap Sipper|25/75|Undiscovered|0.20|2.00
+#299|Nosepass|Nosepass|Rock|Compass|Sturdy/Magnet Pull|Sand Force|50/50|Mineral|1.00|97.00
+#300|Skitty|Skitty|Normal|Kitten|Cute Charm/Normalize|Wonder Skin|25/75|Field, Plant|0.60|11.00
+#301|Delcatty|Delcatty|Normal|Prim|Cute Charm/Normalize|Wonder Skin|25/75|Field, Plant|1.10|32.60
+#302|Sableye|Sableye|Dark/Ghost|Darkness|Keen Eye/Stall|Prankster|50/50|Humanshape|0.50|11.00
+#303|Mawile|Mawile|Steel/Fairy|Deceiver|Hyper Cutter/Intimidate|Sheer Force|50/50|Field, Plant|0.60|11.50
+#304|Aron|Aron|Steel/Rock|Iron Armor|Sturdy/Rock Head|Heavy Metal|50/50|Monster|0.40|60.00
+#305|Lairon|Lairon|Steel/Rock|Iron Armor|Sturdy/Rock Head|Heavy Metal|50/50|Monster|0.90|120.00
+#306|Aggron|Aggron|Steel/Rock|Iron Armor|Sturdy/Rock Head|Heavy Metal|50/50|Monster|2.10|360.00
+#307|Meditite|Meditite|Fighting/Psychic|Meditate|Pure Power|Telepathy|50/50|Humanshape|0.60|11.20
+#308|Medicham|Medicham|Fighting/Psychic|Meditate|Pure Power|Telepathy|50/50|Humanshape|1.30|31.50
+#309|Electrike|Electrike|Electric|Lightning|Static/Lightningrod|Minus|50/50|Field|0.60|15.20
+#310|Manectric|Manectric|Electric|Discharge|Static/Lightningrod|Minus|50/50|Field|1.50|40.20
+#311|Plusle|Plusle|Electric|Cheering|Plus|Lightningrod|50/50|Plant|0.40|4.20
+#312|Minun|Minun|Electric|Cheering|Minus|Volt Absorb|50/50|Plant|0.40|4.20
+#313|Volbeat|Volbeat|Bug|Firefly|Illuminate/Swarm|Prankster|100/0|Bug, Humanshape|0.70|17.70
+#314|Illumise|Illumise|Bug|Firefly|Oblivious/Tinted Lens|Prankster|0/100|Bug, Humanshape|0.60|17.70
+#315|Roselia|Roselia|Grass/Poison|Thorn|Natural Cure/Poison Point|Leaf Guard|50/50|Plant|0.30|2.00
+#316|Gulpin|Gulpin|Poison|Stomach|Liquid Ooze/Sticky Hold|Gluttony|50/50|Amorphous|0.40|10.30
+#317|Swalot|Swalot|Poison|Poison Bag|Liquid Ooze/Sticky Hold|Gluttony|50/50|Amorphous|1.70|80.00
+#318|Carvanha|Carvanha|Water/Dark|Savage|Rough Skin|Speed Boost|50/50|Water 2|0.80|20.80
+#319|Sharpedo|Sharpedo|Water/Dark|Brutal|Rough Skin|Speed Boost|50/50|Water 2|1.80|88.80
+#320|Wailmer|Wailmer|Water|Ball Whale|Water Veil/Oblivious|Pressure|50/50|Field, Water 2|2.00|130.00
+#321|Wailord|Wailord|Water|Float Whale|Water Veil/Oblivious|Pressure|50/50|Field, Water 2|14.50|398.00
+#322|Numel|Numel|Fire/Ground|Numb|Oblivious/Simple|Own Tempo|50/50|Field|0.70|24.00
+#323|Camerupt|Camerupt|Fire/Ground|Eruption|Magma Armor/Solid Rock|Anger Point|50/50|Field|1.90|220.00
+#324|Torkoal|Torkoal|Fire|Coal|White Smoke|Shell Armor|50/50|Field|0.50|80.40
+#325|Spoink|Spoink|Psychic|Bounce|Thick Fat/Own Tempo|Gluttony|50/50|Field|0.70|30.60
+#326|Grumpig|Grumpig|Psychic|Manipulate|Thick Fat/Own Tempo|Gluttony|50/50|Field|0.90|71.50
+#327|Spinda|Spinda|Normal|Spot Panda|Own Tempo/Tangled Feet|Contrary|50/50|Field, Humanshape|1.10|5.00
+#328|Trapinch|Trapinch|Ground|Ant Pit|Hyper Cutter/Arena Trap|Sheer Force|50/50|Bug|0.70|15.00
+#329|Vibrava|Vibrava|Ground/Dragon|Vibration|Levitate|Levitate|50/50|Bug|1.10|15.30
+#330|Flygon|Flygon|Ground/Dragon|Mystic|Levitate|Levitate|50/50|Bug|2.00|82.00
+#331|Cacnea|Cacnea|Grass|Cactus|Sand Veil|Water Absorb|50/50|Plant, Humanshape|0.40|51.30
+#332|Cacturne|Cacturne|Grass/Dark|Scarecrow|Sand Veil|Water Absorb|50/50|Plant, Humanshape|1.30|77.40
+#333|Swablu|Swablu|Normal/Flying|Cotton Bird|Natural Cure|Cloud Nine|50/50|Field, Monster|0.40|1.20
+#334|Altaria|Altaria|Dragon/Flying|Humming|Natural Cure|Cloud Nine|50/50|Field, Monster|1.10|20.60
+#335|Zangoose|Zangoose|Normal|Cat Ferret|Immunity|Toxic Boost|50/50|Field|1.30|40.30
+#336|Seviper|Seviper|Poison|Fang Snake|Shed Skin|Infiltrator|50/50|Field, Monster|2.70|52.50
+#337|Lunatone|Lunatone|Rock/Psychic|Meteorite|Levitate||N/A|Mineral|1.00|168.00
+#338|Solrock|Solrock|Rock/Psychic|Meteorite|Levitate||N/A|Mineral|1.20|154.00
+#339|Barboach|Barboach|Water/Ground|Whiskers|Oblivious/Anticipation|Hydration|50/50|Water 2|0.40|1.90
+#340|Whiscash|Whiscash|Water/Ground|Whiskers|Oblivious/Anticipation|Hydration|50/50|Water 2|0.90|23.60
+#341|Corphish|Corphish|Water|Ruffian|Hyper Cutter/Shell Armor|Adaptability|50/50|Water 1, Water 3|0.60|11.50
+#342|Crawdaunt|Crawdaunt|Water/Dark|Rogue|Hyper Cutter/Shell Armor|Adaptability|50/50|Water 1, Water 3|1.10|32.80
+#343|Baltoy|Baltoy|Ground/Psychic|Clay Doll|Levitate||N/A|Mineral|0.50|21.50
+#344|Claydol|Claydol|Ground/Psychic|Clay Doll|Levitate||N/A|Mineral|1.50|108.00
+#345|Lileep|Lileep|Rock/Grass|Sea Lily|Suction Cups|Storm Drain|87.5/12.5|Water 3|1.00|23.80
+#346|Cradily|Cradily|Rock/Grass|Barnacle|Suction Cups|Storm Drain|87.5/12.5|Water 3|1.50|60.40
+#347|Anorith|Anorith|Rock/Bug|Old Shrimp|Battle Armor|Swift Swim|87.5/12.5|Water 3|0.70|12.50
+#348|Armaldo|Armaldo|Rock/Bug|Plate|Battle Armor|Swift Swim|87.5/12.5|Water 3|1.50|68.20
+#349|Feebas|Feebas|Water|Fish|Swift Swim|Adaptability|50/50|Water 1, Monster|0.60|7.40
+#350|Milotic|Milotic|Water|Tender|Marvel Scale/Competitive|Cute Charm|50/50|Water 1, Monster|6.20|162.00
+#351|Castform|Castform|Normal|Weather|Forecast||50/50|Plant, Amorphous|0.30|0.80
+#352|Kecleon|Kecleon|Normal|Color Swap|Color Change|Protean|50/50|Field|1.00|22.00
+#353|Shuppet|Shuppet|Ghost|Puppet|Insomnia/Frisk|Cursed Body|50/50|Amorphous|0.60|2.30
+#354|Banette|Banette|Ghost|Marionette|Insomnia/Frisk|Cursed Body|50/50|Amorphous|1.10|12.50
+#355|Duskull|Duskull|Ghost|Requiem|Levitate|Frisk|50/50|Amorphous|0.80|15.00
+#356|Dusclops|Dusclops|Ghost|Beckon|Pressure|Frisk|50/50|Amorphous|1.60|30.60
+#357|Tropius|Tropius|Grass/Flying|Fruit|Chlorophyll/Solar Power|Harvest|50/50|Monster, Plant|2.00|100.00
+#358|Chimecho|Chimecho|Psychic|Wind Chime|Levitate||50/50|Amorphous|0.60|1.00
+#359|Absol|Absol|Dark|Disaster|Pressure/Super Luck|Justified|50/50|Field|1.20|47.00
+#360|Wynaut|Wynaut|Psychic|Bright|Shadow Tag|Telepathy|50/50|Undiscovered|0.60|14.00
+#361|Snorunt|Snorunt|Ice|Snow Hat|Inner Focus/Ice Body|Moody|50/50|Plant, Mineral|0.70|16.80
+#362|Glalie|Glalie|Ice|Face|Inner Focus/Ice Body|Moody|50/50|Plant, Mineral|1.50|256.50
+#363|Spheal|Spheal|Ice/Water|Clap|Thick Fat/Ice Body|Oblivious|50/50|Water 1, Field|0.80|39.50
+#364|Sealeo|Sealeo|Ice/Water|Ball Roll|Thick Fat/Ice Body|Oblivious|50/50|Water 1, Field|1.10|87.60
+#365|Walrein|Walrein|Ice/Water|Ice Break|Thick Fat/Ice Body|Oblivious|50/50|Water 1, Field|1.40|150.60
+#366|Clamperl|Clamperl|Water|Bivalve|Shell Armor|Rattled|50/50|Water 1|0.40|52.50
+#367|Huntail|Huntail|Water|Deep Sea|Swift Swim|Water Veil|50/50|Water 1|1.70|27.00
+#368|Gorebyss|Gorebyss|Water|South Sea|Swift Swim|Hydration|50/50|Water 1|1.80|22.60
+#369|Relicanth|Relicanth|Water/Rock|Longevity|Swift Swim/Rock Head|Sturdy|87.5/12.5|Water 1, Water 2|1.00|23.40
+#370|Luvdisc|Luvdisc|Water|Rendezvous|Swift Swim|Hydration|25/75|Water 2|0.60|8.70
+#371|Bagon|Bagon|Dragon|Rock Head|Rock Head|Sheer Force|50/50|Monster|0.60|42.10
+#372|Shelgon|Shelgon|Dragon|Endurance|Rock Head|Overcoat|50/50|Monster|1.10|110.50
+#373|Salamence|Salamence|Dragon/Flying|Dragon|Intimidate|Moxie|50/50|Monster|1.50|102.60
+#374|Beldum|Beldum|Steel/Psychic|Iron Ball|Clear Body|Light Metal|N/A|Mineral|0.60|95.20
+#375|Metang|Metang|Steel/Psychic|Iron Claw|Clear Body|Light Metal|N/A|Mineral|1.20|202.50
+#376|Metagross|Metagross|Steel/Psychic|Iron Leg|Clear Body|Light Metal|N/A|Mineral|1.60|550.00
+#377|Regirock|Regirock|Rock|Rock Peak|Clear Body|Sturdy|N/A|Undiscovered|1.70|230.00
+#378|Regice|Regice|Ice|Iceberg|Clear Body|Ice Body|N/A|Undiscovered|1.80|175.00
+#379|Registeel|Registeel|Steel|Iron|Clear Body|Light Metal|N/A|Undiscovered|1.90|205.00
+#380|Latias|Latias|Dragon/Psychic|Eon|Levitate||0/100|Undiscovered|1.40|40.00
+#381|Latios|Latios|Dragon/Psychic|Eon|Levitate||100/0|Undiscovered|2.00|60.00
+#382|Kyogre|Kyogre|Water|Sea Basin|Drizzle||N/A|Undiscovered|4.50|352.00
+#383|Groudon|Groudon|Ground|Continent|Drought||N/A|Undiscovered|3.50|950.00
+#384|Rayquaza|Rayquaza|Dragon/Flying|Sky High|Air Lock||N/A|Undiscovered|7.00|206.50
+#385|Jirachi|Jirachi|Steel/Psychic|Wish|Serene Grace||N/A|Undiscovered|0.30|1.10
+#386|Deoxys|Deoxys Normal|Psychic|DNA|Pressure||N/A|Undiscovered|1.70|60.80
+#387|Turtwig|Turtwig|Grass|Tiny Leaf|Overgrow|Shell Armor|87.5/12.5|Monster, Plant|0.40|10.20
+#388|Grotle|Grotle|Grass|Grove|Overgrow|Shell Armor|87.5/12.5|Monster, Plant|1.10|97.00
+#389|Torterra|Torterra|Grass/Ground|Continent|Overgrow|Shell Armor|87.5/12.5|Monster, Plant|2.20|310.00
+#390|Chimchar|Chimchar|Fire|Chimp|Blaze|Iron Fist|87.5/12.5|Field, Humanshape|0.50|6.20
+#391|Monferno|Monferno|Fire/Fighting|Playful|Blaze|Iron Fist|87.5/12.5|Field, Humanshape|0.90|22.00
+#392|Infernape|Infernape|Fire/Fighting|Flame|Blaze|Iron Fist|87.5/12.5|Field, Humanshape|1.20|55.00
+#393|Piplup|Piplup|Water|Penguin|Torrent|Defiant|87.5/12.5|Water 1, Field|0.40|5.20
+#394|Prinplup|Prinplup|Water|Penguin|Torrent|Defiant|87.5/12.5|Water 1, Field|0.80|23.00
+#395|Empoleon|Empoleon|Water/Steel|Emperor|Torrent|Defiant|87.5/12.5|Water 1, Field|1.70|84.50
+#396|Starly|Starly|Normal/Flying|Starling|Keen Eye|Reckless|50/50|Field|0.30|2.00
+#397|Staravia|Staravia|Normal/Flying|Starling|Intimidate|Reckless|50/50|Field|0.60|15.50
+#398|Staraptor|Staraptor|Normal/Flying|Predator|Intimidate|Reckless|50/50|Field|1.20|24.90
+#399|Bidoof|Bidoof|Normal|Plump Mouse|Simple/Unaware|Moody|50/50|Water 1, Field|0.50|20.00
+#400|Bibarel|Bibarel|Normal/Water|Beaver|Simple/Unaware|Moody|50/50|Water 1, Field|1.00|31.50
+#401|Kricketot|Kricketot|Bug|Cricket|Shed Skin|Run Away|50/50|Bug|0.30|2.20
+#402|Kricketune|Kricketune|Bug|Cricket|Swarm|Technician|50/50|Bug|1.00|25.50
+#403|Shinx|Shinx|Electric|Flash|Rivalry/Intimidate|Guts|50/50|Field|0.50|9.50
+#404|Luxio|Luxio|Electric|Spark|Rivalry/Intimidate|Guts|50/50|Field|0.90|30.50
+#405|Luxray|Luxray|Electric|Gleam Eyes|Rivalry/Intimidate|Guts|50/50|Field|1.40|42.00
+#406|Budew|Budew|Grass/Poison|Bud|Natural Cure/Poison Point|Leaf Guard|50/50|Undiscovered|0.20|1.20
+#407|Roserade|Roserade|Grass/Poison|Bouquet|Natural Cure/Poison Point|Technician|50/50|Plant|0.90|14.50
+#408|Cranidos|Cranidos|Rock|Head Butt|Mold Breaker|Sheer Force|87.5/12.5|Monster|0.90|31.50
+#409|Rampardos|Rampardos|Rock|Head Butt|Mold Breaker|Sheer Force|87.5/12.5|Monster|1.60|102.50
+#410|Shieldon|Shieldon|Rock/Steel|Shield|Sturdy|Soundproof|87.5/12.5|Monster|0.50|57.00
+#411|Bastiodon|Bastiodon|Rock/Steel|Shield|Sturdy|Soundproof|87.5/12.5|Monster|1.30|149.50
+#412|Burmy|Burmy Plant Cloak|Bug|Bagworm|Shed Skin|Overcoat|50/50|Bug|0.20|3.40
+#413|Wormadam|Wormadam Plant Cloak|Bug/Grass|Bagworm|Anticipation|Overcoat|0/100|Bug|0.50|6.50
+#414|Mothim|Mothim|Bug/Flying|Moth|Swarm|Tinted Lens|100/0|Bug|0.90|23.30
+#415|Combee|Combee|Bug/Flying|Tiny Bee|Honey Gather|Hustle|87.5/12.5|Bug|0.30|5.50
+#416|Vespiquen|Vespiquen|Bug/Flying|Beehive|Pressure|Unnerve|0/100|Bug|1.20|38.50
+#417|Pachirisu|Pachirisu|Electric|EleSquirrel|Run Away/Pickup|Volt Absorb|50/50|Field, Plant|0.40|3.90
+#418|Buizel|Buizel|Water|Sea Weasel|Swift Swim|Water Veil|50/50|Water 1, Field|0.70|29.50
+#419|Floatzel|Floatzel|Water|Sea Weasel|Swift Swim|Water Veil|50/50|Water 1, Field|1.10|33.50
+#420|Cherubi|Cherubi|Grass|Cherry|Chlorophyll||50/50|Plant|0.40|3.30
+#421|Cherrim|Cherrim Overcast|Grass|Blossom|Flower Gift||50/50|Plant|0.50|9.30
+#422|Shellos|Shellos West Sea|Water|Sea Slug|Sticky Hold/Storm Drain|Sand Force|50/50|Water 1, Amorphous|0.30|6.30
+#423|Gastrodon|Gastrodon West Sea|Water/Ground|Sea Slug|Sticky Hold/Storm Drain|Sand Force|50/50|Water 1, Amorphous|0.90|29.90
+#424|Ambipom|Ambipom|Normal|Long Tail|Technician/Pickup|Skill Link|50/50|Field|1.20|20.30
+#425|Drifloon|Drifloon|Ghost/Flying|Balloon|Aftermath/Unburden|Flare Boost|50/50|Amorphous|0.40|1.20
+#426|Drifblim|Drifblim|Ghost/Flying|Blimp|Aftermath/Unburden|Flare Boost|50/50|Amorphous|1.20|15.00
+#427|Buneary|Buneary|Normal|Rabbit|Run Away/Klutz|Limber|50/50|Field, Humanshape|0.40|5.50
+#428|Lopunny|Lopunny|Normal|Rabbit|Cute Charm/Klutz|Limber|50/50|Field, Humanshape|1.20|33.30
+#429|Mismagius|Mismagius|Ghost|Magical|Levitate||50/50|Amorphous|0.90|4.40
+#430|Honchkrow|Honchkrow|Dark/Flying|Big Boss|Insomnia/Super Luck|Moxie|50/50|Field|0.90|27.30
+#431|Glameow|Glameow|Normal|Catty|Limber/Own Tempo|Keen Eye|25/75|Field|0.50|3.90
+#432|Purugly|Purugly|Normal|Tiger Cat|Thick Fat/Own Tempo|Defiant|25/75|Field|1.00|43.80
+#433|Chingling|Chingling|Psychic|Bell|Levitate||50/50|Undiscovered|0.20|0.60
+#434|Stunky|Stunky|Poison/Dark|Skunk|Stench/Aftermath|Keen Eye|50/50|Field|0.40|19.20
+#435|Skuntank|Skuntank|Poison/Dark|Skunk|Stench/Aftermath|Keen Eye|50/50|Field|1.00|38.00
+#436|Bronzor|Bronzor|Steel/Psychic|Bronze|Levitate/Heatproof|Heavy Metal|N/A|Mineral|0.50|60.50
+#437|Bronzong|Bronzong|Steel/Psychic|Bronze Bell|Levitate/Heatproof|Heavy Metal|N/A|Mineral|1.30|187.00
+#438|Bonsly|Bonsly|Rock|Bonsai|Sturdy/Rock Head|Rattled|50/50|Undiscovered|0.50|15.00
+#439|Mime Jr.|Mime Jr.|Psychic|Mime|Soundproof/Filter|Technician|50/50|Undiscovered|0.60|13.00
+#440|Happiny|Happiny|Normal|Playhouse|Natural Cure/Serene Grace|Friend Guard|0/100|Undiscovered|0.60|24.40
+#441|Chatot|Chatot|Normal/Flying|Music Note|Keen Eye/Tangled Feet|Big Pecks|50/50|Field|0.50|1.90
+#442|Spiritomb|Spiritomb|Ghost/Dark|Forbidden|Pressure|Infiltrator|50/50|Amorphous|1.00|108.00
+#443|Gible|Gible|Dragon/Ground|Land Shark|Sand Veil|Rough Skin|50/50|Monster|0.70|20.50
+#444|Gabite|Gabite|Dragon/Ground|Cave|Sand Veil|Rough Skin|50/50|Monster|1.40|56.00
+#445|Garchomp|Garchomp|Dragon/Ground|Mach|Sand Veil|Rough Skin|50/50|Monster|1.90|95.00
+#446|Munchlax|Munchlax|Normal|Big Eater|Pickup/Thick Fat|Gluttony|87.5/12.5|Undiscovered|0.60|105.00
+#447|Riolu|Riolu|Fighting|Emanation|Steadfast/Inner Focus|Prankster|87.5/12.5|Undiscovered|0.70|20.20
+#448|Lucario|Lucario|Fighting/Steel|Aura|Steadfast/Inner Focus|Justified|87.5/12.5|Field, Humanshape|1.20|54.00
+#449|Hippopotas|Hippopotas|Ground|Hippo|Sand Stream|Sand Force|50/50|Field|0.80|49.50
+#450|Hippowdon|Hippowdon|Ground|Heavyweight|Sand Stream|Sand Force|50/50|Field|2.00|300.00
+#451|Skorupi|Skorupi|Poison/Bug|Scorpion|Battle Armor/Sniper|Keen Eye|50/50|Bug, Water 3|0.80|12.00
+#452|Drapion|Drapion|Poison/Dark|Ogre Scorp|Battle Armor/Sniper|Keen Eye|50/50|Bug, Water 3|1.30|61.50
+#453|Croagunk|Croagunk|Poison/Fighting|Toxic Mouth|Anticipation/Dry Skin|Poison Touch|50/50|Humanshape|0.70|23.00
+#454|Toxicroak|Toxicroak|Poison/Fighting|Toxic Mouth|Anticipation/Dry Skin|Poison Touch|50/50|Humanshape|1.30|44.40
+#455|Carnivine|Carnivine|Grass|Bug Catcher|Levitate||50/50|Plant|1.40|27.00
+#456|Finneon|Finneon|Water|Wing Fish|Swift Swim/Storm Drain|Water Veil|50/50|Water 2|0.40|7.00
+#457|Lumineon|Lumineon|Water|Neon|Swift Swim/Storm Drain|Water Veil|50/50|Water 2|1.20|24.00
+#458|Mantyke|Mantyke|Water/Flying|Kite|Swift Swim/Water Absorb|Water Veil|50/50|Undiscovered|1.00|65.00
+#459|Snover|Snover|Grass/Ice|Frost Tree|Snow Warning|Soundproof|50/50|Monster, Plant|1.00|50.50
+#460|Abomasnow|Abomasnow|Grass/Ice|Frost Tree|Snow Warning|Soundproof|50/50|Monster, Plant|2.20|135.50
+#461|Weavile|Weavile|Dark/Ice|Sharp Claw|Pressure|Pickpocket|50/50|Field|1.10|34.00
+#462|Magnezone|Magnezone|Electric/Steel|Magnet Area|Magnet Pull/Sturdy|Analytic|N/A|Mineral|1.20|180.00
+#463|Lickilicky|Lickilicky|Normal|Licking|Own Tempo/Oblivious|Cloud Nine|50/50|Monster|1.70|140.00
+#464|Rhyperior|Rhyperior|Ground/Rock|Drill|Lightningrod/Solid Rock|Reckless|50/50|Monster, Field|2.40|282.80
+#465|Tangrowth|Tangrowth|Grass|Vine|Chlorophyll/Leaf Guard|Regenerator|50/50|Plant|2.00|128.60
+#466|Electivire|Electivire|Electric|Thunderbolt|Motor Drive|Vital Spirit|75/25|Humanshape|1.80|138.60
+#467|Magmortar|Magmortar|Fire|Blast|Flame Body|Vital Spirit|75/25|Humanshape|1.60|68.00
+#468|Togekiss|Togekiss|Normal/Flying|Jubilee|Hustle/Serene Grace|Super Luck|87.5/12.5|Field, Plant|1.50|38.00
+#469|Yanmega|Yanmega|Bug/Flying|Ogre Darner|Speed Boost/Tinted Lens|Frisk|50/50|Bug|1.90|51.50
+#470|Leafeon|Leafeon|Grass|Verdant|Leaf Guard|Chlorophyll|87.5/12.5|Field|1.00|25.50
+#471|Glaceon|Glaceon|Ice|Fresh Snow|Snow Cloak|Ice Body|87.5/12.5|Field|0.80|25.90
+#472|Gliscor|Gliscor|Ground/Flying|Fang Scorp|Hyper Cutter/Sand Veil|Poison Heal|50/50|Bug|2.00|42.50
+#473|Mamoswine|Mamoswine|Ice/Ground|Twin Tusk|Oblivious/Snow Cloak|Thick Fat|50/50|Field|2.50|291.00
+#474|Porygon-Z|Porygon-Z|Normal|Virtual|Adaptability/Download|Analytic|N/A|Mineral|0.90|34.00
+#475|Gallade|Gallade|Psychic/Fighting|Blade|Steadfast|Justified|100/0|Amorphous|1.60|52.00
+#476|Probopass|Probopass|Rock/Steel|Compass|Sturdy/Magnet Pull|Sand Force|50/50|Mineral|1.40|340.00
+#477|Dusknoir|Dusknoir|Ghost|Gripper|Pressure|Frisk|50/50|Amorphous|2.20|106.60
+#478|Froslass|Froslass|Ice/Ghost|Snow Land|Snow Cloak|Cursed Body|0/100|Plant, Mineral|1.30|26.60
+#479|Rotom|Rotom|Electric/Ghost|Plasma|Levitate||N/A|Amorphous|0.30|0.30
+#480|Uxie|Uxie|Psychic|Knowledge|Levitate||N/A|Undiscovered|0.30|0.30
+#481|Mesprit|Mesprit|Psychic|Emotion|Levitate||N/A|Undiscovered|0.30|0.30
+#482|Azelf|Azelf|Psychic|Willpower|Levitate||N/A|Undiscovered|0.30|0.30
+#483|Dialga|Dialga|Steel/Dragon|Temporal|Pressure|Telepathy|N/A|Undiscovered|5.40|683.00
+#484|Palkia|Palkia|Water/Dragon|Spatial|Pressure|Telepathy|N/A|Undiscovered|4.20|336.00
+#485|Heatran|Heatran|Fire/Steel|Lava Dome|Flash Fire|Flame Body|50/50|Undiscovered|1.70|430.00
+#486|Regigigas|Regigigas|Normal|Colossal|Slow Start||N/A|Undiscovered|3.70|420.00
+#487|Giratina|Giratina Altered Forme|Ghost/Dragon|Renegade|Pressure|Telepathy|N/A|Undiscovered|4.50|750.00
+#488|Cresselia|Cresselia|Psychic|Lunar|Levitate||0/100|Undiscovered|1.50|85.60
+#489|Phione|Phione|Water|Sea Drifter|Hydration||N/A|Water 1, Plant|0.40|3.10
+#490|Manaphy|Manaphy|Water|Seafaring|Hydration||N/A|Water 1, Plant|0.30|1.40
+#491|Darkrai|Darkrai|Dark|Pitch-Black|Bad Dreams||N/A|Undiscovered|1.50|50.50
+#492|Shaymin|Shaymin Land Forme|Grass|Gratitude|Natural Cure||N/A|Undiscovered|0.20|2.10
+#493|Arceus|Arceus Normal|Normal|Alpha|Multitype||N/A|Undiscovered|3.20|320.00
+#494|Victini|Victini|Psychic/Fire|Victory|Victory Star||N/A|Undiscovered|0.40|4.00
+#495|Snivy|Snivy|Grass|Grass Snake|Overgrow|Contrary|87.5/12.5|Field, Plant|0.60|8.10
+#496|Servine|Servine|Grass|Grass Snake|Overgrow|Contrary|87.5/12.5|Field, Plant|0.80|16.00
+#497|Serperior|Serperior|Grass|Regal|Overgrow|Contrary|87.5/12.5|Field, Plant|3.30|63.00
+#498|Tepig|Tepig|Fire|Fire Pig|Blaze|Thick Fat|87.5/12.5|Field|0.50|9.90
+#499|Pignite|Pignite|Fire/Fighting|Fire Pig|Blaze|Thick Fat|87.5/12.5|Field|1.00|55.50
+#500|Emboar|Emboar|Fire/Fighting|Mega Fire Pig|Blaze|Reckless|87.5/12.5|Field|1.60|150.00
+#501|Oshawott|Oshawott|Water|Sea Otter|Torrent|Shell Armor|87.5/12.5|Field|0.50|5.90
+#502|Dewott|Dewott|Water|Discipline|Torrent|Shell Armor|87.5/12.5|Field|0.80|24.50
+#503|Samurott|Samurott|Water|Formidable|Torrent|Shell Armor|87.5/12.5|Field|1.50|94.60
+#504|Patrat|Patrat|Normal|Scout|Run Away/Keen Eye|Analytic|50/50|Field|0.50|11.60
+#505|Watchog|Watchog|Normal|Lookout|Illuminate/Keen Eye|Analytic|50/50|Field|1.10|27.00
+#506|Lillipup|Lillipup|Normal|Puppy|Vital Spirit/Pickup|Run Away|50/50|Field|0.40|4.10
+#507|Herdier|Herdier|Normal|Loyal Dog|Intimidate/Sand Rush|Scrappy|50/50|Field|0.90|14.70
+#508|Stoutland|Stoutland|Normal|Big-Hearted|Intimidate/Sand Rush|Scrappy|50/50|Field|1.20|61.00
+#509|Purrloin|Purrloin|Dark|Devious|Limber/Unburden|Prankster|50/50|Field|0.40|10.10
+#510|Liepard|Liepard|Dark|Cruel|Limber/Unburden|Prankster|50/50|Field|1.10|37.50
+#511|Pansage|Pansage|Grass|Grass Monkey|Gluttony|Overgrow|87.5/12.5|Field|0.60|10.50
+#512|Simisage|Simisage|Grass|Thorn Monkey|Gluttony|Overgrow|87.5/12.5|Field|1.10|30.50
+#513|Pansear|Pansear|Fire|High Temp|Gluttony|Blaze|87.5/12.5|Field|0.60|11.00
+#514|Simisear|Simisear|Fire|Ember|Gluttony|Blaze|87.5/12.5|Field|1.00|28.00
+#515|Panpour|Panpour|Water|Spray|Gluttony|Torrent|87.5/12.5|Field|0.60|13.50
+#516|Simipour|Simipour|Water|Geyser|Gluttony|Torrent|87.5/12.5|Field|1.00|29.00
+#517|Munna|Munna|Psychic|Dream Eater|Forewarn/Synchronize|Telepathy|50/50|Field|0.60|23.30
+#518|Musharna|Musharna|Psychic|Drowsing|Forewarn/Synchronize|Telepathy|50/50|Field|1.10|60.50
+#519|Pidove|Pidove|Normal/Flying|Tiny Pigeon|Big Pecks/Super Luck|Rivalry|50/50|Field|0.30|2.10
+#520|Tranquill|Tranquill|Normal/Flying|Wild Pigeon|Big Pecks/Super Luck|Rivalry|50/50|Field|0.60|15.00
+#521|Unfezant|Unfezant|Normal/Flying|Proud|Big Pecks/Super Luck|Rivalry|50/50|Field|1.20|29.00
+#522|Blitzle|Blitzle|Electric|Electrified|Lightningrod/Motor Drive|Sap Sipper|50/50|Field|0.80|29.80
+#523|Zebstrika|Zebstrika|Electric|Thunderbolt|Lightningrod/Motor Drive|Sap Sipper|50/50|Field|1.60|79.50
+#524|Roggenrola|Roggenrola|Rock|Mantle|Sturdy|Sand Force|50/50|Mineral|0.40|18.00
+#525|Boldore|Boldore|Rock|Ore|Sturdy|Sand Force|50/50|Mineral|0.90|102.00
+#526|Gigalith|Gigalith|Rock|Compressed|Sturdy|Sand Force|50/50|Mineral|1.70|260.00
+#527|Woobat|Woobat|Psychic/Flying|Bat|Unaware/Klutz|Simple|50/50|Field|0.40|2.10
+#528|Swoobat|Swoobat|Psychic/Flying|Courting|Unaware/Klutz|Simple|50/50|Field|0.90|10.50
+#529|Drilbur|Drilbur|Ground|Mole|Sand Rush/Sand Force|Mold Breaker|50/50|Field|0.30|8.50
+#530|Excadrill|Excadrill|Ground/Steel|Subterrene|Sand Rush/Sand Force|Mold Breaker|50/50|Field|0.70|40.40
+#531|Audino|Audino|Normal|Hearing|Healer/Regenerator|Klutz|50/50|Plant|1.10|31.00
+#532|Timburr|Timburr|Fighting|Muscular|Guts/Sheer Force|Iron Fist|75/25|Humanshape|0.60|12.50
+#533|Gurdurr|Gurdurr|Fighting|Muscular|Guts/Sheer Force|Iron Fist|75/25|Humanshape|1.20|40.00
+#534|Conkeldurr|Conkeldurr|Fighting|Muscular|Guts/Sheer Force|Iron Fist|75/25|Humanshape|1.40|87.00
+#535|Tympole|Tympole|Water|Tadpole|Swift Swim/Hydration|Water Absorb|50/50|Water 1|0.50|4.50
+#536|Palpitoad|Palpitoad|Water/Ground|Vibration|Swift Swim/Hydration|Water Absorb|50/50|Water 1|0.80|17.00
+#537|Seismitoad|Seismitoad|Water/Ground|Vibration|Swift Swim/Poison Touch|Water Absorb|50/50|Water 1|1.50|62.00
+#538|Throh|Throh|Fighting|Judo|Guts/Inner Focus|Mold Breaker|100/0|Humanshape|1.30|55.50
+#539|Sawk|Sawk|Fighting|Karate|Sturdy/Inner Focus|Mold Breaker|100/0|Humanshape|1.40|51.00
+#540|Sewaddle|Sewaddle|Bug/Grass|Sewing|Swarm/Chlorophyll|Overcoat|50/50|Bug|0.30|2.50
+#541|Swadloon|Swadloon|Bug/Grass|Leaf-Wrapped|Leaf Guard/Chlorophyll|Overcoat|50/50|Bug|0.50|7.30
+#542|Leavanny|Leavanny|Bug/Grass|Nurturing|Swarm/Chlorophyll|Overcoat|50/50|Bug|1.20|20.50
+#543|Venipede|Venipede|Bug/Poison|Centipede|Poison Point/Swarm|Speed Boost|50/50|Bug|0.40|5.30
+#544|Whirlipede|Whirlipede|Bug/Poison|Curlipede|Poison Point/Swarm|Speed Boost|50/50|Bug|1.20|58.50
+#545|Scolipede|Scolipede|Bug/Poison|Megapede|Poison Point/Swarm|Speed Boost|50/50|Bug|2.50|200.50
+#546|Cottonee|Cottonee|Grass|Cotton Puff|Prankster/Infiltrator|Chlorophyll|50/50|Plant|0.30|0.60
+#547|Whimsicott|Whimsicott|Grass|Windveiled|Prankster/Infiltrator|Chlorophyll|50/50|Plant|0.70|6.60
+#548|Petilil|Petilil|Grass|Bulb|Chlorophyll/Own Tempo|Leaf Guard|0/100|Plant|0.50|6.60
+#549|Liligant|Liligant|Grass|Flowering|Chlorophyll/Own Tempo|Leaf Guard|0/100|Plant|1.10|16.30
+#550|Basculin|Basculin Red Stripe|Water|Hostile|Reckless/Adaptability|Mold Breaker|50/50|Water 2|1.00|18.00
+#551|Sandile|Sandile|Ground/Dark|Desert Croc|Intimidate/Moxie|Anger Point|50/50|Field|0.70|15.20
+#552|Krokorok|Krokorok|Ground/Dark|Desert Croc|Intimidate/Moxie|Anger Point|50/50|Field|1.00|33.40
+#553|Krookodile|Krookodile|Ground/Dark|Intimidation|Intimidate/Moxie|Anger Point|50/50|Field|1.50|96.30
+#554|Darumaka|Darumaka|Fire|Zen Charm|Hustle|Inner Focus|50/50|Field|0.60|37.50
+#555|Darmanitan|Darmanitan Standard Form|Fire|Blazing|Sheer Force|Zen Mode|50/50|Field|1.30|92.90
+#556|Maractus|Maractus|Grass|Cactus|Water Absorb/Chlorophyll|Storm Drain|50/50|Plant|1.00|28.00
+#557|Dwebble|Dwebble|Bug/Rock|Rock Inn|Sturdy/Shell Armor|Weak Armor|50/50|Bug, Mineral|0.30|14.50
+#558|Crustle|Crustle|Bug/Rock|Stone Home|Sturdy/Shell Armor|Weak Armor|50/50|Bug, Mineral|1.40|200.00
+#559|Scraggy|Scraggy|Dark/Fighting|Shedding|Shed Skin/Moxie|Intimidate|50/50|Field, Monster|0.60|11.80
+#560|Scrafty|Scrafty|Dark/Fighting|Hoodlum|Shed Skin/Moxie|Intimidate|50/50|Field, Monster|1.10|30.00
+#561|Sigilyph|Sigilyph|Psychic/Flying|Avianoid|Wonder Skin/Magic Guard|Tinted Lens|50/50|Field|1.40|14.00
+#562|Yamask|Yamask|Ghost|Spirit|Mummy||50/50|Mineral, Amorphous|0.50|1.50
+#563|Cofagrigus|Cofagrigus|Ghost|Coffin|Mummy||50/50|Mineral, Amorphous|1.70|76.50
+#564|Tirtouga|Tirtouga|Water/Rock|Prototurtle|Solid Rock/Sturdy|Swift Swim|87.5/12.5|Water 1, Water 3|0.70|16.50
+#565|Carracosta|Carracosta|Water/Rock|Prototurtle|Solid Rock/Sturdy|Swift Swim|87.5/12.5|Water 1, Water 3|1.20|81.00
+#566|Archen|Archen|Rock/Flying|First Bird|Defeatist||87.5/12.5|Field, Water 3|0.50|9.50
+#567|Archeops|Archeops|Rock/Flying|First Bird|Defeatist||87.5/12.5|Field, Water 3|1.40|32.00
+#568|Trubbish|Trubbish|Poison|Trash Bag|Stench/Sticky Hold|Aftermath|50/50|Mineral|0.60|31.00
+#569|Garbodor|Garbodor|Poison|Trash Heap|Stench/Weak Armor|Aftermath|50/50|Mineral|1.90|107.30
+#570|Zorua|Zorua|Dark|Tricky Fox|Illusion||87.5/12.5|Field|0.70|12.50
+#571|Zoroark|Zoroark|Dark|Illusion Fox|Illusion||87.5/12.5|Field|1.60|81.10
+#572|Minccino|Minccino|Normal|Chinchilla|Cute Charm/Technician|Skill Link|25/75|Field|0.40|5.80
+#573|Cinccino|Cinccino|Normal|Scarf|Cute Charm/Technician|Skill Link|25/75|Field|0.50|7.50
+#574|Gothita|Gothita|Psychic|Fixation|Frisk/Competitive|Shadow Tag|25/75|Humanshape|0.40|5.80
+#575|Gothorita|Gothorita|Psychic|Manipulate|Frisk/Competitive|Shadow Tag|25/75|Humanshape|0.70|18.00
+#576|Gothitelle|Gothitelle|Psychic|Astral Body|Frisk/Competitive|Shadow Tag|25/75|Humanshape|1.50|44.00
+#577|Solosis|Solosis|Psychic|Cell|Overcoat/Magic Guard|Regenerator|50/50|Amorphous|0.30|1.00
+#578|Duosion|Duosion|Psychic|Mitosis|Overcoat/Magic Guard|Regenerator|50/50|Amorphous|0.60|8.00
+#579|Reuniclus|Reuniclus|Psychic|Multiplying|Overcoat/Magic Guard|Regenerator|50/50|Amorphous|1.00|20.10
+#580|Ducklett|Ducklett|Water/Flying|Water Bird|Keen Eye/Big Pecks|Hydration|50/50|Water 1, Field|0.50|5.50
+#581|Swanna|Swanna|Water/Flying|White Bird|Keen Eye/Big Pecks|Hydration|50/50|Water 1, Field|1.30|24.20
+#582|Vanillite|Vanillite|Ice|Fresh Snow|Ice Body|Weak Armor|50/50|Mineral|0.40|5.70
+#583|Vanillish|Vanillish|Ice|Icy Snow|Ice Body|Weak Armor|50/50|Mineral|1.10|41.00
+#584|Vanilluxe|Vanilluxe|Ice|Snowstorm|Ice Body|Weak Armor|50/50|Mineral|1.30|57.50
+#585|Deerling|Deerling Spring|Normal/Grass|Season|Chlorophyll/Sap Sipper|Serene Grace|50/50|Field|0.60|19.50
+#586|Sawsbuck|Sawsbuck Spring|Normal/Grass|Season|Chlorophyll/Sap Sipper|Serene Grace|50/50|Field|1.90|92.50
+#587|Emolga|Emolga|Electric/Flying|Sky Squirrel|Static|Motor Drive|50/50|Field|0.40|5.00
+#588|Karrablast|Karrablast|Bug|Clamping|Swarm/Shed Skin|No Guard|50/50|Bug|0.50|5.90
+#589|Escavalier|Escavalier|Bug/Steel|Cavalry|Swarm/Shell Armor|Overcoat|50/50|Bug|1.00|33.00
+#590|Foongus|Foongus|Grass/Poison|Mushroom|Effect Spore|Regenerator|50/50|Plant|0.20|1.00
+#591|Amoonguss|Amoonguss|Grass/Poison|Mushroom|Effect Spore|Regenerator|50/50|Plant|0.60|10.50
+#592|Frillish|Frillish|Water/Ghost|Floating|Water Absorb/Cursed Body|Damp|50/50|Amorphous|1.20|33.00
+#593|Jellicent|Jellicent|Water/Ghost|Floating|Water Absorb/Cursed Body|Damp|50/50|Amorphous|2.20|135.00
+#594|Alomomola|Alomomola|Water|Caring|Healer/Hydration|Regenerator|50/50|Water 1, Water 2|1.20|31.60
+#595|Joltik|Joltik|Bug/Electric|Attaching|Compoundeyes/Unnerve|Swarm|50/50|Bug|0.10|0.60
+#596|Galvantula|Galvantula|Bug/Electric|EleSpider|Compoundeyes/Unnerve|Swarm|50/50|Bug|0.80|14.30
+#597|Ferroseed|Ferroseed|Grass/Steel|Thorn Seed|Iron Barbs||50/50|Plant, Mineral|0.60|18.80
+#598|Ferrothorn|Ferrothorn|Grass/Steel|Thorn Pod|Iron Barbs|Anticipation|50/50|Plant, Mineral|1.00|110.00
+#599|Klink|Klink|Steel|Gear|Plus/Minus|Clear Body|N/A|Mineral|0.30|21.00
+#600|Klang|Klang|Steel|Gear|Plus/Minus|Clear Body|N/A|Mineral|0.60|51.00
+#601|Klinklang|Klinklang|Steel|Gear|Plus/Minus|Clear Body|N/A|Mineral|0.60|81.00
+#602|Tynamo|Tynamo|Electric|EleFish|Levitate||50/50|Amorphous|0.20|0.30
+#603|Eelektrik|Eelektrik|Electric|EleFish|Levitate||50/50|Amorphous|1.20|22.00
+#604|Eelektross|Eelektross|Electric|EleFish|Levitate||50/50|Amorphous|2.10|80.50
+#605|Elgyem|Elgyem|Psychic|Cerebral|Telepathy/Synchronize|Analytic|50/50|Humanshape|0.50|9.00
+#606|Beheeyem|Beheeyem|Psychic|Cerebral|Telepathy/Synchronize|Analytic|50/50|Humanshape|1.00|34.50
+#607|Litwick|Litwick|Ghost/Fire|Candle|Flash Fire/Flame Body|Infiltrator|50/50|Amorphous|0.30|3.10
+#608|Lampent|Lampent|Ghost/Fire|Lamp|Flash Fire/Flame Body|Infiltrator|50/50|Amorphous|0.60|13.00
+#609|Chandelure|Chandelure|Ghost/Fire|Luring|Flash Fire/Flame Body|Infiltrator|50/50|Amorphous|1.00|34.30
+#610|Axew|Axew|Dragon|Tusk|Rivalry/Mold Breaker|Unnerve|50/50|Monster|0.60|18.00
+#611|Fraxure|Fraxure|Dragon|Axe Jaw|Rivalry/Mold Breaker|Unnerve|50/50|Monster|1.00|36.00
+#612|Haxorus|Haxorus|Dragon|Axe Jaw|Rivalry/Mold Breaker|Unnerve|50/50|Monster|1.80|105.50
+#613|Cubchoo|Cubchoo|Ice|Chill|Snow Cloak|Rattled|50/50|Field|0.50|8.50
+#614|Beartic|Beartic|Ice|Freezing|Snow Cloak|Swift Swim|50/50|Field|2.60|260.00
+#615|Cryogonal|Cryogonal|Ice|Crystallizing|Levitate||N/A|Mineral|1.10|148.00
+#616|Shelmet|Shelmet|Bug|Snail|Hydration/Shell Armor|Overcoat|50/50|Bug|0.40|7.70
+#617|Accelgor|Accelgor|Bug|Shell Out|Hydration/Sticky Hold|Unburden|50/50|Bug|0.80|25.30
+#618|Stunfisk|Stunfisk|Ground/Electric|Trap|Static/Limber|Sand Veil|50/50|Water 1, Amorphous|0.70|11.00
+#619|Mienfoo|Mienfoo|Fighting|Martial Arts|Inner Focus/Regenerator|Reckless|50/50|Field, Humanshape|0.90|20.00
+#620|Mienshao|Mienshao|Fighting|Martial Arts|Inner Focus/Regenerator|Reckless|50/50|Field, Humanshape|1.40|35.50
+#621|Druddigon|Druddigon|Dragon|Cave|Rough Skin/Sheer Force|Mold Breaker|50/50|Monster|1.60|139.00
+#622|Golett|Golett|Ground/Ghost|Automaton|Iron Fist/Klutz|No Guard|N/A|Mineral|1.00|92.00
+#623|Golurk|Golurk|Ground/Ghost|Automaton|Iron Fist/Klutz|No Guard|N/A|Mineral|2.80|330.00
+#624|Pawniard|Pawniard|Dark/Steel|Sharp Blade|Defiant/Inner Focus|Pressure|50/50|Humanshape|0.50|10.20
+#625|Bisharp|Bisharp|Dark/Steel|Sword Blade|Defiant/Inner Focus|Pressure|50/50|Humanshape|1.60|70.00
+#626|Bouffalant|Bouffalant|Normal|Bash Buffalo|Reckless/Sap Sipper|Soundproof|50/50|Field|1.60|94.60
+#627|Rufflet|Rufflet|Normal/Flying|Eaglet|Keen Eye/Sheer Force|Hustle|100/0|Field|0.50|10.50
+#628|Braviary|Braviary|Normal/Flying|Valiant|Keen Eye/Sheer Force|Defiant|100/0|Field|1.50|41.00
+#629|Vullaby|Vullaby|Dark/Flying|Diapered|Big Pecks/Overcoat|Weak Armor|0/100|Field|0.50|9.00
+#630|Mandibuzz|Mandibuzz|Dark/Flying|Bone Vulture|Big Pecks/Overcoat|Weak Armor|0/100|Field|1.20|39.50
+#631|Heatmor|Heatmor|Fire|Anteater|Gluttony/Flash Fire|White Smoke|50/50|Field|1.40|58.00
+#632|Durant|Durant|Bug/Steel|Iron Ant|Swarm/Hustle|Truant|50/50|Bug|0.30|33.00
+#633|Deino|Deino|Dark/Dragon|Irate|Hustle||50/50|Monster|0.80|17.30
+#634|Zweilous|Zweilous|Dark/Dragon|Hostile|Hustle||50/50|Monster|1.40|50.00
+#635|Hydreigon|Hydreigon|Dark/Dragon|Brutal|Levitate||50/50|Monster|1.80|160.00
+#636|Larvesta|Larvesta|Bug/Fire|Torch|Flame Body|Swarm|50/50|Bug|1.10|28.80
+#637|Volcarona|Volcarona|Bug/Fire|Sun|Flame Body|Swarm|50/50|Bug|1.60|46.00
+#638|Cobalion|Cobalion|Steel/Fighting|Iron Will|Justified||N/A|Undiscovered|2.10|250.00
+#639|Terrakion|Terrakion|Rock/Fighting|Cavern|Justified||N/A|Undiscovered|1.90|260.00
+#640|Virizion|Virizion|Grass/Fighting|Grassland|Justified||N/A|Undiscovered|2.00|200.00
+#641|Tornadus|Tornadus Incarnate|Flying|Cyclone|Prankster|Defiant|100/0|Undiscovered|1.50|63.00
+#642|Thundurus|Thundurus Incarnate|Electric/Flying|Bolt Strike|Prankster|Defiant|100/0|Undiscovered|1.50|61.00
+#643|Reshiram|Reshiram|Dragon/Fire|Vast White|Turboblaze||N/A|Undiscovered|3.20|330.00
+#644|Zekrom|Zekrom|Dragon/Electric|Deep Black|Teravolt||N/A|Undiscovered|2.90|345.00
+#645|Landorus|Landorus Incarnate|Ground/Flying|Abundance|Sand Force|Sheer Force|100/0|Undiscovered|1.50|68.00
+#646|Kyurem|Kyurem|Dragon/Ice|Boundary|Pressure||N/A|Undiscovered|3.00|325.00
+#647|Keldeo|Keldeo|Water/Fighting|Colt|Justified||N/A|Undiscovered|1.40|48.50
+#648|Meloetta|Meloetta Aria|Normal/Psychic|Melody|Serene Grace||N/A|Undiscovered|0.60|6.50
+#649|Genesect|Genesect|Bug/Steel|Paleozoic|Download||N/A|Undiscovered|1.50|82.50
+#650|Chespin|Chespin|Grass|Spiny Nut|Overgrow|Bulletproof|87.5/12.5|Field|0.40|9.00
+#651|Quilladin|Quilladin|Grass|Spiny Armor|Overgrow|Bulletproof|87.5/12.5|Field|0.70|29.00
+#652|Chesnaught|Chesnaught|Grass/Fighting|Spiny Armor|Overgrow|Bulletproof|87.5/12.5|Field|1.60|90.00
+#653|Fennekin|Fennekin|Fire|Fox|Blaze|Magician|87.5/12.5|Field|0.40|9.40
+#654|Braixen|Braixen|Fire|Fox|Blaze|Magician|87.5/12.5|Field|1.00|14.50
+#655|Delphox|Delphox|Fire/Psychic|Fox|Blaze|Magician|87.5/12.5|Field|1.50|39.00
+#656|Froakie|Froakie|Water|Bubble Frog|Torrent|Protean|87.5/12.5|Water 1|0.30|7.00
+#657|Frogadier|Frogadier|Water|Bubble Frog|Torrent|Protean|87.5/12.5|Water 1|0.60|10.90
+#658|Greninja|Greninja|Water/Dark|Ninja|Torrent|Protean|87.5/12.5|Water 1|1.50|40.00
+#659|Bunnelby|Bunnelby|Normal|Digging|Cheek Pouch/Pickup|Huge Power|50/50|Field|0.40|5.00
+#660|Diggersby|Diggersby|Normal/Ground|Digging|Cheek Pouch/Pickup|Huge Power|50/50|Field|1.00|42.40
+#661|Fletchling|Fletchling|Normal/Flying|Tiny Robin|Big Pecks|Gale Wings|50/50|Flying|0.30|1.70
+#662|Fletchinder|Fletchinder|Fire/Flying|Ember|Flame Body|Gale Wings|50/50|Flying|0.70|16.00
+#663|Talonflame|Talonflame|Fire/Flying|Scorching|Flame Body|Gale Wings|50/50|Flying|1.20|24.50
+#664|Scatterbug|Scatterbug|Bug|Scatterdust|Compoundeyes/Shield Dust|Friend Guard|50/50|Bug|0.30|2.50
+#665|Spewpa|Spewpa|Bug|Scatterdust|Shed Skin|Friend Guard|50/50|Bug|0.30|8.40
+#666|Vivillon|Vivillon|Bug/Flying|Scale|Compoundeyes/Shield Dust|Friend Guard|50/50|Bug|1.20|17.00
+#667|Litleo|Litleo|Fire/Normal|Lion Cub|Rivalry/Unnerve|Moxie|50/50|Field|0.60|13.50
+#668|Pyroar|Pyroar|Fire/Normal|Royal|Rivalry/Unnerve|Moxie|50/50|Field|1.50|81.50
+#669|Flabébé|Flabébé|Fairy|Single Bloom|Flower Veil|Symbiosis|0/100|Fairy|0.10|0.10
+#670|Floette|Floette|Fairy|Single Bloom|Flower Veil|Symbiosis|0/100|Fairy|0.20|0.90
+#671|Florges|Florges|Fairy|Garden|Flower Veil|Symbiosis|0/100|Fairy|1.10|10.00
+#672|Skiddo|Skiddo|Grass|Mount|Sap Sipper|Grass Pelt|50/50|Grass|0.90|31.00
+#673|Gogoat|Gogoat|Grass|Mount|Sap Sipper|Grass Pelt|50/50|Grass|1.70|91.00
+#674|Pancham|Pancham|Fighting|Playful|Iron Fist/Mold Breaker|Scrappy|50/50|Field, Humanshape|0.60|8.00
+#675|Pangoro|Pangoro|Fighting/Dark|Daunting|Iron Fist/Mold Breaker|Scrappy|50/50|Field, Humanshape|2.10|136.00
+#676|Furfrou|Furfrou|Normal|Poodle|Fur Coat||50/50|Field|1.20|28.00
+#677|Espurr|Espurr|Psychic|Restraint|Keen Eye/Infiltrator|Own Tempo|50/50|Field|0.30|3.50
+#678|Meowstic♂|Meowstic♂|Psychic|Constraint|Keen Eye/Infiltrator|Prankster|100/0|Field|0.60|8.50
+#679|Honedge|Honedge|Steel/Ghost|Sword|No Guard||50/50|Mineral|0.80|2.00
+#680|Doublade|Doublade|Steel/Ghost|Sword|No Guard||50/50|Mineral|0.80|4.50
+#681|Aegislash|Aegislash Shield|Steel/Ghost|Royal Sword|Stance Change||50/50|Mineral|1.70|53.00
+#682|Spritzee|Spritzee|Fairy|Perfume|Healer|Aroma Veil|50/50|Fairy|0.20|0.50
+#683|Aromatisse|Aromatisse|Fairy|Fragrance|Healer|Aroma Veil|50/50|Fairy|0.80|15.50
+#684|Swirlix|Swirlix|Fairy|Cotton Candy|Sweet Veil|Unburden|50/50|Fairy|0.40|3.50
+#685|Slurpuff|Slurpuff|Fairy|Meringue|Sweet Veil|Unburden|50/50|Fairy|0.80|5.00
+#686|Inkay|Inkay|Dark/Psychic|Revolving|Suction Cups/Contrary|Infiltrator|50/50|Water 1, Water 2|0.40|3.50
+#687|Malamar|Malamar|Dark/Psychic|Overturning|Suction Cups/Contrary|Infiltrator|50/50|Water 1, Water 2|1.50|47.00
+#688|Binacle|Binacle|Rock/Water|Two-Handed|Sniper/Tough Claws|Pickpocket|50/50|Water 3|0.50|31.00
+#689|Barbaracle|Barbaracle|Rock/Water|Collective|Sniper/Tough Claws|Pickpocket|50/50|Water 3|1.30|96.00
+#690|Skrelp|Skrelp|Poison/Water|Mock Kelp|Poison Point/Poison Touch|Adaptability|50/50|Water 1, Dragon|0.50|7.30
+#691|Dragalge|Dragalge|Poison/Dragon|Mock Kelp|Poison Point/Poison Touch|Adaptability|50/50|Water 1, Dragon|1.80|81.50
+#692|Clauncher|Clauncher|Water|Water Gun|Mega Launcher||50/50|Water 1, Water 3|0.50|8.30
+#693|Clawitzer|Clawitzer|Water|Howitzer|Mega Launcher||50/50|Water 1, Water 3|1.30|35.30
+#694|Helioptile|Helioptile|Electric/Normal|Generator|Sand Veil/Dry Skin|Solar Power|50/50|Monster, Dragon|0.50|6.00
+#695|Heliolisk|Heliolisk|Electric/Normal|Generator|Sand Veil/Dry Skin|Solar Power|50/50|Monster, Dragon|1.00|21.00
+#696|Tyrunt|Tyrunt|Rock/Dragon|Royal Heir|Strong Jaw|Rock Head|87.5/12.5|Monster, Dragon|0.80|26.00
+#697|Tyrantrum|Tyrantrum|Rock/Dragon|Despot|Strong Jaw|Rock Head|87.5/12.5|Monster, Dragon|2.50|270.00
+#698|Amaura|Amaura|Rock/Ice|Tundra|Refrigerate|Snow Warning|87.5/12.5|Monster|1.30|25.20
+#699|Aurorus|Aurorus|Rock/Ice|Tundra|Refrigerate|Snow Warning|87.5/12.5|Monster|2.70|225.00
+#700|Sylveon|Sylveon|Fairy|Intertwining|Cute Charm|Pixilate|87.5/12.5|Field|1.00|23.50
+#701|Hawlucha|Hawlucha|Fighting/Flying|Wrestling|Limber/Unburden|Mold Breaker|50/50|Human-Like|0.80|21.50
+#702|Dedenne|Dedenne|Electric/Fairy|Antenna|Cheek Pouch/Pickup|Plus|50/50|Field, Fairy|0.20|2.20
+#703|Carbink|Carbink|Rock/Fairy|Jewel|Clear Body|Sturdy|N/A|Fairy, Mineral|0.30|5.70
+#704|Goomy|Goomy|Dragon|Soft Tissue|Sap Sipper/Hydration|Gooey|50/50|Dragon|0.30|2.80
+#705|Sliggoo|Sliggoo|Dragon|Soft Tissue|Sap Sipper/Hydration|Gooey|50/50|Dragon|0.80|17.50
+#706|Goodra|Goodra|Dragon|Dragon|Sap Sipper/Hydration|Gooey|50/50|Dragon|2.00|150.50
+#707|Klefki|Klefki|Steel/Fairy|Key Ring|Prankster|Magician|50/50|Mineral|0.20|3.00
+#708|Phantump|Phantump|Ghost/Grass|Stump|Natural Cure/Frisk|Harvest|50/50|Grass, Amorphous|0.40|7.00
+#709|Trevenant|Trevenant|Ghost/Grass|Elder Tree|Natural Cure/Frisk|Harvest|50/50|Grass, Amorphous|1.50|71.00
+#710|Pumpkaboo|Pumpkaboo Average|Ghost/Grass|Pumpkin|Pickup/Frisk|Insomnia|50/50|Amorphous|0.40|5.00
+#711|Gourgeist|Gourgeist Average|Ghost/Grass|Pumpkin|Pickup/Frisk|Insomnia|50/50|Amorphous|0.90|12.50
+#712|Bergmite|Bergmite|Ice|Ice Chunk|Ice Body/Own Tempo|Sturdy|50/50|Monster|1.00|99.50
+#713|Avalugg|Avalugg|Ice|Iceberg|Ice Body/Own Tempo|Sturdy|50/50|Monster|2.00|505.00
+#714|Noibat|Noibat|Flying/Dragon|Sound Wave|Infiltrator/Frisk|Telepathy|50/50|Flying|0.50|8.00
+#715|Noivern|Noivern|Flying/Dragon|Sound Wave|Infiltrator/Frisk|Telepathy|50/50|Flying|1.50|85.00
+#716|Xerneas|Xerneas|Fairy|Life|Fairy Aura||N/A|Undiscovered|3.00|215.00
+#717|Yveltal|Yveltal|Dark/Flying|Destruction|Dark Aura||N/A|Undiscovered|5.80|203.00
+#718|Zygarde|Zygarde|Dragon/Ground|Order|Aura Break||N/A|Undiscovered|5.00|305.00

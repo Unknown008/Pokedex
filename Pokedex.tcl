@@ -132,20 +132,62 @@ foreach {a b} {1 I 2 II 3 III 4 IV 5 V 6 VI} {
   $note add $note.gen$a -text " Gen $b "
 }
 
-foreach i {2 3 4 5 6} {
-  labelframe $note.gen$i.lab -text "Pokemon" -labelanchor n
-  pack [label $note.gen$i.lab.sprite -image ""]
-  grid $note.gen$i.lab -row 0 -column 0 -sticky nw
-  grid columnconfigure $note.gen$i 0 -weight 1 -minsize 211
-  grid rowconfigure $note.gen$i 0 -weight 1 -minsize 240
+foreach i {1 2 3 4 5 6} {
+  ttk::label $note.gen$i.lab -text "Pok\u00E9mon" -anchor n
+  
+  image create photo default -file "$pokeDir/data/sprites-6/default.png" -format png
+  pack [label $note.gen$i.sprite -image default]
+  
+  pack [ttk::frame $note.gen$i.info]
+  label $note.gen$i.info.formlab -text "Form name: "
+  label $note.gen$i.info.formvar -text "N/A"
+  label $note.gen$i.info.typelab -text "Type: "
+  label $note.gen$i.info.typevar -text "Unknown"
+  label $note.gen$i.info.genulab -text "Genus: "
+  label $note.gen$i.info.genuvar -text "Unknown"
+  label $note.gen$i.info.abillab -text "Abilities: "
+  label $note.gen$i.info.abilvar -text "Unknown"
+  label $note.gen$i.info.gendlab -text "Gender ratio: "
+  label $note.gen$i.info.gendvar -text " - / -  %"
+  label $note.gen$i.info.eggglab -text "Egg Group: "
+  label $note.gen$i.info.egggvar -text "Unknown"
+  label $note.gen$i.info.heiglab -text "Height: "
+  label $note.gen$i.info.heigvar -text "Unknown"
+  label $note.gen$i.info.weiglab -text "Weight: "
+  label $note.gen$i.info.weigvar -text "Unknown"
+  
+  grid $note.gen$i.lab -row 0 -column 0
+  grid $note.gen$i.sprite -row 1 -column 0
+  grid $note.gen$i.info -row 1 -column 1 -sticky nw
+  
+  grid $note.gen$i.info.formlab -row 0 -column 0 -sticky nw
+  grid $note.gen$i.info.formvar -row 0 -column 1 -sticky nw
+  grid $note.gen$i.info.typelab -row 1 -column 0 -sticky nw
+  grid $note.gen$i.info.typevar -row 1 -column 1 -sticky nw
+  grid $note.gen$i.info.genulab -row 2 -column 0 -sticky nw
+  grid $note.gen$i.info.genuvar -row 2 -column 1 -sticky nw
+  grid $note.gen$i.info.abillab -row 3 -column 0 -sticky nw
+  grid $note.gen$i.info.abilvar -row 3 -column 1 -sticky nw
+  grid $note.gen$i.info.gendlab -row 4 -column 0 -sticky nw
+  grid $note.gen$i.info.gendvar -row 4 -column 1 -sticky nw
+  grid $note.gen$i.info.eggglab -row 5 -column 0 -sticky nw
+  grid $note.gen$i.info.egggvar -row 5 -column 1 -sticky nw
+  grid $note.gen$i.info.heiglab -row 6 -column 0 -sticky nw
+  grid $note.gen$i.info.heigvar -row 6 -column 1 -sticky nw
+  grid $note.gen$i.info.weiglab -row 7 -column 0 -sticky nw
+  grid $note.gen$i.info.weigvar -row 7 -column 1 -sticky nw
+  
+  grid columnconfigure $note.gen$i.info 0 -minsize 70
+  grid columnconfigure $note.gen$i.info 1 -minsize 100
+  grid columnconfigure $note.gen$i 0 -weight 1;# -minsize 100
+  grid rowconfigure $note.gen$i 0 -weight 1;# -minsize 300
 }
 
+update idletasks
 after idle [wm minsize . [winfo width .] [winfo height .]]
 
-
-
 # Binds
-bind .sidepane.top.entry <KeyPress-Return> [list poke_populate $pokemonSpecies]
+bind .sidepane.top.entry <KeyPress-Return> "poke_populate \$pokemonSpecies"
 bind .sidepane.top.entry <KeyPress-Down> [list poke_focus $pokeList]
 bind .sidepane.bottom.list <Double-ButtonPress-1> [list poke_entry %W $pokeList]
 bind .sidepane.bottom.list <KeyPress-Return> [list list_populate_entry %W $pokeList]
