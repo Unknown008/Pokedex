@@ -21,6 +21,7 @@ package require Tk  8.5
 package require Ttk
 package require msgcat
 package require Img
+package require sqlite3
 
 ### Pokédex version
 set version 0.01
@@ -109,7 +110,7 @@ listbox .sidepane.bottom.list -yscrollcommand ".sidepane.bottom.scroll set" \
   -activestyle dotbox -selectmode browse -listvariable $pokeList
 scrollbar .sidepane.bottom.scroll -command ".sidepane.bottom.list yview"
 pack .sidepane.bottom.list .sidepane.bottom.scroll -side left -fill y -expand 1
-.sidepane.bottom.list insert 0 {*}[lreplace $pokeList 0 0]
+.sidepane.bottom.list insert 0 {*}$pokeList
 
 ### Main part where information will be displayed
 ttk::frame .mainpane
@@ -185,6 +186,27 @@ foreach i {1 2 3 4 5 6} {
 
 update idletasks
 after idle [wm minsize . [winfo width .] [winfo height .]]
+
+# Load database and create it from txt if it doesn't exist
+sqlite3 dex pokedexdb
+dex eval {
+  CREATE TABLE IF NOT EXISTS pokeDetails(
+    id text PRIMARY KEY ASC ON CONFLICT ABORT UNIQUE,
+    pokemon text,
+    formname text,
+    type text,
+    genus text,
+    ability text,
+    habiligy text,
+    gender text,
+    egggroup text,
+    height float,
+    weight float
+  )
+}
+if {![dex exists {SELECT 1 FROM pokeDetails}]} {
+  dex copy ignore pokeDetails "$pokeDir/data/info" "|"
+}
 
 # Binds
 bind .sidepane.top.entry <KeyPress-Return> "poke_populate \$pokemonSpecies"

@@ -15,15 +15,15 @@ proc poke_entry {entry pokeList} {
   foreach i {1 2 3 4 5 6} {
     #catch {destroy [winfo children .mainpane.note.gen$i.lab]}
   }
-  set pokemon [lindex $pokeList [$entry curselection]+1]
+  set pokemon [lindex $pokeList [$entry curselection]]
   .sidepane.top.entry delete 0 end
   .sidepane.top.entry insert 0 $pokemon
   poke_populate $pokemon
 }
 
 ### Pressing enter from list
-proc list_populate_entry {lb list} {
-  if {![catch {set pokemon [lindex $list [$lb curselection]+1]}]} {
+proc list_populate_entry {lb pokeList} {
+  if {![catch {set pokemon [lindex $pokeList [$lb curselection]]}]} {
     .sidepane.top.entry delete 0 end
     .sidepane.top.entry insert 0 $pokemon
     poke_populate $pokemon
@@ -32,14 +32,14 @@ proc list_populate_entry {lb list} {
 }
 
 ### Autocomplete of entry box
-proc poke_autocomplete {entry action validation value list} {
-  if {$action == 1 && $value != {} && [set pop [lsearch -inline -nocase $list $value*]] != {}} {
+proc poke_autocomplete {entry action validation value pokeList} {
+  if {$action == 1 && $value != {} && [set pop [lsearch -inline -nocase $pokeList $value*]] != {}} {
     set cursorIndex [string length $value]
     $entry delete 0 end
     $entry insert end $pop
     $entry selection range $cursorIndex end
     $entry icursor $cursorIndex
-    poke_showlist $entry $list $value
+    poke_showlist $entry $pokeList $value
   } else {
     $entry selection clear
   }
@@ -286,12 +286,13 @@ proc poke_populate_gen6 {w pokemon idx} {
   set framesGen6 [get_frames "$pokeDir/data/sprites-6/$pokemon.gif"]
   set interval [get_fps "$pokeDir/data/sprites-6/$pokemon.gif"]
 
-  $w.gen6.lab configure -text $pokemon
+  
   $w.gen6.sprite configure -image [lindex $framesGen6 0]
   
   after idle "animate_poke $w.gen6.sprite \"$framesGen6\" $interval"
-  # Populate details
-  info_populate $w $pokemon $idx 6
+  # Populate details. Since lists are zero based, 1 has to be added to $idx
+  incr idx
+  info_populate $w $pokemon [format "#%03d" $idx] 6
 }
 
 ### Update tabs
@@ -308,15 +309,17 @@ proc tab_update {w idx} {
 ### Add informations
 proc info_populate {w pokemon idx i} {
   global pokeDir
-  set data [open "$pokeDir/data/info.txt" r]
-  fconfigure $data -encoding utf-8
-  while {[gets $data line] != -1} {
-    if {[lindex [split $line "|"] 0] eq [format "#%03d" $idx]} {break}
-  }
-  close $data
-  set datagroup [split $line "|"]
-  lassign $datagroup - - formname type genus ability hability gender egggroup height \
+  #set data [open "$pokeDir/data/info.txt" r]
+  #fconfigure $data -encoding utf-8
+  #while {[gets $data line] != -1} {
+  #  if {[lindex [split $line "|"] 0] eq [format "#%03d" $idx]} {break}
+  #}
+  #close $data
+  #set datagroup [split $line "|"]
+  set datagroup [dex eval {SELECT * FROM pokeDetails WHERE id = $idx}]
+  lassign $datagroup id - formname type genus ability hability gender egggroup height \
     weight
+  $w.gen$i.lab configure -text "$id $pokemon"
   $w.gen$i.info.formvar configure -text $formname
   $w.gen$i.info.typevar configure -text $type
   $w.gen$i.info.genuvar configure -text $genus
