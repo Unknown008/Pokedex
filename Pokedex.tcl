@@ -179,7 +179,7 @@ foreach i {1 2 3 4 5 6} {
   grid $note.gen$i.info.weigvar -row 7 -column 1 -sticky nw
   
   grid columnconfigure $note.gen$i.info 0 -minsize 70
-  grid columnconfigure $note.gen$i.info 1 -minsize 100
+  grid columnconfigure $note.gen$i.info 1 -minsize 200
   grid columnconfigure $note.gen$i 0 -weight 1;# -minsize 100
   grid rowconfigure $note.gen$i 0 -weight 1;# -minsize 300
 }

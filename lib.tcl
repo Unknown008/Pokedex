@@ -323,7 +323,7 @@ proc info_populate {w pokemon idx i} {
   $w.gen$i.info.formvar configure -text $formname
   $w.gen$i.info.typevar configure -text $type
   $w.gen$i.info.genuvar configure -text $genus
-  $w.gen$i.info.abilvar configure -text $ability
+  $w.gen$i.info.abilvar configure -text "$ability/$hability"
   $w.gen$i.info.gendvar configure -text $gender
   $w.gen$i.info.egggvar configure -text $egggroup
   $w.gen$i.info.heigvar configure -text "$height m"
