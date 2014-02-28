@@ -22,6 +22,7 @@ package require Ttk
 package require msgcat
 package require Img
 package require sqlite3
+package require tooltip
 
 ### Pokédex version
 set version 0.01
@@ -56,13 +57,17 @@ menu $m -tearoff 0
 $menu add cascade -label [mc "File"] -menu $m -underline 0
 $m add command -label [mc "Import mod"] -command {error "just testing"} \
   -accelerator Ctrl+I
-$m add command -label [mc "Language"] -command {error "just testing"}
+$m add cascade -label [mc "Language"] -menu $m.lang -underline 0
 $m add separator
 $m add command -label [mc "Close"] -command {exit} -accelerator Ctrl+Q
 
 bind . <Control-KeyPress-I> {error "just testing"}
 bind . <Alt-KeyPress-F4> {exit}
 bind . <Control-KeyPress-Q> {exit}
+
+menu $m.lang -tearoff 0
+$m.lang add radio -label "English" -variable language
+$m.lang invoke 1
 
 ### Tools
 set m $menu.tools
@@ -134,60 +139,87 @@ foreach {a b} {1 I 2 II 3 III 4 IV 5 V 6 VI} {
 }
 
 foreach i {1 2 3 4 5 6} {
-  ttk::label $note.gen$i.lab -text "Pok\u00E9mon" -anchor n
+  image create photo default -file "$pokeDir/data/sprites-6/default.png" \
+    -format png
   
-  image create photo default -file "$pokeDir/data/sprites-6/default.png" -format png
-  pack [label $note.gen$i.sprite -image default]
+  grid [ttk::label $note.gen$i.lab -text [mc "Pok\u00E9mon"] -anchor n] \
+    -row 0 -column 0
+  grid [ttk::frame $note.gen$i.down] -row 1 -column 0 -sticky nw
+  grid [label $note.gen$i.down.sprite -image default] -row 0 -column 0 -sticky nw
+  grid [ttk::frame $note.gen$i.down.info] -row 0 -column 1 -sticky nw
   
-  pack [ttk::frame $note.gen$i.info]
-  label $note.gen$i.info.formlab -text "Form name: "
-  label $note.gen$i.info.formvar -text "N/A"
-  label $note.gen$i.info.typelab -text "Type: "
-  label $note.gen$i.info.typevar -text "Unknown"
-  label $note.gen$i.info.genulab -text "Genus: "
-  label $note.gen$i.info.genuvar -text "Unknown"
-  label $note.gen$i.info.abillab -text "Abilities: "
-  label $note.gen$i.info.abilvar -text "Unknown"
-  label $note.gen$i.info.gendlab -text "Gender ratio: "
-  label $note.gen$i.info.gendvar -text " - / -  %"
-  label $note.gen$i.info.eggglab -text "Egg Group: "
-  label $note.gen$i.info.egggvar -text "Unknown"
-  label $note.gen$i.info.heiglab -text "Height: "
-  label $note.gen$i.info.heigvar -text "Unknown"
-  label $note.gen$i.info.weiglab -text "Weight: "
-  label $note.gen$i.info.weigvar -text "Unknown"
+  label $note.gen$i.down.info.formlab -text [mc "Form name:"]
+  label $note.gen$i.down.info.typelab -text [mc "Type:"]
+  label $note.gen$i.down.info.genulab -text [mc "Genus:"]
+  label $note.gen$i.down.info.abillab -text [mc "Abilities:"]
+  label $note.gen$i.down.info.gendlab -text [mc "Gender Ratio:"]
+  label $note.gen$i.down.info.eggglab -text [mc "Egg Group:"]
+  label $note.gen$i.down.info.heiglab -text [mc "Height:"]
+  label $note.gen$i.down.info.weiglab -text [mc "Weight:"]
   
-  grid $note.gen$i.lab -row 0 -column 0
-  grid $note.gen$i.sprite -row 1 -column 0
-  grid $note.gen$i.info -row 1 -column 1 -sticky nw
+  text $note.gen$i.down.info.formvar -width 40 -height 1 -font TkDefaultFont \
+    -background "#F0F0F0" -relief flat
+  $note.gen$i.down.info.formvar insert end [mc "Unknown"]
+  $note.gen$i.down.info.formvar configure -state disabled
+  text $note.gen$i.down.info.typevar -width 40 -height 1 -font TkDefaultFont \
+    -background "#F0F0F0" -relief flat
+  $note.gen$i.down.info.typevar insert end [mc "Unknown"]
+  $note.gen$i.down.info.typevar configure -state disabled
+  text $note.gen$i.down.info.genuvar -width 40 -height 1 -font TkDefaultFont \
+    -background "#F0F0F0" -relief flat
+  $note.gen$i.down.info.genuvar insert end [mc "Unknown"]
+  $note.gen$i.down.info.genuvar configure -state disabled
+  text $note.gen$i.down.info.abilvar -width 40 -height 1 -font TkDefaultFont \
+    -background "#F0F0F0" -relief flat
+  $note.gen$i.down.info.abilvar insert end [mc "Unknown"]
+  $note.gen$i.down.info.abilvar configure -state disabled
+  $note.gen$i.down.info.abilvar tag configure hidden -foreground purple
+  text $note.gen$i.down.info.gendvar -width 40 -height 1 -font TkDefaultFont \
+    -background "#F0F0F0" -relief flat
+  $note.gen$i.down.info.gendvar insert end " - / -  %"
+  $note.gen$i.down.info.gendvar configure -state disabled
+  $note.gen$i.down.info.gendvar tag configure male -foreground blue
+  $note.gen$i.down.info.gendvar tag configure female -foreground red
+  text $note.gen$i.down.info.egggvar -width 40 -height 1 -font TkDefaultFont \
+    -background "#F0F0F0" -relief flat
+  $note.gen$i.down.info.egggvar insert end [mc "Unknown"]
+  $note.gen$i.down.info.egggvar configure -state disabled
+  text $note.gen$i.down.info.heigvar -width 40 -height 1 -font TkDefaultFont \
+    -background "#F0F0F0" -relief flat
+  $note.gen$i.down.info.heigvar insert end [mc "Unknown"]
+  $note.gen$i.down.info.heigvar configure -state disabled
+  text $note.gen$i.down.info.weigvar -width 40 -height 1 -font TkDefaultFont \
+    -background "#F0F0F0" -relief flat
+  $note.gen$i.down.info.weigvar insert end [mc "Unknown"]
+  $note.gen$i.down.info.weigvar configure -state disabled
+ 
+  grid $note.gen$i.down.info.formlab -row 0 -column 0 -sticky nw
+  grid $note.gen$i.down.info.formvar -row 0 -column 1 -sticky nw
+  grid $note.gen$i.down.info.typelab -row 1 -column 0 -sticky nw
+  grid $note.gen$i.down.info.typevar -row 1 -column 1 -sticky nw
+  grid $note.gen$i.down.info.genulab -row 2 -column 0 -sticky nw
+  grid $note.gen$i.down.info.genuvar -row 2 -column 1 -sticky nw
+  grid $note.gen$i.down.info.abillab -row 3 -column 0 -sticky nw
+  grid $note.gen$i.down.info.abilvar -row 3 -column 1 -sticky nw
+  grid $note.gen$i.down.info.gendlab -row 4 -column 0 -sticky nw
+  grid $note.gen$i.down.info.gendvar -row 4 -column 1 -sticky nw
+  grid $note.gen$i.down.info.eggglab -row 5 -column 0 -sticky nw
+  grid $note.gen$i.down.info.egggvar -row 5 -column 1 -sticky nw
+  grid $note.gen$i.down.info.heiglab -row 6 -column 0 -sticky nw
+  grid $note.gen$i.down.info.heigvar -row 6 -column 1 -sticky nw
+  grid $note.gen$i.down.info.weiglab -row 7 -column 0 -sticky nw
+  grid $note.gen$i.down.info.weigvar -row 7 -column 1 -sticky nw
   
-  grid $note.gen$i.info.formlab -row 0 -column 0 -sticky nw
-  grid $note.gen$i.info.formvar -row 0 -column 1 -sticky nw
-  grid $note.gen$i.info.typelab -row 1 -column 0 -sticky nw
-  grid $note.gen$i.info.typevar -row 1 -column 1 -sticky nw
-  grid $note.gen$i.info.genulab -row 2 -column 0 -sticky nw
-  grid $note.gen$i.info.genuvar -row 2 -column 1 -sticky nw
-  grid $note.gen$i.info.abillab -row 3 -column 0 -sticky nw
-  grid $note.gen$i.info.abilvar -row 3 -column 1 -sticky nw
-  grid $note.gen$i.info.gendlab -row 4 -column 0 -sticky nw
-  grid $note.gen$i.info.gendvar -row 4 -column 1 -sticky nw
-  grid $note.gen$i.info.eggglab -row 5 -column 0 -sticky nw
-  grid $note.gen$i.info.egggvar -row 5 -column 1 -sticky nw
-  grid $note.gen$i.info.heiglab -row 6 -column 0 -sticky nw
-  grid $note.gen$i.info.heigvar -row 6 -column 1 -sticky nw
-  grid $note.gen$i.info.weiglab -row 7 -column 0 -sticky nw
-  grid $note.gen$i.info.weigvar -row 7 -column 1 -sticky nw
-  
-  grid columnconfigure $note.gen$i.info 0 -minsize 70
-  grid columnconfigure $note.gen$i.info 1 -minsize 200
-  grid columnconfigure $note.gen$i 0 -weight 1;# -minsize 100
-  grid rowconfigure $note.gen$i 0 -weight 1;# -minsize 300
+  grid columnconfigure $note.gen$i.down.info 0 -minsize 70
+  grid columnconfigure $note.gen$i.down.info 1 -minsize 200
+  grid columnconfigure $note.gen$i 0 -weight 1
+  grid rowconfigure $note.gen$i 0 -weight 1
 }
 
 update idletasks
 after idle [wm minsize . [winfo width .] [winfo height .]]
 
-# Load database and create it from txt if it doesn't exist
+### Load database and create it from txt if it doesn't exist
 sqlite3 dex pokedexdb
 dex eval {
   CREATE TABLE IF NOT EXISTS pokeDetails(
@@ -197,15 +229,70 @@ dex eval {
     type text,
     genus text,
     ability text,
-    habiligy text,
+    hability text,
     gender text,
     egggroup text,
     height float,
-    weight float
+    weight float,
+    legend bool,
+    evolve_cond text,
+    hp int,
+    atk int,
+    def int,
+    spatk int,
+    spdef int,
+    spd int,
+    capture int,
+    final bool,
+    stage int,
+    effort int,
+    hatch_counter int,
+    happiness int,
+    exp int,
+    forms int,
+    colour text,
+    base_exp int
   )
 }
+
+dex eval {
+  CREATE TABLE IF NOT EXISTS moveDetails(
+    id text PRIMARY KEY ASC ON CONFLICT ABORT UNIQUE,
+    type text,
+    class text,
+    pp int,
+    basepower int,
+    accuracy int,
+    priority int,
+    effect text,
+    contact bool,
+    charging bool,
+    recharge bool,
+    detectprotect bool,
+    reflectable bool,
+    snatchable bool,
+    mirrormove bool,
+    punchbased bool,
+    sound bool,
+    gravity bool,
+    defrosts bool,
+    range int,
+    heal bool,
+    infiltrate bool
+  )
+}
+
+dex eval {
+  CREATE TABLE IF NOT EXISTS abilDetails(
+    id text PRIMARY KEY ASC ON CONFLICT ABORT UNIQUE,
+    description text
+  )
+}
+
 if {![dex exists {SELECT 1 FROM pokeDetails}]} {
-  dex copy ignore pokeDetails "$pokeDir/data/info" "|"
+  dex copy ignore pokeDetails "$pokeDir/data/info" "\t"
+  dex copy ignore moveDetails "$pokeDir/data/moves-5.txt" "\t"
+  dex copy ignore abilDetails "$pokeDir/data/abilities-5.txt" "\t"
 }
 
 # Binds
@@ -213,45 +300,3 @@ bind .sidepane.top.entry <KeyPress-Return> "poke_populate \$pokemonSpecies"
 bind .sidepane.top.entry <KeyPress-Down> [list poke_focus $pokeList]
 bind .sidepane.bottom.list <Double-ButtonPress-1> [list poke_entry %W $pokeList]
 bind .sidepane.bottom.list <KeyPress-Return> [list list_populate_entry %W $pokeList]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
