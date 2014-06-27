@@ -546,7 +546,7 @@ Scolipede
 Cottonee
 Whimsicott
 Petilil
-Liligant
+Lilligant
 Basculin
 Sandile
 Krokorok
@@ -666,7 +666,7 @@ Spewpa
 Vivillon
 Litleo
 Pyroar
-Flabb
+Flabébé
 Floette
 Florges
 Skiddo
@@ -675,10 +675,10 @@ Pancham
 Pangoro
 Furfrou
 Espurr
-Meowstic?
+Meowstic
 Honedge
 Doublade
-Aegislash Shield
+Aegislash
 Spritzee
 Aromatisse
 Swirlix
@@ -716,3 +716,4 @@ Noivern
 Xerneas
 Yveltal
 Zygarde
+Diancie
