@@ -50,6 +50,8 @@ proc type_matchup {} {
       }
       $f3.c configure -yscrollcommand "" -scrollregion "0 0 0 0"
       $f.c configure -yscrollcommand "" -scrollregion "0 0 0 0"
+      bind $f3.c <MouseWheel> {}
+      bind $f.c <MouseWheel> {}
       return
     }
     foreach {col val} $types {
@@ -122,6 +124,14 @@ proc type_matchup {} {
       -scrollregion "0 0 100 $height"
     $f.c configure -yscrollcommand "$f4.vscroll set" \
       -scrollregion "0 0 $px $height"
+      
+    proc mouse_scroll {a b d} {
+      $a yview scroll [expr {-$d/120}] units
+      $b yview scroll [expr {-$d/120}] units
+    }
+      
+    bind $f3.c <MouseWheel> [list mouse_scroll $f3.c $f.c %D]
+    bind $f.c <MouseWheel> [list mouse_scroll $f3.c $f.c %D]
   }
   
   proc hide {px whiteList types gen otypes} {
