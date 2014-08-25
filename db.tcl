@@ -264,7 +264,7 @@ if {![dex exists {SELECT 1 FROM config}]} {
   while {[gets $f line] != -1} {
     lassign [split $line "\t"] type1 type2 gen
     dex eval {
-      INSERT INTO types VALUES(
+      INSERT INTO itypes VALUES(
         $type1,
         $type2,
         $gen
