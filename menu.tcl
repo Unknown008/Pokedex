@@ -30,11 +30,12 @@ proc type_matchup {} {
     
   }
   
+  # Switch between matchup types
   proc matchup_mode {mode px whiteList types gen otypes} {
     global typeList
     set hidden [dex eval {SELECT value FROM config WHERE param = 'matchuphide'}]
     dex eval {UPDATE config SET value = $mode WHERE param = 'matchup'}
-    
+
     set f2 .matchup.frame2
     set f3 .matchup.frame3
     set f4 .matchup.frame4
@@ -87,16 +88,8 @@ proc type_matchup {} {
           -fill $myTypes($type1) -outline black -tags "aatk $type1$type2"
         $f3.c create rectangle 50 $height 100 [expr {$height+25}] \
           -fill $myTypes($type2) -outline black -tags "aatk $type1$type2"
-        if {[lsearch $whiteList $type1] != -1} {
-          set fcolour1 white
-        } else {
-          set fcolour1 black
-        }
-        if {[lsearch $whiteList $type2] != -1} {
-          set fcolour2 white
-        } else {
-          set fcolour2 black
-        }
+        set fcolour1 [expr {[lsearch $whiteList $type1] != -1 ? "white" : "black"}]
+        set fcolour2 [expr {[lsearch $whiteList $type2] != -1 ? "white" : "black"}]
         $f3.c create text 25 [expr {$height+12}] -text $type1 \
           -justify center -fill $fcolour1 -tags "aatk $type1$type2"
         $f3.c create text 75 [expr {$height+12}] -text $type2 \
@@ -118,7 +111,8 @@ proc type_matchup {} {
       }
     }
     scrollbar $f4.vscroll -orient vertical
-    $f4.vscroll configure -command "sync_scroll \"$f.c yview $f3.c yview\""
+    $f4.vscroll configure \
+      -command "sync_scroll [list [list $f.c yview $f3.c yview]]"
     grid $f4.vscroll -row 0 -column 1 -sticky nsew
     $f3.c configure -yscrollcommand "$f4.vscroll set" \
       -scrollregion "0 0 100 $height"
@@ -190,11 +184,7 @@ proc type_matchup {} {
     if {[lsearch $otypes $type] == -1} {continue}
     $f2.c create rectangle $i 20 [expr {$i+25}] 70 -fill $types($type) \
       -outline black -tags "atk $type"
-    if {[lsearch $whiteList $type] != -1} {
-      set fcolour white
-    } else {
-      set fcolour black
-    }
+    set fcolour [expr {[lsearch $whiteList $type] != -1 ? "white" : "black"}]
     $f2.c create text [expr {$i+12}] 45 -text $type -justify center \
       -fill $fcolour -angle 90 -tags "ulabels"
   }
@@ -221,11 +211,7 @@ proc type_matchup {} {
     if {[lsearch $otypes $type] == -1} {continue}
     $f3.c create rectangle 50 $i 100 [expr {$i+25}] -fill $types($type) \
       -outline black -tags "batk $type"
-    if {[lsearch $whiteList $type] != -1} {
-      set fcolour white
-    } else {
-      set fcolour black
-    }
+    set fcolour [expr {[lsearch $whiteList $type] != -1 ? "white" : "black"}]
     $f3.c create text 75 [expr {$i+12}] -text $type -justify center \
       -fill $fcolour -tags "batk $type"
     set d -13
@@ -243,7 +229,7 @@ proc type_matchup {} {
   $m invoke 5
   $m invoke $mode  
   $m entryconfigure 5 -state $stat
-  
+
   wm maxsize $w 0 [expr {$px+70}]
   wm minsize $w 0 220
   after idle [wm resizable $w 0 1]
