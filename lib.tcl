@@ -477,7 +477,8 @@ proc info_populate {w idx i} {
   $info.weigvar insert end "$weight kg"
   $info.weigvar configure -state disabled
   
-  # Populate moves here
+  # Populate moves here e.g.
+  # $w.gen$i.move.t insert end [list Tackle Physical Normal 35 40 95 -]
 }
 
 proc form_menu {w idx gen} {
@@ -839,4 +840,27 @@ proc binom {n k} {
     set res [expr {$res*$m/$d}]
   }
   return $res
+}
+
+### Procedure for sorting columns in tablelist
+# Returns -1 if a < b
+# Returns 0 if a == b
+# Returns 1 if a > b
+proc move_sort {a b} {
+  if {[string compare $a $b] == 0} {return 0}
+  lassign {0 0} inta intb
+  if {[regexp {^[0-9]+$} $a]} {set inta 1}
+  if {[regexp {^[0-9]+$} $b]} {set intb 2}
+  
+  # $inta + $intb =
+  # 0 => none are numbers
+  # 1 => only inta is number; so $b should be smaller
+  # 2 => only intb is number; so $a should be smaller
+  # 3 => both are numbers  
+  switch [expr {$inta+$intb}] {
+    0 {return [expr {$a == "-" ? 1 : -1}]}
+    1 {return 1}
+    2 {return -1}
+    3 {return [expr {$a > $b ? 1 : -1}]}
+  }
 }
