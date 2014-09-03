@@ -212,11 +212,35 @@ foreach i [list 1 2 3 4 5 6] {
   $note.gen$i.down.info.weigvar configure -state disabled
   
   grid [ttk::frame $note.gen$i.move] -row 2 -column 0 -sticky nsew
+  scrollbar $note.gen$i.move.s -command "$note.gen$i.move.t yview"
   tablelist::tablelist $note.gen$i.move.t -columns {
-    0 "Move" 0 "Category" 0 "Type" 0 "PP" 0 "Power" 0 "Accuracy" 0 "Learning"
-  } -stretch all -background white
+    4 "Move"
+    3 "Category" center
+    3 "Type" center
+    2 "PP" right
+    2 "Pow" right
+    2 "Acc" right
+    6 "Learning"
+  } -stretch all -background white -yscrollcommand "$note.gen$i.move.s set" \
+    -arrowstyle sunken8x7 -showarrow 1 -resizablecolumns 0 \
+    -labelcommand tablelist::sortByColumn
+  $note.gen$i.move.t configcolumnlist {
+    0 -labelalign center
+    1 -labelalign center
+    2 -labelalign center
+    3 -labelalign center
+    4 -labelalign center
+    5 -labelalign center
+    6 -labelalign center
+    3 -sortmode command
+    4 -sortmode command
+    5 -sortmode command
+    3 -sortcommand move_sort
+    4 -sortcommand move_sort
+    5 -sortcommand move_sort
+  }
+
   pack $note.gen$i.move.t -fill both -expand 1 -side left
-  scrollbar $note.gen$i.move.s -command ""
   pack $note.gen$i.move.s -fill y -side left
   
   grid $note.gen$i.down.info.formlab -row 0 -column 0 -sticky nw
