@@ -160,8 +160,12 @@ foreach i [list 1 2 3 4 5 6] {
   image create photo default -format png \
     -file [file join $pokeDir data gen6 sprites default.png]
 
-  grid [label $note.gen$i.lab -text [mc "Pok\u00E9mon"] -anchor n] \
-    -row 0 -column 0
+  text $note.gen$i.lab -width 30 -height 2 -font TkDefaultFont \
+    -background "#F0F0F0" -relief flat
+  $note.gen$i.lab insert end [mc "Pok\u00E9mon"]
+  $note.gen$i.lab configure -state disabled
+  grid $note.gen$i.lab -column 0 -row 0
+  
   grid [frame $note.gen$i.down] -row 1 -column 0 -sticky nw
   grid [label $note.gen$i.down.sprite -image default] -row 0 -column 0 -sticky nw
   grid [frame $note.gen$i.down.info] -row 0 -column 1 -sticky nw
