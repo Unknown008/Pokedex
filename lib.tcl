@@ -29,7 +29,8 @@ proc poke_entry {entry pokeList} {
 
 ### Pressing enter from list
 proc list_populate_entry {lb pokeList} {
-  if {![catch {set pokemon [lindex $pokeList [$lb curselection]]}]} {
+  if {![catch {set pokemon [lindex $pokeList [$lb curselection]]}] &&
+      [$lb curselection] ne ""} {
     .sidepane.top.entry delete 0 end
     .sidepane.top.entry insert 0 $pokemon
     .sidepane.top.entry icursor end
@@ -164,11 +165,11 @@ proc poke_populate {pokemon} {
   
   # Increment index by 1 since lists are 0 based
   incr idx
-  #poke_populate_gen1 $w $idx
-  #poke_populate_gen2 $w $idx
-  #poke_populate_gen3 $w $idx
-  #poke_populate_gen4 $w $idx
-  #poke_populate_gen5 $w $idx
+  poke_populate_gen1 $w [format %03d $idx]
+  poke_populate_gen2 $w [format %03d $idx]
+  poke_populate_gen3 $w [format %03d $idx]
+  #poke_populate_gen4 $w [format %03d $idx]
+  #poke_populate_gen5 $w [format %03d $idx]
   poke_populate_gen6 $w [format %03d $idx]
 }
 
@@ -228,45 +229,55 @@ proc get_fps {file} {
 proc poke_populate_gen1 {w idx} {
   global pokeDir
   
-  catch {image create photo gen1Sprite -format png \
-    -file [file join $pokeDir data gen1 sprites $idx.png]} res
-  $w.gen1.sprite configure -image gen1Sprite  
+  if {[catch {image create photo gen1Sprite -format png \
+    -file [file join $pokeDir data gen1 sprites $idx.png]} err]} {
+    return
+  }
+  $w.gen1.down.sprite configure -image gen1Sprite  
   
   # Populate details
-  #info_populate $w $idx
+  # For now, it can return error
+  catch {info_populate $w "#$idx" 1}
 }
 
 proc poke_populate_gen2 {w idx} {
   global pokeDir
   
-  catch {image create photo gen2Sprite -format png \
-    -file [file join $pokeDir data gen2 sprites $idx.png]} res
-  $w.gen2.sprite configure -image gen2Sprite  
+  if {[catch {image create photo gen2Sprite -format png \
+    -file [file join $pokeDir data gen2 sprites $idx.png]} err]} {
+    return
+  }
+  $w.gen2.down.sprite configure -image gen2Sprite  
   
   # Populate details
-  #info_populate $w $idx
+  # For now, it can return error
+  catch {info_populate $w "#$idx" 2}
 }
 
 proc poke_populate_gen3 {w idx} {
   global pokeDir
   
-  catch {image create photo gen3Sprite -format png \
-    -file [file join $pokeDir data gen3 sprites $idx.png]} res
-  $w.gen3.sprite configure -image gen3Sprite  
+  if {[catch {image create photo gen3Sprite -format png \
+    -file [file join $pokeDir data gen3 sprites $idx.png]} err]} {
+    return
+  }
+  $w.gen3.down.sprite configure -image gen3Sprite  
   
   # Populate details
-  #info_populate $w $idx
+  catch {info_populate $w $idx 3}
 }
 
 proc poke_populate_gen4 {w idx} {
   global pokeDir
   
-  catch {image create photo gen4Sprite -format png \
-    -file [file join $pokeDir data gen4 sprites $idx.png]} res
-  $w.gen4.sprite configure -image gen4Sprite  
+  if {[catch {image create photo gen4Sprite -format png \
+    -file [file join $pokeDir data gen4 sprites $idx.png]} err]} {
+    return
+  }
+  $w.gen4.down.sprite configure -image gen4Sprite  
   
   # Populate details
-  #info_populate $w $idx
+  #info_populate $w $idx 4
 }
 
 proc poke_populate_gen5 {w idx} {
@@ -277,11 +288,11 @@ proc poke_populate_gen5 {w idx} {
   set framesGen5 [get_frames [file join $pokeDir data gen5 sprites $idx.gif]]
   set interval [get_fps [file join $pokeDir data gen5 sprites $idx.gif]]
 
-  $w.gen5.sprite configure -image [lindex $framesGen5 0]
+  $w.gen5.down.sprite configure -image [lindex $framesGen5 0]
   
   after idle "animate_poke $w.gen5.down.sprite \"$framesGen5\" $interval"
   # Populate details
-  #info_populate $w $idx
+  #info_populate $w $idx 5
 }
 
 proc poke_populate_gen6 {w idx} {
@@ -295,20 +306,24 @@ proc poke_populate_gen6 {w idx} {
   $w.gen6.down.sprite configure -image [lindex $framesGen6 0]
   after idle "animate_poke $w.gen6.down.sprite \"$framesGen6\" $interval"
   
-  # Check if stats of the female are different. If not, don't change other info
-  regexp {^[^-]+} $idx id
-  if {!("$idx-f" eq "$curIdx" || "$idx" eq "$curIdx-f") &&
-      [llength [dex eval "
-        SELECT id FROM pokeDetails6 WHERE id IN ('#$id','#$id-f')
-      "]] == 1} {
+  # Check if stats of the female/form are different. If not, don't change other info
+  set id ""
+  regexp {^[^-]+(?=-f)} $idx id
+  regexp {^[^-]*} $curIdx cid
+  
+  set entries [dex eval "SELECT id FROM pokeDetails6 WHERE id IN ('#$id','#$id-f')"]
+ 
+  if {!(($idx eq $curIdx || $idx eq "$cid-f" || "$id-f" eq $curIdx) &&
+      [llength $entries] == 1)} {
     info_populate $w "#$idx" 6
   }
+  
   set curIdx $idx
 }
 
-### Update tabs
+### Update tabs; enable/diaable them as necessary
 proc tab_update {w idx} {
-  foreach {a b} [list 0 151 1 251 2 386 3 493 4 649] {
+  foreach a {0 1 2 3 4} b {151 251 386 493 649} {
     if {$idx > $b && [$w tab $a -state] eq "normal"} {
       $w tab $a -state disabled
     } elseif {$idx <= $b && [$w tab $a -state] eq "disabled"} {
@@ -320,43 +335,57 @@ proc tab_update {w idx} {
 ### Add informations
 proc info_populate {w idx i} {
   global pokeDir
-  # 2 lines will have to be edited when Gen I-V implemented
-  set gen [dex eval {SELECT value FROM config WHERE param = 'gen'}]
-  set datagroup [dex eval "SELECT * FROM pokeDetails$gen WHERE id = '$idx'"]
+  
+  # $gen is always 6; true gen is $i
+  # set gen [dex eval {SELECT value FROM config WHERE param = 'gen'}]
+  # set datagroup [dex eval "SELECT * FROM pokeDetails$gen WHERE id = '$idx'"]
+  # set megaevos [dex eval "
+    # SELECT id FROM pokeDetails$gen WHERE id LIKE '$idx%' AND formname LIKE '%Mega%'
+  # "]
+  
+  set datagroup [dex eval "SELECT * FROM pokeDetails$i WHERE id = '$idx'"]
   set megaevos [dex eval "
-    SELECT id FROM pokeDetails$gen WHERE id LIKE '$idx%' AND formname LIKE '%Mega%'
+    SELECT id FROM pokeDetails$i WHERE id LIKE '$idx%' AND formname LIKE '%Mega%'
   "]
   
   lassign $datagroup id pokemon formname type genus ability1 ability2 hability \
     gender egggroup height weight
   regexp {^[^-]+} $idx id
   
-  $w.gen$i.lab configure -text "$id $pokemon"
+  $w.gen$i.lab configure -state normal
+  $w.gen$i.lab delete 1.0 end
+  $w.gen$i.lab insert end " $id $pokemon"
+  $w.gen$i.lab image create 1.0 -image [image create photo \
+    -format png -file [file join $pokeDir data icons [string trimleft $id #].png]]
+  $w.gen$i.lab configure -state disabled
   
   set info $w.gen$i.down.info
   $info.formvar configure -state normal
   $info.formvar delete 1.0 end
   $info.formvar insert end $formname form
   $info.formvar tag bind form <ButtonPress-1> \
-    [list form_menu $info.formvar $id $gen]
+    [list form_menu $info.formvar $id $i]
   tooltip::tooltip $info.formvar "Click for other forms"
   if {[llength $megaevos] != 0} {
     foreach mega $megaevos {
       set idx [string trimleft $mega #]
       $info.formvar insert end " "
-      set $mega [image create photo -file \
-        [file join $pokeDir data gen$i stones $idx.png]]
-      if {[string first "Mega" $formname] > -1} {
-        regexp {\d+} $idx id
-        $info.formvar window create end -create [list \
-          button %W.$mega -image [set $mega] -relief flat -cursor hand2 \
-          -command [list poke_populate_gen$i .mainpane.note $id] \
-        ]
-      } else {
-        $info.formvar window create end -create [list \
-          button %W.$mega -image [set $mega] -relief flat -cursor hand2 \
-          -command [list poke_populate_gen$i .mainpane.note $idx] \
-        ]
+      # For earlier gens, there are no megastones; file won't be found
+      catch {
+        set $mega [image create photo -file \
+          [file join $pokeDir data gen$i stones $idx.png]]
+        if {[string first "Mega" $formname] > -1} {
+          regexp {\d+} $idx id
+          $info.formvar window create end -create [list \
+            button %W.$mega -image [set $mega] -relief flat -cursor hand2 \
+            -command [list poke_populate_gen$i .mainpane.note $id] \
+          ]
+        } else {
+          $info.formvar window create end -create [list \
+            button %W.$mega -image [set $mega] -relief flat -cursor hand2 \
+            -command [list poke_populate_gen$i .mainpane.note $idx] \
+          ]
+        }
       }
     }
   }
@@ -412,9 +441,9 @@ proc info_populate {w idx i} {
     $info.gendvar insert end [lindex [split $gender "/"] 1] female
     $info.gendvar insert end " %"
     regexp {\d+} $idx id
-    if {[lsearch [glob -tails -directory \
-          [file join $pokeDir data gen$i sprites] \
-        *] "$id-f.gif"] != -1} {
+    set sprites [glob -tails -directory [file join $pokeDir data gen$i sprites] *]
+    if {[lsearch $sprites "$id-f.gif"] != -1 &&
+        [string first "Mega " $formname] == -1} {
       $info.gendvar tag bind male <Any-Enter> \
         [list linkify $info.gendvar male 1]
       $info.gendvar tag bind male <Any-Leave> \
@@ -477,8 +506,14 @@ proc info_populate {w idx i} {
   $info.weigvar insert end "$weight kg"
   $info.weigvar configure -state disabled
   
+  # Clear current contents of table
+  $w.gen$i.move.t delete 0 end
   # Populate moves here e.g.
   # $w.gen$i.move.t insert end [list Tackle Physical Normal 35 40 95 -]
+  $w.gen$i.move.t insert end [list Tackle Physical Normal 35 40 95 -]
+  $w.gen$i.move.t insert end [list Scratch Physical Normal 40 35 100 -]
+  $w.gen$i.move.t insert end [list "Water Spout" Special Water 5 * 100 -]
+  $w.gen$i.move.t insert end [list "Tail Whip" Status Normal 40 - 100 -]
 }
 
 proc form_menu {w idx gen} {
@@ -494,7 +529,7 @@ proc form_menu {w idx gen} {
     wm withdraw $lb
     wm overrideredirect $lb 1
     listbox $lb.l -exportselection 0 -selectmode browse -activestyle dotbox \
-        -listvariable $miniList
+      -listvariable $miniList
     $lb.l insert 0 {*}$miniList
     $lb.l selection clear 0 end
     $lb.l selection set 0
@@ -538,8 +573,8 @@ proc form_menu {w idx gen} {
     bind $lb <ButtonPress-1> [list sel_populate_entry %W $miniList $gen]
     bind $lb.l <ButtonPress-1> [list sel_populate_entry %W $miniList $gen]
     bind $lb <Motion> [list poke_hover %W %x %y]
-    bind $w <KeyPress-Escape> {sel_remove}
-    after idle {bind all <ButtonPress-1> {sel_remove}}
+    bind $w <KeyPress-Escape> [list sel_remove $gen]
+    after idle {bind all <ButtonPress-1> [list sel_remove $gen]}
     
     $w configure -state normal
     $w tag bind form {} {}
@@ -552,14 +587,14 @@ proc form_menu {w idx gen} {
 }
 
 ### Removing the selection window
-proc sel_remove {} {
-  set w .mainpane.note.gen6.down.info.formvar.listbox.l
+proc sel_remove {gen} {
+  set w .mainpane.note.gen$gen.down.info.formvar.listbox.l
   if {[winfo exists $w]} {
     set w [winfo parent $w]
     wm withdraw $w
-    destroy $w
     ttk::releaseGrab $w.l
     grab release $w.l
+    destroy $w
     focus .mainpane
   }
   bind all <ButtonPress-1> {}
@@ -572,7 +607,7 @@ proc sel_populate_entry {w mini gen} {
     set idx [string map {"#" ""} [lindex $idx 0]]
     poke_populate_gen$gen .mainpane.note $idx
   }
-  sel_remove
+  sel_remove $gen
 }
 
 ### Add a link formatting to the property
