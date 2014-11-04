@@ -2,10 +2,15 @@
 if {[info exists argv0] && [file tail $argv0] ne "main.tcl"} {
   tk_messageBox -title Error \
     -message "This script should be run from the main.tcl script"
-  return
+  exit
 }
 
 ### Matchup window
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# This window callable from the menu will list the various types that Pokémon
+# can have and the weakness/resist multiplier for both mono and dual typed
+# Pokémon, plus the effects of Forest's Curse and Trick-or-Treat
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 proc type_matchup {} {
   global typeList
   set gen [dex eval {SELECT value FROM config WHERE param = 'gen'}]
@@ -74,15 +79,17 @@ proc type_matchup {} {
     }
     
     $f3.c delete aatk
+    $f.c delete sec
     catch {destroy $f4.vscroll}
     set add [list]
     for {set i 0} {$i < [llength $otypes]} {incr i} {
       for {set j [expr {$i+1}]} {$j < [llength $otypes]} {incr j} {
         set type1 [lindex $otypes $i]
         set type2 [lindex $otypes $j]
-        if {[lsearch [array names myTypes] $type1] == -1 ||
-            [lsearch [array names myTypes] $type2] == -1 ||
-            ([lsearch $ilist [list $type1 $type2]] != -1 && $hidden == 1)
+        if {
+          [lsearch [array names myTypes] $type1] == -1 ||
+          [lsearch [array names myTypes] $type2] == -1 ||
+          ([lsearch $ilist [list $type1 $type2]] != -1 && $hidden == 1)
         } {continue}
         $f3.c create rectangle 0 $height 50 [expr {$height+25}] \
           -fill $myTypes($type1) -outline black -tags "aatk $type1$type2"
@@ -96,7 +103,7 @@ proc type_matchup {} {
           -justify center -fill $fcolour2 -tags "aatk $type1$type2"
         $f.c create rectangle 0 [expr {$height+2}] \
           [expr {([llength $otypes]*25)-2}] [expr {$height+21}] \
-          -fill "" -tags "effhbar h$type1$type2" -outline ""
+          -fill "" -tags "effhbar h$type1$type2 sec" -outline ""
 
         set d -13
         for {set k 0} {$k < [llength $otypes]} {incr k} {
@@ -114,7 +121,7 @@ proc type_matchup {} {
           set eff [expr {[lindex $eff 0]*[lindex $eff 1]}]
           incr d 25
           $f.c create text $d [expr {$height+12}] \
-            -text $eff -justify center -fill black -tags "eff $type1$type2 $atker"
+            -text $eff -justify center -fill black -tags "eff $type1$type2 $atker sec"
         }
         incr height 25
       }
