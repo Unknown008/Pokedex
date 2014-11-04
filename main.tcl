@@ -16,17 +16,28 @@ exec wish "$0" ${1+"$@"}
 #######################################################
 
 ### Import libraries
-package require Tcl
-package require Tk
-package require Ttk
-package require msgcat
-package require Img
-package require sqlite3
-package require tooltip
-package require tablelist
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Those are the versions with which the application was written in.
+# Tcl for main code
+# Tk for GUI; canvas features are quite specific to version
+# Ttk for pretty GUI
+# msgcat to ease multi lingual features
+# Img for picture handling
+# sqlite3 for database management. Most info stored in DB
+# tooltip for tooltips; messages that appear on mouse hover
+# tablelist for moves table
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+package require Tcl       8.5
+package require Tk        8.6
+package require Ttk       8.6
+package require msgcat    1.5.2
+package require Img       1.4.1
+package require sqlite3   3.8.0.1
+package require tooltip   1.4.4
+package require tablelist 5.11
 
 ### Pokédex version
-set version 0.01
+set version 0.02
 
 ### Safeguard cleaning everything on startup
 catch {destroy [winfo children .]}
@@ -38,11 +49,11 @@ set pokeDir [file join [pwd] [file dirname [info script]]]
 ::msgcat::mcload $pokeDir
 namespace import ::msgcat::mc
 
-### Import procedures
+### Import file containing most procedures
 source [file join $pokeDir lib.tcl]
 source [file join $pokeDir menu.tcl]
 
-### Window configurations
+### Window configurations like title, favicon and relative window position
 wm title . [mc "Pok\u00E9dex v%s" $version]
 wm iconname . Pokedex
 wm geometry . +100+100
@@ -51,20 +62,31 @@ wm geometry . +100+100
 ### Tk theme
 ttk::setTheme classic
 
-### Type list
+### List of all Pokémon types.
 set typeList [list Grass Fire Water Bug Flying Electric Ground Rock Fighting Poison \
   Normal Psychic Ghost Ice Dragon Dark Steel Fairy]
 
-### Current pokemon index
+### Current Pokémon ID in Pokédex
 set curIdx ""
   
-###
-# Menu settings
-###
+### Menu settings
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# All the menu items in the main window
+# File - Some general commands
+# Tools - Some specific tools like calculators, matchups, etc
+# About - Information not related to the coding of the app, but about the app
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 set menu .menu
 menu $menu -tearoff 0
 
-### File
+###
+# File
+#
+# Import mod - Import file containing Pokémon details other than the usual ones
+# Default generation - Set the tab and other minor settings when the app is opened
+# Language - Choose language
+# Close - Exit the app
+#
 set m $menu.file
 menu $m -tearoff 0
 $menu add cascade -label [mc "File"] -menu $m -underline 0
@@ -85,7 +107,17 @@ menu $m.lang -tearoff 0
 $m.lang add radio -label "English" -variable language
 $m.lang invoke 0
 
-### Tools
+###
+# Tools
+#
+# Search Pokémon - Search one or more Pokémon from various details
+# Search Abilities - Search one or more abilities from various details
+# Search Moves - Search one or more moves from various details
+# Search Items - Search one or more items from various details
+# Type Matchup - Type matchup chart with various options
+# Damage calculator - Calculate damage dealt when a Pokémon attacks another one
+# Compare Pokémon - Compare two Pokémon on various aspects
+#
 set m $menu.tools
 menu $m -tearoff 0
 $menu add cascade -label [mc "Tools"] -menu $m -underline 0
@@ -98,7 +130,13 @@ $m add command -label [mc "Type matchup chart"] -command {type_matchup}
 $m add command -label [mc "Damage calculator"] -command {error "just testing"}
 $m add command -label [mc "Compare Pok\u00E9mon"] -command {error "just testing"}
 
-### About
+###
+# About
+#
+# About - Version details, license
+# Help - Guidance about using this app
+# Credits - Sites, people who helped
+#
 set m $menu.about
 menu $m -tearoff 0
 $menu add cascade -label [mc "About"] -menu $m -underline 0
@@ -106,6 +144,15 @@ $m add command -label [mc "Help"] -command {error "just testing"}
 $m add command -label [mc "Credits"] -command poke_credits
 
 . configure -menu $menu
+
+### Generation of the main window
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# Filling of the pane at the right, with the list of species and entry box
+# at the top with autocomplete features.
+#
+# Main pane has two parts, the upper detailing the different specifics to
+# the Pokémon, and the bottom part the moves the Pokémon can learn.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 ### Get Pokémon species list
 set pokemonFile [open [file join $pokeDir pokemon.txt] r]
@@ -149,7 +196,7 @@ pack $note -fill both -expand 1
 ttk::notebook::enableTraversal $note
 
 ### Insert tabs
-foreach {a b} [list 1 I 2 II 3 III 4 IV 5 V 6 VI] {
+foreach a {1 2 3 4 5 6} b {I II III IV V VI} {
   ttk::frame $note.gen$a
   $note add $note.gen$a -text " Gen $b "
   $menu.file.gen add radio -label $b -variable generation \
@@ -179,6 +226,9 @@ foreach i [list 1 2 3 4 5 6] {
   label $note.gen$i.down.info.heiglab -text [mc "Height:"]
   label $note.gen$i.down.info.weiglab -text [mc "Weight:"]
   
+  # #F0F0F0 is the colour of the default grey background. White is the default
+  # background of the text widget and wound't appear too nice when placed on
+  # that grey widget
   text $note.gen$i.down.info.formvar -width 40 -height 1.5 -font TkDefaultFont \
     -background "#F0F0F0" -relief flat
   $note.gen$i.down.info.formvar insert end [mc "Unknown"]
