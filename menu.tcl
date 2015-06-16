@@ -16,10 +16,10 @@ proc type_matchup {} {
   set gen [dex eval {SELECT value FROM config WHERE param = 'gen'}]
   set mode [dex eval {SELECT value FROM config WHERE param = 'matchup'}]
   set hidden [dex eval {SELECT value FROM config WHERE param = 'matchuphide'}]
-  catch {destroy .matchup [winfo children .matchup]}
   
   set w .matchup
-  set currentMatchup ""
+  catch {destroy $w [winfo children $w]}
+    
   toplevel $w
   wm title $w [mc "Matchup chart"]
   sub_position $w +50+10
@@ -95,8 +95,12 @@ proc type_matchup {} {
           -fill $myTypes($type1) -outline black -tags "aatk $type1$type2"
         $f3.c create rectangle 50 $height 99 [expr {$height+25}] \
           -fill $myTypes($type2) -outline black -tags "aatk $type1$type2"
-        set fcolour1 [expr {[lsearch $whiteList $type1] != -1 ? "white" : "black"}]
-        set fcolour2 [expr {[lsearch $whiteList $type2] != -1 ? "white" : "black"}]
+        set fcolour1 [expr {
+          [lsearch $whiteList $type1] != -1 ? "white" : "black"
+        }]
+        set fcolour2 [expr {
+          [lsearch $whiteList $type2] != -1 ? "white" : "black"
+        }]
         $f3.c create text 25 [expr {$height+12}] -text $type1 \
           -justify center -fill $fcolour1 -tags "aatk $type1$type2"
         $f3.c create text 75 [expr {$height+12}] -text $type2 \
@@ -108,7 +112,9 @@ proc type_matchup {} {
         set d -13
         for {set k 0} {$k < [llength $otypes]} {incr k} {
           set atker [lindex $otypes $k]
-          if {[llength [$f.c find withtag effvbar]] < [expr {2*[llength $otypes]}]} {
+          if {
+            [llength [$f.c find withtag effvbar]] < [expr {2*[llength $otypes]}]
+          } {
             $f.c create rectangle [expr {$d+15}] $height [expr {$d+34}] \
               [expr {[llength $typeList]*$max*25}] -fill "" -outline "" \
               -tags "effvbar v$atker"
@@ -120,8 +126,8 @@ proc type_matchup {} {
           "]
           set eff [expr {[lindex $eff 0]*[lindex $eff 1]}]
           incr d 25
-          $f.c create text $d [expr {$height+12}] \
-            -text $eff -justify center -fill black -tags "eff $type1$type2 $atker sec"
+          $f.c create text $d [expr {$height+12}] -text $eff \
+            -justify center -fill black -tags "eff $type1$type2 $atker sec"
         }
         incr height 25
       }
@@ -285,6 +291,73 @@ proc type_matchup {} {
   after idle [wm resizable $w 0 1]
 }
 
+### Matchup window
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# This window callable from the menu will list the various types that Pokémon
+# can have and the weakness/resist multiplier for both mono and dual typed
+# Pokémon, plus the effects of Forest's Curse and Trick-or-Treat
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+proc damage_calculator {} {
+  set gen [dex eval {SELECT value FROM config WHERE param = 'gen'}]
+  catch {destroy .dmgcalc [winfo children .dmgcalc]}
+  
+  set w .dmgcalc
+  toplevel $w
+  wm title $w [mc "Damage Calculator"]
+  label $w.poke1 -text "Attacker:"
+  label $w.poke2 -text "Defender:"
+  label $w.move -text "Move:"
+  entry $w.atker -width 16 -textvariable atker
+  entry $w.defer -width 16 -textvariable defer
+  entry $w.emove -width 16 -textvariable umove
+  entry $w.result1 -width 16 -textvariable res1
+  entry $w.result2 -width 16 -textvariable res2
+  entry $w.result3 -width 16 -textvariable res3
+  entry $w.result4 -width 16 -textvariable res4
+  ttk::button $w.calculate -text "Calculate" -command \
+    "update_win \$atker \$defer \$umove $gen $w"
+  
+  grid $w.poke1 -row 0 -column 0
+  grid $w.poke2 -row 1 -column 0
+  grid $w.atker -row 0 -column 1
+  grid $w.defer -row 1 -column 1
+  grid $w.move -row 2 -column 0
+  grid $w.emove -row 2 -column 1
+  grid $w.result1 -row 3 -column 0
+  grid $w.result2 -row 3 -column 1
+  grid $w.result3 -row 3 -column 2
+  grid $w.result4 -row 3 -column 3
+  grid $w.calculate -row 4 -column 3
+  
+  proc update_win {atker defer move gen w} {
+    # atker same format list as defer with indice:
+    # 0 - pokemon id
+    # 1 - pokemon level
+    # 2 - pokemon atk stat
+    # 3 - pokemon spatk stat
+    # 4 - pokemon ability
+    # 5 - pokemon item
+    # 6 - pokemon current status*
+    set details1 [dex eval "
+      SELECT atk, spatk, type FROM pokeDetails$gen
+      WHERE id = '[lindex $atker 0]'
+    "]
+    set details2 [dex eval "
+      SELECT def, spdef, type FROM pokeDetails$gen
+      WHERE id = '[lindex $atker 0]'
+    "]
+    set atker [list 100 1 284 100 [lindex $details1 2] Static None Normal]
+    set defer [list 100 1 196 100 [lindex $details2 2] Static None Normal]
+    lassign [calculate_damage $atker $defer Normal $move $gen] \
+      res1 res2 res3 res4
+    # foreach i {1 2 3 4} {
+      # $w.result$i delete 0 end
+      # $w.result$i insert 0 [set res$i]
+    # }
+  }
+  
+}
+
 ### Credits window
 proc poke_credits {} {
   set w .pokecredits
@@ -294,8 +367,11 @@ proc poke_credits {} {
   wm resizable $w 0 0
   focus $w
   # http://www.pkparaiso.com/xy/sprites_pokemon.php
-  label $w.lab -text \
-    "\u00A9 1995-2014 The Pok\u00E9mon Company, Nintendo, Creatures Inc., \
-    Game Freak Inc."
+  label $w.lab -justify left -text "\
+    \u00A9 1995-2015 The Pok\u00E9mon Company\n\
+    \u00A9 1995-2015 Nintendo\n\
+    \u00A9 1995-2015 Creatures Inc.\n\
+    \u00A9 1995-2015 Game Freak Inc.
+  "
   pack $w.lab
 }
