@@ -27,14 +27,14 @@ exec wish "$0" ${1+"$@"}
 # tooltip for tooltips; messages that appear on mouse hover
 # tablelist for moves table
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-package require Tcl       8.5
+package require Tcl       8.6
 package require Tk        8.6
 package require Ttk       8.6
 package require msgcat    1.5.2
 package require Img       1.4.1
 package require sqlite3   3.8.0.1
 package require tooltip   1.4.4
-package require tablelist 5.11
+package require tablelist 5.13
 
 ### Pokédex version
 set version 0.02
@@ -61,10 +61,11 @@ wm geometry . +100+100
 
 ### Tk theme
 ttk::setTheme classic
+set ttk::theme::classic::colors(-frame) #f0f0f0
 
 ### List of all Pokémon types.
-set typeList [list Grass Fire Water Bug Flying Electric Ground Rock Fighting Poison \
-  Normal Psychic Ghost Ice Dragon Dark Steel Fairy]
+set typeList [list Grass Fire Water Bug Flying Electric Ground Rock Fighting \
+  Poison Normal Psychic Ghost Ice Dragon Dark Steel Fairy]
 
 ### Current Pokémon ID in Pokédex
 set curIdx ""
@@ -83,7 +84,8 @@ menu $menu -tearoff 0
 # File
 #
 # Import mod - Import file containing Pokémon details other than the usual ones
-# Default generation - Set the tab and other minor settings when the app is opened
+# Default generation - Set the tab and other minor settings when the app is 
+# opened
 # Language - Choose language
 # Close - Exit the app
 #
@@ -127,7 +129,7 @@ $m add command -label [mc "Search Moves"] -command {error "just testing"}
 $m add command -label [mc "Search Items"] -command {error "just testing"}
 $m add separator
 $m add command -label [mc "Type matchup chart"] -command {type_matchup}
-$m add command -label [mc "Damage calculator"] -command {error "just testing"}
+$m add command -label [mc "Damage calculator"] -command {damage_calculator}
 $m add command -label [mc "Compare Pok\u00E9mon"] -command {error "just testing"}
 
 ###
@@ -227,7 +229,7 @@ foreach i [list 1 2 3 4 5 6] {
   label $note.gen$i.down.info.weiglab -text [mc "Weight:"]
   
   # #F0F0F0 is the colour of the default grey background. White is the default
-  # background of the text widget and wound't appear too nice when placed on
+  # background of the text widget and would't appear too nice when placed on
   # that grey widget
   text $note.gen$i.down.info.formvar -width 40 -height 1.5 -font TkDefaultFont \
     -background "#F0F0F0" -relief flat
@@ -332,7 +334,8 @@ bind .sidepane.top.entry <KeyPress-Return> "poke_populate \$pokemonSpecies"
 bind .sidepane.top.entry <KeyPress-Down> [list poke_focus $pokeList]
 bind .sidepane.top.entry <ButtonPress-1> [list focus -force %W]
 bind .sidepane.bottom.list <Double-ButtonPress-1> [list poke_entry %W $pokeList]
-bind .sidepane.bottom.list <KeyPress-Return> [list list_populate_entry %W $pokeList]
+bind .sidepane.bottom.list <KeyPress-Return> \
+  [list list_populate_entry %W $pokeList]
 bind .mainpane.note.gen6.down.sprite <Configure> {
   wm minsize . [winfo width .] [winfo height .]
 }
