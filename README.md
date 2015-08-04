@@ -10,7 +10,7 @@ For the time being, I'm implementing some basic features:
 - Viewing details of the Pokédex (including picture, name, species, gender encouter rate, movepool, stats, etc),
 - Being able to view Pokédex from the different generations,
 - Damage calculator
-- 
+
 Things that I'm considering in no particular order:
 - Basic search for Pokédex with input like specific stats, learnable moves, abilities.
 - Basic search for items with input like effects, category.
