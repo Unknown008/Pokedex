@@ -61,7 +61,7 @@ wm geometry . +100+100
 
 ### Tk theme
 ttk::setTheme classic
-set ttk::theme::classic::colors(-frame) #f0f0f0
+ttk::style configure "." -background #f0f0f0
 
 ### List of all Pokémon types.
 set typeList [list Grass Fire Water Bug Flying Electric Ground Rock Fighting \
