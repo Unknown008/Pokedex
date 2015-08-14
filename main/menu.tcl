@@ -1,9 +1,9 @@
 ### Run only when sourced
-if {[info exists argv0] && [file tail $argv0] ne "main.tcl"} {
-  tk_messageBox -title Error \
-    -message "This script should be run from the main.tcl script"
-  exit
-}
+# if {[info exists argv0] && [file tail $argv0] ne "main.tcl"} {
+  # tk_messageBox -title Error \
+    # -message "This script should be run from the main.tcl script"
+  # exit
+# }
 
 ### Matchup window
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -33,8 +33,51 @@ proc type_matchup {} {
   set stat [expr {$mode ? "normal" : "disabled"}]
   
   # Trick or treat and Forest's Curse
-  proc matchup {type} {
-    
+  proc matchup {type gen} {
+    upvar tot tot fc fc
+    set c .matchup.frame4.f.c
+    set values [$c find withtag eff]
+    foreach v $values {
+      lassign [lrange [lindex [$c itemconfigure $v -tags] 4] 1 2] defer atker
+      set ceff [lindex [$c itemconfigure $v -text] 4]
+      switch $type {
+        Ghost {
+          set stat $tot
+        }
+        Grass {
+          set stat $fc
+        }
+      }
+      if {[string first $type $defer] != -1} {continue}
+      if {$stat} {
+        set aeff [dex eval "
+          SELECT effectiveness FROM matcDetails$gen
+          WHERE type1 = '$type' AND type2 = '$atker'
+        "]
+        set neff [expr {$aeff*$ceff}]
+      } else {
+        lassign [regexp -all -inline {[A-Z][a-z]+} $defer] type1 type2
+        set neff [dex eval "
+          SELECT effectiveness FROM matcDetails$gen
+          WHERE (type1 = '$type1' AND type2 = '$atker') OR
+                (type1 = '$type2' AND type2 = '$atker')
+        "]
+        set active ""
+        if {$tot} {
+          set active Ghost
+        } elseif {$fc} {
+          set active Grass
+        }
+        if {$active != ""} {
+          set aeff [dex eval "
+            SELECT effectiveness FROM matcDetails$gen
+            WHERE type1 = '$active' AND type2 = '$atker'
+          "]
+          set neff [expr {$aeff*$neff}]
+        }
+      }
+      $c itemconfigure $v -text $neff
+    }
   }
   
   # Switch between matchup types
@@ -73,11 +116,9 @@ proc type_matchup {} {
     set max [expr {$px+(25*[binom 18 2])}]
 
     set itypes [dex eval {SELECT type1, type2 FROM itypes WHERE gen > $gen}]
-    set ilist [list]
-    foreach {a b} $itypes {
-      lappend ilist [list $a $b]
-    }
+    set ilist [lmap {a b} $itypes {list $a $b}]
     
+    # Remove secondary types figures and hbars
     $f3.c delete aatk
     $f.c delete sec
     catch {destroy $f4.vscroll}
@@ -198,9 +239,9 @@ proc type_matchup {} {
     -command [list matchup_mode 1 $px $whiteList [array get types] $gen $otypes] 
   $m add separator
   $m add check -label [mc "Add Trick-Or-Treat"] -variable tot \
-    -command {matchup tot}
+    -command [list matchup Ghost $gen]
   $m add check -label [mc "Add Forest's Curse"] -variable fc \
-    -command {matchup fc}
+    -command [list matchup Grass $gen]
   $m add check -label [mc "Hide illegal typing"] -variable hidden \
     -command [list hide $px $whiteList [array get types] $gen $otypes]
   $w configure -menu $menu
@@ -291,11 +332,10 @@ proc type_matchup {} {
   after idle [wm resizable $w 0 1]
 }
 
-### Matchup window
+### Damage Calculator Window
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-# This window callable from the menu will list the various types that Pokémon
-# can have and the weakness/resist multiplier for both mono and dual typed
-# Pokémon, plus the effects of Forest's Curse and Trick-or-Treat
+# This window callable from the menu will give a window where the damage
+# can be calculated from the attack(s) of a single Pokémon.
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 proc damage_calculator {} {
   set gen [dex eval {SELECT value FROM config WHERE param = 'gen'}]
