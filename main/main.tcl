@@ -49,6 +49,9 @@ set pokeDir [file join [pwd] [file dirname [info script]]]
 ::msgcat::mcload $pokeDir
 namespace import ::msgcat::mc
 
+### Set up default encoding
+encoding system utf-8
+
 ### Import file containing most procedures
 source [file join $pokeDir lib.tcl]
 source [file join $pokeDir menu.tcl]
