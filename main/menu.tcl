@@ -1,9 +1,9 @@
 ### Run only when sourced
-if {[info exists argv0] && [file tail $argv0] ne "main.tcl"} {
-  tk_messageBox -title Error \
-    -message "This script should be run from the main.tcl script"
-  exit
-}
+# if {[info exists argv0] && [file tail $argv0] ne "main.tcl"} {
+  # tk_messageBox -title Error \
+    # -message "This script should be run from the main.tcl script"
+  # exit
+# }
 
 ### Matchup window
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -83,6 +83,7 @@ proc type_matchup {} {
   # Switch between matchup types
   proc matchup_mode {mode px whiteList types gen otypes} {
     global typeList
+    upvar tot tot fc fc
     set hidden [dex eval {SELECT value FROM config WHERE param = 'matchuphide'}]
     dex eval {UPDATE config SET value = $mode WHERE param = 'matchup'}
 
@@ -166,6 +167,20 @@ proc type_matchup {} {
                   (type1 = '$type2' AND type2 = '$atker')
           "]
           set eff [expr {[lindex $eff 0]*[lindex $eff 1]}]
+          if {$tot} {
+            set gh [dex eval "
+              SELECT effectiveness FROM matcDetails$gen
+              WHERE type1 = 'Ghost' AND type2 = '$atker'
+            "]
+            set eff [expr {$eff*$gh}]
+          }
+          if {$tot} {
+            set gr [dex eval "
+              SELECT effectiveness FROM matcDetails$gen
+              WHERE type1 = 'Grass' AND type2 = '$atker'
+            "]
+            set eff [expr {$eff*$gr}]
+          }
           incr d 25
           $f.c create text $d [expr {$height+12}] -text $eff \
             -justify center -fill black -tags "eff $type1$type2 $atker sec"
