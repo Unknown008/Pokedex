@@ -1,9 +1,9 @@
 ### Run only when sourced
-# if {[info exists argv0] && [file tail $argv0] ne "main.tcl"} {
-  # tk_messageBox -title Error \
-    # -message "This script should be run from the main.tcl script"
-  # exit
-# }
+if {[info exists argv0] && [file tail $argv0] ne "main.tcl"} {
+  tk_messageBox -title Error \
+    -message "This script should be run from the main.tcl script"
+  exit
+}
 
 ### Matchup window
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
