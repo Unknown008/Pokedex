@@ -34,21 +34,18 @@ proc type_matchup {} {
   
   # Trick or treat and Forest's Curse
   proc matchup {type gen} {
-    upvar tot tot fc fc
+    global tot fc
     set c .matchup.frame4.f.c
     set values [$c find withtag eff]
     foreach v $values {
       lassign [lrange [lindex [$c itemconfigure $v -tags] 4] 1 2] defer atker
       set ceff [lindex [$c itemconfigure $v -text] 4]
       switch $type {
-        Ghost {
-          set stat $tot
-        }
-        Grass {
-          set stat $fc
-        }
+        Ghost {set stat $tot}
+        Grass {set stat $fc}
       }
-      if {[string first $type $defer] != -1} {continue}
+
+      if {[regexp $type $defer]} {continue}
       if {$stat} {
         set aeff [dex eval "
           SELECT effectiveness FROM matcDetails$gen
@@ -73,7 +70,9 @@ proc type_matchup {} {
             SELECT effectiveness FROM matcDetails$gen
             WHERE type1 = '$active' AND type2 = '$atker'
           "]
-          set neff [expr {$aeff*$neff}]
+          set neff [::tcl::mathop::* {*}$neff $aeff]
+        } else {
+          set neff [::tcl::mathop::* {*}$neff]
         }
       }
       $c itemconfigure $v -text $neff
@@ -82,8 +81,7 @@ proc type_matchup {} {
   
   # Switch between matchup types
   proc matchup_mode {mode px whiteList types gen otypes} {
-    global typeList
-    upvar tot tot fc fc
+    global typeList tot fc
     set hidden [dex eval {SELECT value FROM config WHERE param = 'matchuphide'}]
     dex eval {UPDATE config SET value = $mode WHERE param = 'matchup'}
 
@@ -167,6 +165,7 @@ proc type_matchup {} {
                   (type1 = '$type2' AND type2 = '$atker')
           "]
           set eff [expr {[lindex $eff 0]*[lindex $eff 1]}]
+          
           if {$tot} {
             set gh [dex eval "
               SELECT effectiveness FROM matcDetails$gen
@@ -174,7 +173,7 @@ proc type_matchup {} {
             "]
             set eff [expr {$eff*$gh}]
           }
-          if {$tot} {
+          if {$fc} {
             set gr [dex eval "
               SELECT effectiveness FROM matcDetails$gen
               WHERE type1 = 'Grass' AND type2 = '$atker'
@@ -333,7 +332,10 @@ proc type_matchup {} {
         -justify center -fill black -tags "eff $type $atker"
     }
   }
-  $m invoke 5
+  set curmode [dex eval {SELECT value FROM config WHERE param = 'matchuphide'}]
+  if {$curmode != $hidden} {
+    $m invoke 5
+  }
   $m invoke $mode  
   $m entryconfigure 5 -state $stat
 
@@ -401,9 +403,13 @@ proc damage_calculator {} {
       SELECT def, spdef, type FROM pokeDetails$gen
       WHERE id = '[lindex $atker 0]'
     "]
+    
+    
     set atker [list 100 1 284 100 [lindex $details1 2] Static None Normal]
     set defer [list 100 1 196 100 [lindex $details2 2] Static None Normal]
-    lassign [calculate_damage $atker $defer Normal $move $gen] \
+    
+    
+    lassign [calculate_damage $atker $defer Normal $move $gen {n n}] \
       res1 res2 res3 res4
     # foreach i {1 2 3 4} {
       # $w.result$i delete 0 end
