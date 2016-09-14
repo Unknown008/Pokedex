@@ -20,8 +20,8 @@ proc sub_position {w args} {
 }
 
 ### Double click from list pane procedure
-proc poke_entry {entry pokeList} {
-  set pokemon [lindex $pokeList [$entry curselection]]
+proc poke_entry {entry} {
+  set pokemon [$entry get [$entry curselection]]
   .sidepane.top.entry delete 0 end
   .sidepane.top.entry insert 0 $pokemon
   poke_populate $pokemon
@@ -156,7 +156,7 @@ proc poke_hover {w x y} {
 
 ### Procedure to instruct population of each gen
 proc poke_populate {pokemon} {
-  global pokeList
+  global pokeList generations
   set w .mainpane.note
   
   set idx [lsearch -nocase $pokeList $pokemon]
@@ -170,20 +170,18 @@ proc poke_populate {pokemon} {
   
   # Increment index by 1 since lists are 0 based
   incr idx
-  poke_populate_gen1 $w [format %03d $idx]
-  poke_populate_gen2 $w [format %03d $idx]
-  poke_populate_gen3 $w [format %03d $idx]
-  #poke_populate_gen4 $w [format %03d $idx]
-  #poke_populate_gen5 $w [format %03d $idx]
-  poke_populate_gen6 $w [format %03d $idx]
+  foreach gen $generations {
+    if {$gen in {4 5}} {continue}
+    poke_populate_gen $w [format %03d $idx] $gen
+  }
 }
 
 ### Focus on popup when down arrow pressed
-proc poke_focus {pokeList} {
-  if {[.sidepane.top.entry get] eq ""} {return}
-  set text [string range [.sidepane.top.entry get] 0 \
-    [.sidepane.top.entry index insert]-1]
-  if {[poke_showlist .sidepane.top.entry $pokeList $text]} {
+proc poke_focus {w pokeList} {
+  set current [$w get]
+  if {$current eq ""} {return}
+  set text [string range $current 0 [$w index insert]-1]
+  if {[poke_showlist $w $pokeList $text]} {
     focus .sidepane.top.listbox.l
   }
 }
@@ -232,102 +230,34 @@ proc get_fps {file} {
 }
 
 ### Fill main pane with details of Pokémon
-proc poke_populate_gen1 {w idx} {
-  global pokeDir
-  
-  if {
-    [catch {image create photo gen1Sprite -format png \
-    -file [file join $pokeDir data gen1 sprites $idx.png]} err]
-  } {
-    return
+proc poke_populate_gen {w idx gen} {
+  global pokeDir curIdx framesGen5 framesGen6 framesGen7 curgen
+  if {$gen < 5} {
+    if {
+      [catch {image create photo spriteGen$gen -format png \
+      -file [file join $pokeDir data gen$gen sprites $idx.png]} err]
+    } {
+      return
+    }
+    $w.gen$gen.down.sprite configure -image spriteGen$gen
+  } else {
+    if {[info exists framesGen$gen]} {
+      foreach n [set framesGen$gen] {rename $n {}}
+    }
+    set file [file join $pokeDir data gen$gen sprites $idx.gif]
+    set framesGen$gen [get_frames $file]
+    set interval [get_fps $file]
+    
+    $w.gen$gen.down.sprite configure -image [lindex [set framesGen$gen] 0]
+    after idle [list animate_poke $w.gen$gen.down.sprite [set framesGen$gen] $interval]
   }
-  $w.gen1.down.sprite configure -image gen1Sprite  
   
-  # Populate details
-  # For now, it can return error
-  catch {info_populate $w "#$idx" 1}
-}
-
-proc poke_populate_gen2 {w idx} {
-  global pokeDir
-  
-  if {
-    [catch {image create photo gen2Sprite -format png \
-    -file [file join $pokeDir data gen2 sprites $idx.png]} err]
-  } {
-    return
-  }
-  $w.gen2.down.sprite configure -image gen2Sprite  
-  
-  # Populate details
-  # For now, it can return error
-  catch {info_populate $w "#$idx" 2}
-}
-
-proc poke_populate_gen3 {w idx} {
-  global pokeDir
-  
-  if {
-    [catch {image create photo gen3Sprite -format png \
-    -file [file join $pokeDir data gen3 sprites $idx.png]} err]
-  } {
-    return
-  }
-  $w.gen3.down.sprite configure -image gen3Sprite  
-  
-  # Populate details
-  catch {info_populate $w $idx 3}
-}
-
-proc poke_populate_gen4 {w idx} {
-  global pokeDir
-  
-  if {
-    [catch {image create photo gen4Sprite -format png \
-    -file [file join $pokeDir data gen4 sprites $idx.png]} err]
-  } {
-    return
-  }
-  $w.gen4.down.sprite configure -image gen4Sprite  
-  
-  # Populate details
-  #info_populate $w $idx 4
-}
-
-proc poke_populate_gen5 {w idx} {
-  global framesGen5 pokeDir
-  if {[info exists framesGen5]} {
-    foreach n $framesGen5 {rename $n {}}
-  }
-  set framesGen5 [get_frames [file join $pokeDir data gen5 sprites $idx.gif]]
-  set interval [get_fps [file join $pokeDir data gen5 sprites $idx.gif]]
-
-  $w.gen5.down.sprite configure -image [lindex $framesGen5 0]
-  
-  after idle "animate_poke $w.gen5.down.sprite \"$framesGen5\" $interval"
-  # Populate details
-  #info_populate $w $idx 5
-}
-
-proc poke_populate_gen6 {w idx} {
-  global framesGen6 pokeDir curIdx
-  if {[info exists framesGen6]} {
-    foreach n $framesGen6 {rename $n {}}
-  }
-  set framesGen6 [get_frames [file join $pokeDir data gen6 sprites $idx.gif]]
-  set interval [get_fps [file join $pokeDir data gen6 sprites $idx.gif]]
-  # Insert first image, then loop through each other images
-  $w.gen6.down.sprite configure -image [lindex $framesGen6 0]
-  after idle "animate_poke $w.gen6.down.sprite \"$framesGen6\" $interval"
-  
-  # Check if stats of the female/form are different. If not, don't change other
-  # info
   set id ""
   regexp {^[^-]+(?=-f)} $idx id
   regexp {^[^-]*} $curIdx cid
   
   set entries [dex eval "
-    SELECT id FROM pokeDetails6 WHERE id IN ('#$id','#$id-f')
+    SELECT id FROM pokeDetails$gen WHERE id IN ('#$id','#$id-f')
   "]
  
   if {
@@ -336,13 +266,14 @@ proc poke_populate_gen6 {w idx} {
       [llength $entries] == 1
     )
   } {
-    info_populate $w "#$idx" 6
+    #tk_messageBox -title $gen -message  "$w \"#$idx\" $gen"
+    info_populate $w "#$idx" $gen
   } elseif {[file exists [file join $pokeDir data icons $idx.png]]} {
-    $w.gen6.lab configure -state normal
-    $w.gen6.lab delete 1.0 1.1
-    $w.gen6.lab image create 1.0 -image [image create photo -format png \
+    $w.gen$gen.lab configure -state normal
+    $w.gen$gen.lab delete 1.0 1.1
+    $w.gen$gen.lab image create 1.0 -image [image create photo -format png \
       -file [file join $pokeDir data icons $idx.png]]
-    $w.gen6.lab configure -state disabled
+    $w.gen$gen.lab configure -state disabled
   }
   
   set curIdx $idx
@@ -368,7 +299,7 @@ proc info_populate {w idx i} {
     SELECT id FROM pokeDetails$i
     WHERE id LIKE '$idx%' AND formname LIKE '%Mega%'
   "]
-  
+  #tk_messageBox -title $i -message $datagroup
   lassign $datagroup id pokemon formname type genus ability1 ability2 hability \
     gender egggroup height weight
   regexp {^[^-]+} $idx id
@@ -399,12 +330,12 @@ proc info_populate {w idx i} {
           regexp {\d+} $idx id
           $info.formvar window create end -create [list \
             button %W.$mega -image [set $mega] -relief flat -cursor hand2 \
-            -command [list poke_populate_gen$i .mainpane.note $id] \
+            -command [list poke_populate_gen .mainpane.note $id $gen] \
           ]
         } else {
           $info.formvar window create end -create [list \
             button %W.$mega -image [set $mega] -relief flat -cursor hand2 \
-            -command [list poke_populate_gen$i .mainpane.note $idx] \
+            -command [list poke_populate_gen .mainpane.note $idx $i] \
           ]
         }
       }
@@ -457,9 +388,10 @@ proc info_populate {w idx i} {
   $info.gendvar configure -state normal
   $info.gendvar delete 1.0 end
   if {$gender ne "N/A"} {
-    $info.gendvar insert end [lindex [split $gender "/"] 0] male
+    lassign [split $gender "/"] male female
+    $info.gendvar insert end $male male
     $info.gendvar insert end "/"
-    $info.gendvar insert end [lindex [split $gender "/"] 1] female
+    $info.gendvar insert end $female female
     $info.gendvar insert end " %"
     regexp {\d+} $idx id
     set sprites [glob -tails -directory \
@@ -477,9 +409,9 @@ proc info_populate {w idx i} {
       $info.gendvar tag bind female <Any-Leave> \
         [list linkify $info.gendvar female 0]
       $info.gendvar tag bind male <ButtonPress-1> \
-        [list poke_populate_gen$i .mainpane.note $id]
+        [list poke_populate_gen .mainpane.note $id $gen]
       $info.gendvar tag bind female <ButtonPress-1> \
-        [list poke_populate_gen$i .mainpane.note "$id-f"]
+        [list poke_populate_gen .mainpane.note "$id-f" $i]
     } else {
       $info.gendvar tag bind male <ButtonPress-1> {}
       $info.gendvar tag bind female <ButtonPress-1> {}
@@ -532,12 +464,43 @@ proc info_populate {w idx i} {
   
   # Clear current contents of table
   $w.gen$i.move.t delete 0 end
-  # Populate moves here e.g.
-  # $w.gen$i.move.t insert end [list Tackle Physical Normal 35 40 95 -]
-  $w.gen$i.move.t insert end [list Tackle Physical Normal 35 40 95 -]
-  $w.gen$i.move.t insert end [list Scratch Physical Normal 40 35 100 -]
-  $w.gen$i.move.t insert end [list "Water Spout" Special Water 5 * 100 -]
-  $w.gen$i.move.t insert end [list "Tail Whip" Status Normal 40 - 100 -]
+  
+  set movetabs [dex eval "
+    SELECT name FROM SQLITE_MASTER WHERE type = 'table' AND name LIKE 'moves%$i'
+  "]
+  foreach tab $movetabs {
+    set moveset [split [lindex [dex eval "SELECT moves FROM $tab where id = '$idx'"] 0] \t]
+    if {[string first "Levelup" $tab] > -1} {
+      foreach {lvl moveid} $moveset {
+        set movedet [dex eval "
+          SELECT name, class, type, pp, basepower, accuracy FROM moveDetails$i WHERE id = '$moveid'
+        "]
+        if {$lvl eq "0"} {
+          set lvl "1"
+        }
+        $w.gen$i.move.t insert end [list {*}$movedet "At level $lvl"]
+      }
+    } else {
+      foreach moveid $moveset {
+        set movedet [dex eval "
+          SELECT name, class, type, pp, basepower, accuracy FROM moveDetails$i WHERE id = '$moveid'
+        "]
+        switch -glob $tab {
+          *TMHM* {set desc "TM/HM"}
+          *Tutor* {set desc "Move tutor"}
+          *Egg* {set desc "Egg move"}
+          *Form* {set desc "Form specific"}
+        }
+        $w.gen$i.move.t insert end [list {*}$movedet $desc]
+      }
+    }
+  }
+  
+  bind [$w.gen$i.move.t bodytag] <Button-1> {
+    lassign [tablelist::convEventFields %W %x %y] w x y
+    lassign [split [$w containingcell $x $y] ,] x y
+    tk_messageBox -title Info -message "This is $x [lindex [lindex [$w rowconfigure $x -text] 4] 0]"
+  }
 }
 
 proc form_menu {w idx gen} {
@@ -638,7 +601,7 @@ proc sel_populate_entry {w mini gen} {
       SELECT id FROM pokeDetails$gen WHERE formname = '$pokemon'
     "]
     set idx [string map {"#" ""} [lindex $idx 0]]
-    poke_populate_gen$gen .mainpane.note $idx
+    poke_populate_gen .mainpane.note $idx $gen
   }
   sel_remove $gen
 }
@@ -912,7 +875,7 @@ proc binom {n k} {
   return $res
 }
 
-### Procedure for sorting columns in tablelist
+### Procedure for sorting base power column in tablelist
 # Returns -1 if a < b
 # Returns 0 if a == b
 # Returns 1 if a > b
@@ -932,6 +895,25 @@ proc move_sort {a b} {
     1 {return 1}
     2 {return -1}
     3 {return [expr {$a > $b ? 1 : -1}]}
+  }
+}
+
+### Procedure for sorting move level learning column in tablelist
+# Returns -1 if a < b
+# Returns 0 if a == b
+# Returns 1 if a > b
+proc levelup_sort {a b} {
+  if {[string compare $a $b] == 0} {return 0}
+  lassign {0 0} inta intb
+  if {[regexp {^At level ([0-9]+)$} $a - vala]} {set inta 1}
+  if {[regexp {^At level ([0-9]+)$} $b - valb]} {set intb 1}
+  
+  # $inta and $intb both equal to 1 => level up, thus compare numeric levels
+  # else order normally  
+  if {$inta && $intb} {
+    return [expr {$vala > $valb ? 1 : -1}]
+  } else {
+    return [string compare $a $b]
   }
 }
 
@@ -1008,6 +990,7 @@ proc calculate_damage {attacker defender field move gen status} {
   set crate [expr {$gen > 5 ? 1.5 : 2}]
   set baseCritDamage [expr {$baseDamage*$crate}]
   
+  # TBD
   switch $field {
     sun {}
     rain {}
@@ -1022,5 +1005,4 @@ proc calculate_damage {attacker defender field move gen status} {
   set netMinCritDamage [expr {int($baseCritDamage*0.85)}]
   set netMaxCritDamage [expr {int($baseCritDamage)}]
   return "$netMinDamage $netMaxDamage $netMinCritDamage $netMaxCritDamage"
-
 }
