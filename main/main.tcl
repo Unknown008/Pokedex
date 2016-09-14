@@ -39,6 +39,9 @@ package require tablelist 5.13
 ### Pokédex version
 set version 0.02
 
+### Latest generation
+set currentGen 6
+
 ### Safeguard cleaning everything on startup
 catch {destroy [winfo children .]}
 
@@ -72,7 +75,11 @@ set typeList [list Grass Fire Water Bug Flying Electric Ground Rock Fighting \
 
 ### Current Pokémon ID in Pokédex
 set curIdx ""
-  
+
+### Generations
+set generations [list 1 2 3 4 5 6 7]
+set genRoman [list I II III IV V VI VII]
+
 ### Menu settings
 # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 # All the menu items in the main window
@@ -201,16 +208,17 @@ pack $note -fill both -expand 1
 ttk::notebook::enableTraversal $note
 
 ### Insert tabs
-foreach a {1 2 3 4 5 6} b {I II III IV V VI} {
+foreach a $generations b $genRoman {
   ttk::frame $note.gen$a
   $note add $note.gen$a -text " Gen $b "
   $menu.file.gen add radio -label $b -variable generation \
     -command [list write_config $a "gen"] -value $a
 }
 
-foreach i [list 1 2 3 4 5 6] {
+foreach i $generations {
+  # Transparent 256x192 image for place holder
   image create photo default -format png \
-    -file [file join $pokeDir data gen6 sprites default.png]
+    -file [file join $pokeDir data default.png]
 
   text $note.gen$i.lab -width 30 -height 2 -font TkDefaultFont \
     -background "#F0F0F0" -relief flat
@@ -294,9 +302,11 @@ foreach i [list 1 2 3 4 5 6] {
     3 -sortmode command
     4 -sortmode command
     5 -sortmode command
+    6 -sortmode command
     3 -sortcommand move_sort
     4 -sortcommand move_sort
     5 -sortcommand move_sort
+    6 -sortcommand levelup_sort
   }
 
   pack $note.gen$i.move.t -fill both -expand 1 -side left
@@ -336,7 +346,7 @@ bind . <Alt-F4> {exit}
 bind .sidepane.top.entry <KeyPress-Return> "poke_populate \$pokemonSpecies"
 bind .sidepane.top.entry <KeyPress-Down> [list poke_focus $pokeList]
 bind .sidepane.top.entry <ButtonPress-1> [list focus -force %W]
-bind .sidepane.bottom.list <Double-ButtonPress-1> [list poke_entry %W $pokeList]
+bind .sidepane.bottom.list <Double-ButtonPress-1> [list poke_entry %W]
 bind .sidepane.bottom.list <KeyPress-Return> \
   [list list_populate_entry %W $pokeList]
 bind .mainpane.note.gen6.down.sprite <Configure> {
