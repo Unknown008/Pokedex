@@ -1,0 +1,232 @@
+#001	Stench	あくしゅう	악취	Duftnote	Puanteur
+#002	Drizzle	あめふらし	잔비	Niesel	Crachin
+#003	Speed Boost	かそく	가속	Temposchub	Turbo
+#004	Battle Armor	カブトアーマー	전투무장	Kampfpanzer	Armurbaston
+#005	Sturdy	がんじょう	옹골참	Robustheit	Fermeté
+#006	Damp	しめりけ	습기	Feuchtigkeit	Moiteur
+#007	Limber	じゅうなん	유연	Flexibilität	Échauffement
+#008	Sand Veil	すながくれ	모래숨기	Sandschleier	Voile Sable
+#009	Static	せいでんき	정전기	Statik	Statik
+#010	Volt Absorb	ちくでん	축전	Voltabsorber	Absorb Volt
+#011	Water Absorb	ちょすい	저수	H2O-Absorber	Absorb Eau
+#012	Oblivious	どんかん	둔감	Dösigkeit	Benêt
+#013	Cloud Nine	ノーてんき	날씨부정	Wolke Sieben	Ciel Gris
+#014	Compoundeyes	ふくがん	복안	Facettenauge	Œil Composé
+#015	Insomnia	ふみん	불면	Insomnia	Insomnia
+#016	Color Change	へんしょく	변색	Farbwechsel	Déguisement
+#017	Immunity	めんえき	면역	Immunität	Vaccin
+#018	Flash Fire	もらいび	타오르는불꽃	Feuerfänger	Torche
+#019	Shield Dust	りんぷん	인분	Puderabwehr	Écran Poudre
+#020	Own Tempo	マイペース	마이페이스	Tempomacher	Tempo Perso
+#021	Suction Cups	きゅうばん	흡반	Saugnapf	Ventouse
+#022	Intimidate	いかく	위협	Bedroher	Intimidation
+#023	Shadow Tag	かげふみ	그림자밟기	Wegsperre	Marque Ombre
+#024	Rough Skin	さめはだ	까칠한피부	Rauhaut	Peau Dure
+#025	Wonder Guard	ふしぎなまもり	불가사의부적	Wunderwache	Garde Mystik
+#026	Levitate	ふゆう	부유	Schwebe	Lévitation
+#027	Effect Spore	ほうし	포자	Sporenwirt	Pose Spore
+#028	Synchronize	シンクロ	싱크로	Synchro	Synchro
+#029	Clear Body	クリアボディ	클리어바디	Neutraltorso	Corps Sain
+#030	Natural Cure	しぜんかいふく	자연회복	Innere Kraft	Médic Nature
+#031	Lightning Rod	ひらいしん	피뢰침	Blitzfänger	Paratonnerre
+#032	Serene Grace	てんのめぐみ	하늘의은총	Edelmut	Sérénité
+#033	Swift Swim	すいすい	쓱쓱	Wassertempo	Glissade
+#034	Chlorophyll	ようりょくそ	엽록소	Chlorophyll	Chlorophylle
+#035	Illuminate	はっこう	발광	Erleuchtung	Lumiattirance
+#036	Trace	トレース	트레이스	Fährte	Calque
+#037	Huge Power	ちからもち	천하장사	Kraftkoloss	Coloforce
+#038	Poison Point	どくのトゲ	독가시	Giftdorn	Point Poison
+#039	Inner Focus	せいしんりょく	정신력	Konzentrator	Attention
+#040	Magma Armor	マグマのよろい	마그마의무장	Magmapanzer	Armumagma
+#041	Water Veil	みずのベール	수의베일	Aquahülle	Ignifu-Voile
+#042	Magnet Pull	じりょく	자력	Magnetfalle	Magnépiège
+#043	Soundproof	ぼうおん	방음	Lärmschutz	Anti-Bruit
+#044	Rain Dish	あめうけざら	젖은접시	Regengenuss	Cuvette
+#045	Sand Stream	すなおこし	모래날림	Sandsturm	Sable Volant
+#046	Pressure	プレッシャー	프레셔	Erzwinger	Pression
+#047	Thick Fat	あついしぼう	두꺼운지방	Speckschicht	Isograisse
+#048	Early Bird	はやおき	일찍기상	Frühwecker	Matinal
+#049	Flame Body	ほのおのからだ	불꽃몸	Flammkörper	Corps Ardent
+#050	Run Away	にげあし	도주	Angsthase	Fuite
+#051	Keen Eye	するどいめ	날카로운눈	Adlerauge	Regard Vif
+#052	Hyper Cutter	かいりきバサミ	괴력집게	Scherenmacht	Hyper Cutter
+#053	Pickup	ものひろい	픽업	Mitnahme	Ramassage
+#054	Truant	なまけ	게으름	Schnarchnase	Absentéisme
+#055	Hustle	はりきり	의욕	Übereifer	Agitation
+#056	Cute Charm	メロメロボディ	헤롱헤롱바디	Charmebolzen	Joli Sourire
+#057	Plus	プラス	플러스	Plus	Plus
+#058	Minus	マイナス	마이너스	Minus	Minus
+#059	Forecast	てんきや	기분파	Prognose	Météo
+#060	Sticky Hold	ねんちゃく	점착	Wertehalter	Glue
+#061	Shed Skin	だっぴ	탈피	Expidermis	Mue
+#062	Guts	こんじょう	근성	Adrenalin	Cran
+#063	Marvel Scale	ふしぎなうろこ	이상한비늘	Notschutz	Écaille Spéciale
+#064	Liquid Ooze	ヘドロえき	해감액	Kloakensoße	Suintement
+#065	Overgrow	しんりょく	심록	Notdünger	Engrais
+#066	Blaze	もうか	맹화	Großbrand	Brasier
+#067	Torrent	げきりゅう	급류	Sturzbach	Torrent
+#068	Swarm	むしのしらせ	벌레의알림	Hexaplaga	Essaim
+#069	Rock Head	いしあたま	돌머리	Steinhaupt	Tête de Roc
+#070	Drought	ひでり	가뭄	Dürre	Sécheresse
+#071	Arena Trap	ありじごく	개미지옥	Ausweglos	Piège Sable
+#072	Vital Spirit	やるき	의기양양	Munterkeit	Esprit Vital
+#073	White Smoke	しろいけむり	하얀연기	Pulverrauch	Écran Fumée
+#074	Pure Power	ヨガパワー	순수한힘	Mentalkraft	Force Pure
+#075	Shell Armor	シェルアーマー	조가비갑옷	Panzerhaut	Coque Armure
+#076	Air Lock	エアロック	에어록	Klimaschutz	Air Lock
+#077	Tangled Feet	ちどりあし	갈지자걸음	Fußangel	Pieds Confus
+#078	Motor Drive	でんきエンジン	전기엔진	Starthilfe	Motorisé
+#079	Rivalry	とうそうしん	투쟁심	Rivalität	Rivalité
+#080	Steadfast	ふくつのこころ	불굴의마음	Felsenfest	Impassible
+#081	Snow Cloak	ゆきがくれ	눈숨기	Schneemantel	Rideau Neige
+#082	Gluttony	くいしんぼう	먹보	Völlerei	Gloutonnerie
+#083	Anger Point	いかりのつぼ	분노의경혈	Kurzschluss	Colérique
+#084	Unburden	かるわざ	곡예	Entlastung	Délestage
+#085	Heatproof	たいねつ	내열	Hitzeschutz	Ignifugé
+#086	Simple	たんじゅん	단순	Wankelmut	Simple
+#087	Dry Skin	かんそうはだ	건조피부	Trockenheit	Peau Sèche
+#088	Download	ダウンロード	다운로드	Download	Télécharge
+#089	Iron Fist	てつのこぶし	철주먹	Eisenfaust	Poing de Fer
+#090	Poison Heal	ポイズンヒール	포이즌힐	Aufheber	Soin Poison
+#091	Adaptability	てきおうりょく	적응력	Anpassung	Adaptabilité
+#092	Skill Link	スキルリンク	스킬링크	Wertelink	Multi-Coups
+#093	Hydration	うるおいボディ	촉촉바디	Hydration	Hydratation
+#094	Solar Power	サンパワー	선파워	Solarkraft	Force Soleil
+#095	Quick Feet	はやあし	속보	Rasanz	Pied Véloce
+#096	Normalize	ノーマルスキン	노말스킨	Regulierung	Normalise
+#097	Sniper	スナイパー	스나이퍼	Superschütze	Sniper
+#098	Magic Guard	マジックガード	매직가드	Magieschild	Garde Magik
+#099	No Guard	ノーガード	노가드	Schildlos	Annule Garde
+#100	Stall	あとだし	시간벌기	Zeitspiel	Frein
+#101	Technician	テクニシャン	테크니션	Techniker	Technicien
+#102	Leaf Guard	リーフガード	리프가드	Floraschild	Feuille Garde
+#103	Klutz	ぶきよう	서투름	Tollpatsch	Maladresse
+#104	Mold Breaker	かたやぶり	틀깨기	Überbrückung	Brise Moule
+#105	Super Luck	きょううん	대운	Glückspilz	Chanceux
+#106	Aftermath	ゆうばく	유폭	Finalschlag	Boom Final
+#107	Anticipation	きけんよち	위험예지	Vorahnung	Anticipation
+#108	Forewarn	よちむ	예지몽	Vorwarnung	Prédiction
+#109	Unaware	てんねん	천진	Unkenntnis	Inconscient
+#110	Tinted Lens	いろめがね	색안경	Aufwertung	Lentiteintée
+#111	Filter	フィルター	필터	Filter	Filtre
+#112	Slow Start	スロースタート	슬로스타트	Saumselig	Début Calme
+#113	Scrappy	きもったま	배짱	Rauflust	Querelleur
+#114	Storm Drain	よびみず	마중물	Sturmsog	Lavabo
+#115	Ice Body	アイスボディ	아이스바디	Eishaut	Corps Gel
+#116	Solid Rock	ハードロック	하드록	Felskern	Solide Roc
+#117	Snow Warning	ゆきふらし	눈퍼뜨리기	Hagelalarm	Alerte Neige
+#118	Honey Gather	みつあつめ	꿀모으기	Honigmaul	Cherche Miel
+#119	Frisk	おみとおし	통찰	Schnüffler	Fouille
+#120	Reckless	すてみ	이판사판	Achtlos	Téméraire
+#121	Multitype	マルチタイプ	멀티타입	Variabilität	Multi-Type
+#122	Flower Gift	フラワーギフト	플라워기프트	Pflanzengabe	Don Floral
+#123	Bad Dreams	ナイトメア	나이트메어	Alptraum	Mauvais Rêve
+#124	Pickpocket	わるいてぐせ	나쁜손버릇	Langfinger	Pickpocket
+#125	Sheer Force	ちからずく	우격다짐	Rohe Gewalt	Sans Limite
+#126	Contrary	あまのじゃく	심술꾸러기	Umkehrung	Contestation
+#127	Unnerve	きんちょうかん	긴장감	Anspannung	Tension
+#128	Defiant	まけんき	오기	Siegeswille	Acharné
+#129	Defeatist	よわき	무기력	Schwächling	Défaitiste
+#130	Cursed Body	のろわれボディ	저주받은바디	Tastfluch	Corps Maudit
+#131	Healer	いやしのこころ	치유의마음	Heilherz	Cœur Soin
+#132	Friend Guard	フレンドガード	프렌드가드	Freundeshut	Garde Amie
+#133	Weak Armor	くだけるよろい	깨어진갑옷	Bruchrüstung	Armurouillée
+#134	Heavy Metal	ヘヴィメタル	헤비메탈	Schwermetall	Heavy Metal
+#135	Light Metal	ライトメタル	라이트메탈	Leichtmetall	Light Metal
+#136	Multiscale	マルチスケイル	멀티스케일	Multischuppe	Multiécaille
+#137	Toxic Boost	どくぼうそう	독폭주	Giftwahn	Rage Poison
+#138	Flare Boost	ねつぼうそう	열폭주	Hitzewahn	Rage Brûlure
+#139	Harvest	しゅうかく	수확	Reiche Ernte	Récolte
+#140	Telepathy	テレパシー	텔레파시	Telepathie	Télépathe
+#141	Moody	ムラっけ	변덕쟁이	Gefühlswippe	Lunatique
+#142	Overcoat	ぼうじん	방진	Wetterfest	Envelocape
+#143	Poison Touch	どくしゅ	독수	Giftgriff	Toxitouche
+#144	Regenerator	さいせいりょく	재생력	Belebekraft	Régé-Force
+#145	Big Pecks	はとむね	부풀린가슴	Brustbieter	Cœur de Coq
+#146	Sand Rush	すなかき	모래헤치기	Sandscharrer	Baigne Sable
+#147	Wonder Skin	ミラクルスキン	미라클스킨	Wunderhaut	Peau Miracle
+#148	Analytic	アナライズ	애널라이즈	Analyse	Analyste
+#149	Illusion	イリュージョン	일루전	Trugbild	Illusion
+#150	Imposter	かわりもの	괴짜	Doppelgänger	Imposteur
+#151	Infiltrator	すりぬけ	틈새포착	Schwebedurch	Infiltration
+#152	Mummy	ミイラ	미라	Mumie	Momie
+#153	Moxie	じしんかじょう	자기과신	Hochmut	Impudence
+#154	Justified	せいぎのこころ	정의의마음	Redlichkeit	Cœur Noble
+#155	Rattled	びびり	주눅	Hasenfuß	Phobique
+#156	Magic Bounce	マジックミラー	매직미러	Magiespiegel	Miroir Magik
+#157	Sap Sipper	そうしょく	초식	Vegetarier	Herbivore
+#158	Prankster	いたずらごころ	짓궂은마음	Strolch	Farceur
+#159	Sand Force	すなのちから	모래의힘	Sandgewalt	Force Sable
+#160	Iron Barbs	てつのトゲ	철가시	Eisenstachel	Épine de Fer
+#161	Zen Mode	ダルマモード	달마모드	Trance-Modus	Mode Transe
+#162	Victory Star	しょうりのほし	승리의별	Triumphstern	Victorieux
+#163	Turboblaze	ターボブレイズ	터보블레이즈	Turbobrand	TurboBrasier
+#164	Teravolt	テラボルテージ	테라볼티지	Teravolt	Téra-Voltage
+#165	Aroma Veil	アロマベール	아로마베일	Dufthülle	Aroma-Voile
+#166	Flower Veil	フラワーベール	플라워베일	Blütenhülle	Flora-Voile
+#167	Cheek Pouch	ほおぶくろ	볼주머니	Backentaschen	Bajoues
+#168	Protean	へんげんじざい	변환자재	Wandlungskunst	Protéen
+#169	Fur Coat	ファーコート	퍼코트	Fellkleid	Toison Épaisse
+#170	Magician	マジシャン	매지션	Zauberer	Magicien
+#171	Bulletproof	ぼうだん	방탄	Kugelsicher	Pare-Balles
+#172	Competitive	かちき	승기	Unbeugsamkeit	Battant
+#173	Strong Jaw	がんじょうあご	옹골찬턱	Titankiefer	Prognathe
+#174	Refrigerate	フリーズスキン	프리즈스킨	Frostschicht	Peau Gelée
+#175	Sweet Veil	スイートベール	스위트베일	Zuckerhülle	Gluco-Voile
+#176	Stance Change	バトルスイッチ	배틀스위치	Taktikwechsel	Déclic Tactique
+#177	Gale Wings	はやてのつばさ	질풍날개	Orkanschwingen	Ailes Bourrasque
+#178	Mega Launcher	メガランチャー	메가런처	Megawumme	Méga Blaster
+#179	Grass Pelt	くさのけがわ	풀모피	Pflanzenpelz	Toison Herbue
+#180	Symbiosis	きょうせい	공생	Nutznießer	Symbiose
+#181	Tough Claws	かたいツメ	단단한발톱	Krallenwucht	Griffe Dure
+#182	Pixilate	フェアリースキン	페어리스킨	Feenschicht	Peau Féérique
+#183	Gooey	ぬめぬめ	미끈미끈	Viskosität	Poisseux
+#184	Parental Bond	スカイスキン	스카이스킨	Zenithaut	Peau Céleste
+#185	Aerilate	おやこあい	부자유친	Familienbande	Amour Filial
+#186	Dark Aura	ダークオーラ	다크오라	Dunkelaura	Aura Ténébreuse
+#187	Fairy Aura	フェアリーオーラ	페어리오라	Feenaura	Aura Féérique
+#188	Aura Break	オーラブレイク	오라브레이크	Aura-Umkehr	Aura Inversée
+#189	Primordial Sea	はじまりのうみ	시작의바다	Urmeer	Mer Primaire
+#190	Desolate Land	おわりのだいち	끝의대지	Endland	Terre Finale
+#191	Delta Stream	デルタストリーム	델타스트림	Delta-Wind	Souffle Delta
+#192	Stamina	じきゅうりょく	지구력	Zähigkeit	Endurance
+#193	Wimp Out	にげごし	도망태세	Reißaus	Escampette
+#194	Emergency Exit	ききかいひ	위기회피	Rückzug	Repli Tactique
+#195	Water Compaction	みずがため	꾸덕꾸덕굳기	Verklumpen	Sable Humide
+#196	Merciless	ひとでなし	무도한행동	Quälerei	Cruauté
+#197	Shields Down	リミットシールド	리밋실드	Limitschild	Bouclier-Carcan
+#198	Stakeout	はりこみ	잠복	Beschattung	Filature
+#199	Water Bubble	すいほう	수포	Wasserblase	Aquabulle
+#200	Steelworker	はがねつかい	강철술사	Stahlprofi	Expert Acier
+#201	Berserk	ぎゃくじょう	발끈	Wutausbruch	Dracolère
+#202	Slush Rush	ゆきかき	눈치우기	Schneescharrer	Chasse-Neige
+#203	Long Reach	えんかく	원격	Langstrecke	Longue Portée
+#204	Liquid Voice	うるおいボイス	촉촉보이스	Plätscherstimme	Hydrata-Son
+#205	Triage	ヒーリングシフト	힐링시프트	Heilwandel	Prioguérison
+#206	Galvanize	エレキスキン	일렉트릭스킨	Elektrohaut	Peau Électrique
+#207	Surge Surfer	サーフテール	서핑테일	Surf-Schweif	Surf Caudal
+#208	Schooling	ぎょぐん	어군	Fischschwarm	Banc
+#209	Disguise	ばけのかわ	탈	Kostümspuk	Fantômasque
+#210	Battle Bond	きずなへんげ	유대변화	Freundschaftsakt	Synergie
+#211	Power Construct	スワームチェンジ	스웜체인지	Scharwandel	Rassemblement
+#212	Corrosion	ふしょく	부식	Korrosion	Corrosion
+#213	Comatose	ぜったいねむり	절대안깸	Dauerschlaf	Hypersommeil
+#214	Queenly Majesty	じょおうのいげん	여왕의위엄	Majestät	Prestance Royale
+#215	Innards Out	とびだすなかみ	내용물분출	Magenkrempler	Expuls’Organes
+#216	Dancer	おどりこ	무희	Tänzer	Danseuse
+#217	Battery	バッテリー	배터리	Batterie	Batterie
+#218	Fluffy	もふもふ	복슬복슬	Flauschigkeit	Boule de Poils
+#219	Dazzling	ビビッドボディ	비비드바디	Buntkörper	Corps Coloré
+#220	Soul-Heart	ソウルハート	소울하트	Seelenherz	Animacœur
+#221	Tangling Hair	カーリーヘアー	컬리헤어	Lockenkopf	Mèche Rebelle
+#222	Receiver	レシーバー	리시버	Receiver	Receveur
+#223	Power of Alchemy	かがくのちから	과학의힘	Chemiekraft	Osmose
+#224	Beast Boost	ビーストブースト	비스트부스트	Bestien-Boost	Boost Chimère
+#225	RKS System	ＡＲシステム	AR시스템	Alpha-System	Système Alpha
+#226	Electric Surge	エレキメイカー	일렉트릭메이커	Elektro-Erzeuger	Créa-Élec
+#227	Psychic Surge	サイコメイカー	사이코메이커	Psycho-Erzeuger	Créa-Psy
+#228	Misty Surge	ミストメイカー	미스트메이커	Nebel-Erzeuger	Créa-Brume
+#229	Grassy Surge	グラスメイカー	그래스메이커	Gras-Erzeuger	Créa-Herbe
+#230	Full Metal Body	メタルプロテクト	메탈프로텍트	Metallprotektor	Métallo-Garde
+#231	Shadow Shield	ファントムガード	스펙터가드	Phantomschutz	Spectro-Bouclier
+#232	Prism Armor	プリズムアーマー	프리즘아머	Prismarüstung	Prisme-Armure
