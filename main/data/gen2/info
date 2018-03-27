@@ -1,0 +1,278 @@
+#001	Bulbasaur	Bulbasaur	Grass/Poison	Seed	Overgrow		Chlorophyll	87.5/12.5	Monster, Plant	0.70	6.90	0	16	45	49	49	65	65	45	45	0	1	256	20	70	3	1	Green	64	
+#002	Ivysaur	Ivysaur	Grass/Poison	Seed	Overgrow		Chlorophyll	87.5/12.5	Monster, Plant	1.00	13.00	0	32	60	62	63	80	80	60	45	0	2	1280	20	70	3	1	Green	142	#001
+#003	Venusaur	Venusaur	Grass/Poison	Seed	Overgrow		Chlorophyll	87.5/12.5	Monster, Plant	2.00	100.00	0		80	82	83	100	100	80	45	1	3	1536	20	70	3	1	Green	236	#001 #002
+#004	Charmander	Charmander	Fire	Lizard	Blaze		Solar Power	87.5/12.5	Monster	0.60	8.50	0	16	39	52	43	60	50	65	45	0	1	64	20	70	3	1	Red	62	
+#005	Charmeleon	Charmeleon	Fire	Flame	Blaze		Solar Power	87.5/12.5	Monster	1.10	19.00	0	36	58	64	58	80	65	80	45	0	2	320	20	70	3	1	Red	142	#004
+#006	Charizard	Charizard	Fire/Flying	Flame	Blaze		Solar Power	87.5/12.5	Monster	1.70	90.50	0		78	84	78	109	85	100	45	1	3	768	20	70	3	1	Red	240	#004 #005
+#007	Squirtle	Squirtle	Water	Tiny Turtle	Torrent		Rain Dish	87.5/12.5	Monster, Water 1	0.50	9.00	0	16	44	48	65	50	64	43	45	0	1	16	20	70	3	1	Blue	63	
+#008	Wartortle	Wartortle	Water	Turtle	Torrent		Rain Dish	87.5/12.5	Monster, Water 1	1.00	22.50	0	36	59	63	80	65	80	58	45	0	2	1040	20	70	3	1	Blue	142	#007
+#009	Blastoise	Blastoise	Water	Shellfish	Torrent		Rain Dish	87.5/12.5	Monster, Water 1	1.60	85.50	0		79	83	100	85	105	78	45	1	3	3072	20	70	3	1	Blue	239	#007 #008
+#010	Caterpie	Caterpie	Bug	Worm	Shield Dust		Run Away	50/50	Bug	0.30	2.90	0	7	45	30	35	20	20	45	255	0	1	1	15	70	0	1	Green	39	
+#011	Metapod	Metapod	Bug	Cocoon	Shed Skin		Shed Skin	50/50	Bug	0.70	9.90	0	10	50	20	55	25	25	30	120	0	2	32	15	70	0	1	Green	72	#010
+#012	Butterfree	Butterfree	Bug/Flying	Butterfly	Compoundeyes		Tinted Lens	50/50	Bug	1.10	32.00	0		60	45	50	90	80	70	45	1	3	1536	15	70	0	1	White	173	#010 #011
+#013	Weedle	Weedle	Bug/Poison	Hairy Bug	Shield Dust		Run Away	50/50	Bug	0.30	3.20	0	7	40	35	30	20	20	50	255	0	1	64	15	70	0	1	Brown	39	
+#014	Kakuna	Kakuna	Bug/Poison	Cocoon	Shed Skin		Shed Skin	50/50	Bug	0.60	10.00	0	10	45	25	50	25	25	35	120	0	2	32	15	70	0	1	Yellow	72	#013
+#015	Beedrill	Beedrill	Bug/Poison	Poison Bee	Swarm		Sniper	50/50	Bug	1.00	29.50	0		65	90	40	45	80	75	45	1	3	1032	15	70	0	1	Yellow	173	#013 #014
+#016	Pidgey	Pidgey	Normal/Flying	Tiny Bird	Keen Eye	Tangled Feet	Big Pecks	50/50	Field	0.30	1.80	0	18	40	45	40	35	35	56	255	0	1	64	15	70	3	1	Brown	50	
+#017	Pidgeotto	Pidgeotto	Normal/Flying	Bird	Keen Eye	Tangled Feet	Big Pecks	50/50	Field	1.10	30.00	0	36	63	60	55	50	50	71	120	0	2	128	15	70	3	1	Brown	122	#016
+#018	Pidgeot	Pidgeot	Normal/Flying	Bird	Keen Eye	Tangled Feet	Big Pecks	50/50	Field	1.50	39.50	0		83	80	75	70	70	101	45	1	3	192	15	70	3	1	Brown	211	#016 #017
+#019	Rattata	Rattata	Normal	Mouse	Run Away	Guts	Hustle	50/50	Field	0.30	3.50	0	20	30	56	35	25	35	72	255	0	1	64	15	70	0	1	Purple	51	
+#020	Raticate	Raticate	Normal	Mouse	Run Away	Guts	Hustle	50/50	Field	0.70	18.50	0		55	81	60	50	70	97	127	1	2	128	15	70	0	1	Brown	145	#019
+#021	Spearow	Spearow	Normal/Flying	Tiny Bird	Keen Eye		Sniper	50/50	Field	0.30	2.00	0	16	40	60	30	31	31	70	255	0	1	64	15	70	0	1	Brown	52	
+#022	Fearow	Fearow	Normal/Flying	Beak	Keen Eye		Sniper	50/50	Field	1.20	38.00	0		65	90	65	61	61	100	90	1	2	128	15	70	0	1	Brown	155	#021
+#023	Ekans	Ekans	Poison	Snake	Intimidate	Shed Skin	Unnerve	50/50	Field, Monster	2.00	6.90	0	22	35	60	44	40	54	55	255	0	1	4	20	70	0	1	Purple	58	
+#024	Arbok	Arbok	Poison	Cobra	Intimidate	Shed Skin	Unnerve	50/50	Field, Monster	3.50	65.00	0		60	85	69	65	79	80	90	1	2	8	20	70	0	1	Purple	153	#023
+#025	Pikachu	Pikachu	Electric	Mouse	Static		Lightningrod	50/50	Field, Fairy	0.40	6.00	0	Thunder Stone, Raichu	35	55	40	50	50	90	190	0	2	128	10	70	0	1	Yellow	105	#172 #172-1
+#026	Raichu	Raichu	Electric	Mouse	Static		Lightningrod	50/50	Field, Fairy	0.80	30.00	0		60	90	55	90	80	110	75	1	3	192	10	70	0	1	Yellow	214	#172 #025
+#027	Sandshrew	Sandshrew	Ground	Mouse	Sand Veil		Sand Rush	50/50	Field	0.60	12.00	0	22	50	75	85	20	30	40	255	0	1	16	20	70	0	1	Yellow	60	
+#028	Sandslash	Sandslash	Ground	Mouse	Sand Veil		Sand Rush	50/50	Field	1.00	29.50	0		75	100	110	45	55	65	90	1	2	32	20	70	0	1	Yellow	158	#027
+#029	Nidoran♀	Nidoran♀	Poison	Poison Pin	Poison Point	Rivalry	Hustle	0/100	Monster, Field	0.40	7.00	0	16	55	47	52	40	40	41	235	0	1	1	20	70	3	1	Blue	55	
+#030	Nidorina	Nidorina	Poison	Poison Pin	Poison Point	Rivalry	Hustle	0/100	Undiscovered	0.80	20.00	0	Moon Stone, Nidoqueen	70	62	67	55	55	56	120	0	2	2	20	70	3	1	Blue	128	#029
+#031	Nidoqueen	Nidoqueen	Poison/Ground	Drill	Poison Point	Rivalry	Sheer Force	0/100	Undiscovered	1.30	60.00	0		90	92	87	75	85	76	45	1	3	3	20	70	3	1	Blue	223	#029 #030
+#032	Nidoran♂	Nidoran♂	Poison	Poison Pin	Poison Point	Rivalry	Hustle	100/0	Monster, Field	0.50	9.00	0	16	46	57	40	40	40	50	235	0	1	4	20	70	3	1	Purple	55	
+#033	Nidorino	Nidorino	Poison	Poison Pin	Poison Point	Rivalry	Hustle	100/0	Monster, Field	0.90	19.50	0	Moon Stone, Nidoking	61	72	57	55	55	65	120	0	2	8	20	70	3	1	Purple	128	#032
+#034	Nidoking	Nidoking	Poison/Ground	Drill	Poison Point	Rivalry	Sheer Force	100/0	Monster, Field	1.40	62.00	0		81	102	77	85	75	85	45	1	3	12	20	70	3	1	Purple	223	#032 #033
+#035	Clefairy	Clefairy	Fairy	Fairy	Cute Charm	Magic Guard	Friend Guard	25/75	Plant	0.60	7.50	0	Moon Stone, Clefable	70	45	48	60	65	35	150	0	2	2	10	140	4	1	Pink	113	#173
+#036	Clefable	Clefable	Fairy	Fairy	Cute Charm	Magic Guard	Unaware	25/75	Plant	1.30	40.00	0		95	70	73	95	90	60	25	1	3	3	10	140	4	1	Pink	213	#173 #035
+#037	Vulpix	Vulpix	Fire	Fox	Flash Fire		Drought	25/75	Field	0.60	9.90	0	Fire Stone, Ninetales	38	41	40	50	65	65	190	0	1	64	20	70	0	1	Brown	60	
+#038	Ninetales	Ninetales	Fire	Fox	Flash Fire		Drought	25/75	Field	1.10	19.90	0		73	76	75	81	100	100	75	1	2	1088	20	70	0	1	Yellow	177	#037
+#039	Jigglypuff	Jigglypuff	Normal/Fairy	Balloon	Cute Charm	Competitive	Friend Guard	25/75	Plant	0.50	5.50	0	Moon Stone, Wigglytuff	115	45	20	45	25	20	170	0	2	2	10	70	4	1	Pink	95	#174
+#040	Wigglytuff	Wigglytuff	Normal/Fairy	Balloon	Cute Charm	Competitive	Frisk	25/75	Plant	1.00	12.00	0		140	70	45	85	50	45	50	1	3	3	10	70	4	1	Pink	191	#174 #039
+#041	Zubat	Zubat	Poison/Flying	Bat	Inner Focus		Infiltrator	50/50	Field	0.80	7.50	0	22	40	45	35	30	40	55	255	0	1	64	15	70	0	1	Purple	49	
+#042	Golbat	Golbat	Poison/Flying	Bat	Inner Focus		Infiltrator	50/50	Field	1.60	55.00	0	Happiness Evolution, Crobat	75	80	70	65	75	90	90	0	2	128	15	70	0	1	Purple	159	#041
+#043	Oddish	Oddish	Grass/Poison	Weed	Chlorophyll		Run Away	50/50	Plant	0.50	5.40	0	21	45	50	55	75	65	30	255	0	1	256	20	70	3	1	Blue	64	
+#044	Gloom	Gloom	Grass/Poison	Weed	Chlorophyll		Stench	50/50	Plant	0.80	8.60	0	Leaf Stone, Vileplume; Sun Stone, Bellossom	60	65	70	85	75	40	120	0	2	512	20	70	3	1	Blue	138	#043
+#045	Vileplume	Vileplume	Grass/Poison	Flower	Chlorophyll		Effect Spore	50/50	Plant	1.20	18.60	0		75	80	85	110	90	50	45	1	3	768	20	70	3	1	Red	216	#043 #044
+#046	Paras	Paras	Bug/Grass	Mushroom	Effect Spore	Dry Skin	Damp	50/50	Bug, Plant	0.30	5.40	0	24	35	70	55	45	55	25	190	0	1	4	20	70	0	1	Red	57	
+#047	Parasect	Parasect	Bug/Grass	Mushroom	Effect Spore	Dry Skin	Damp	50/50	Bug, Plant	1.00	29.50	0		60	95	80	60	80	30	75	1	2	24	20	70	0	1	Red	142	#046
+#048	Venonat	Venonat	Bug/Poison	Insect	Compoundeyes	Tinted Lens	Run Away	50/50	Bug	1.00	30.00	0	31	60	55	50	40	55	45	190	0	1	1024	20	70	0	1	Purple	61	
+#049	Venomoth	Venomoth	Bug/Poison	Poison Moth	Shield Dust	Tinted Lens	Wonder Skin	50/50	Bug	1.50	12.50	0		70	65	60	90	75	90	75	1	2	320	20	70	0	1	Purple	158	#048
+#050	Diglett	Diglett	Ground	Mole	Sand Veil	Arena Trap	Sand Force	50/50	Field	0.20	0.80	0	26	10	55	25	35	45	95	255	0	1	4160	20	70	0	1	Brown	53	
+#051	Dugtrio	Dugtrio	Ground	Mole	Sand Veil	Arena Trap	Sand Force	50/50	Field	0.70	33.30	0		35	80	50	50	70	120	50	1	2	4224	20	70	0	1	Brown	142	#050
+#052	Meowth	Meowth	Normal	Scratch Cat	Pickup	Technician	Unnerve	50/50	Field	0.40	4.20	0	28	40	45	35	40	40	90	255	0	1	64	20	70	0	1	Yellow	58	
+#053	Persian	Persian	Normal	Classy Cat	Limber	Technician	Unnerve	50/50	Field	1.00	32.00	0		65	70	60	65	65	115	90	1	2	128	20	70	0	1	Yellow	154	#052
+#054	Psyduck	Psyduck	Water	Duck	Damp	Cloud Nine	Swift Swim	50/50	Water 1, Field	0.80	19.60	0	28	50	52	48	65	50	55	190	0	1	256	20	70	0	1	Yellow	64	
+#055	Golduck	Golduck	Water	Duck	Damp	Cloud Nine	Swift Swim	50/50	Water 1, Field	1.70	76.60	0		80	82	78	95	80	85	75	1	2	512	20	70	0	1	Blue	175	#054
+#056	Mankey	Mankey	Fighting	Pig Monkey	Vital Spirit	Anger Point	Defiant	50/50	Field	0.50	28.00	0	28	40	80	35	35	45	70	190	0	1	4	20	70	0	1	Brown	61	
+#057	Primeape	Primeape	Fighting	Pig Monkey	Vital Spirit	Anger Point	Defiant	50/50	Field	1.00	32.00	0		65	105	60	60	70	95	75	1	2	8	20	70	0	1	Brown	159	#056
+#058	Growlithe	Growlithe	Fire	Puppy	Intimidate	Flash Fire	Justified	75/25	Field	0.70	19.00	0	Fire Stone, Arcanine	55	70	45	70	50	60	190	0	1	4	20	70	5	1	Brown	70	
+#059	Arcanine	Arcanine	Fire	Legendary	Intimidate	Flash Fire	Justified	75/25	Field	1.90	155.00	0		90	110	80	100	80	95	75	1	2	8	20	70	5	1	Brown	194	#058
+#060	Poliwag	Poliwag	Water	Tadpole	Water Absorb	Damp	Swift Swim	50/50	Water 1	0.60	12.40	0	25	40	50	40	40	40	90	255	0	1	64	20	70	3	1	Blue	60	
+#061	Poliwhirl	Poliwhirl	Water	Tadpole	Water Absorb	Damp	Swift Swim	50/50	Water 1	1.00	20.00	0	Water Stone,Poliwrath; Trading with King's Rock,Politoed	65	65	65	50	50	90	120	0	2	128	20	70	3	1	Blue	135	#060
+#062	Poliwrath	Poliwrath	Water/Fighting	Tadpole	Water Absorb	Damp	Swift Swim	50/50	Water 1	1.30	54.00	0		90	95	95	70	90	70	45	1	3	48	20	70	3	1	Blue	225	#060 #061
+#063	Abra	Abra	Psychic	Psi	Synchronize	Inner Focus	Magic Guard	75/25	Humanshape	0.90	19.50	0	16	25	20	15	105	55	90	200	0	1	256	20	70	3	1	Brown	62	
+#064	Kadabra	Kadabra	Psychic	Psi	Synchronize	Inner Focus	Magic Guard	75/25	Humanshape	1.30	56.50	0	Trading, Alakazam	40	35	30	120	70	105	100	0	2	512	20	70	3	1	Brown	140	#063
+#065	Alakazam	Alakazam	Psychic	Psi	Synchronize	Inner Focus	Magic Guard	75/25	Humanshape	1.50	48.00	0		55	50	45	135	95	120	50	1	3	768	20	70	3	1	Brown	221	#063 #064
+#066	Machop	Machop	Fighting	Superpower	Guts	No Guard	Steadfast	75/25	Humanshape	0.80	19.50	0	28	70	80	50	35	35	35	180	0	1	4	20	70	3	1	Gray	61	
+#067	Machoke	Machoke	Fighting	Superpower	Guts	No Guard	Steadfast	75/25	Humanshape	1.50	70.50	0	Trading, Machamp	80	100	70	50	60	45	90	0	2	8	20	70	3	1	Gray	142	#066
+#068	Machamp	Machamp	Fighting	Superpower	Guts	No Guard	Steadfast	75/25	Humanshape	1.60	130.00	0		90	130	80	65	85	55	45	1	3	12	20	70	3	1	Gray	227	#066 #067
+#069	Bellsprout	Bellsprout	Grass/Poison	Flower	Chlorophyll		Gluttony	50/50	Plant	0.70	4.00	0	21	50	75	35	70	30	40	255	0	1	4	20	70	3	1	Green	60	
+#070	Weepinbell	Weepinbell	Grass/Poison	Flycatcher	Chlorophyll		Gluttony	50/50	Plant	1.00	6.40	0	Leaf Stone, Victreebell	65	90	50	85	45	55	120	0	2	8	20	70	3	1	Green	137	#069
+#071	Victreebel	Victreebel	Grass/Poison	Flycatcher	Chlorophyll		Gluttony	50/50	Plant	1.70	15.50	0		80	105	65	100	70	70	45	1	3	12	20	70	3	1	Green	216	#069 #070
+#072	Tentacool	Tentacool	Water/Poison	Jellyfish	Clear Body	Liquid Ooze	Rain Dish	50/50	Water 3	0.90	45.50	0	30	40	40	35	50	100	70	190	0	1	1024	20	70	5	1	Blue	67	
+#073	Tentacruel	Tentacruel	Water/Poison	Jellyfish	Clear Body	Liquid Ooze	Rain Dish	50/50	Water 3	1.60	55.00	0		80	70	65	80	120	100	60	1	2	2048	20	70	5	1	Blue	180	#072
+#074	Geodude	Geodude	Rock/Ground	Rock	Rock Head	Sturdy	Sand Veil	50/50	Mineral	0.40	20.00	0	25	40	80	100	30	30	20	255	0	1	16	15	70	3	1	Brown	60	
+#075	Graveler	Graveler	Rock/Ground	Rock	Rock Head	Sturdy	Sand Veil	50/50	Mineral	1.00	105.00	0	Trading, Golem	55	95	115	45	45	35	120	0	2	32	15	70	3	1	Brown	137	#074
+#076	Golem	Golem	Rock/Ground	Megaton	Rock Head	Sturdy	Sand Veil	50/50	Mineral	1.40	300.00	0		80	120	130	55	65	45	45	1	3	48	15	70	3	1	Brown	218	#074 #075
+#077	Ponyta	Ponyta	Fire	Fire Horse	Run Away	Flash Fire	Flame Body	50/50	Field	1.00	30.00	0	40	50	85	55	65	65	90	190	0	1	64	20	70	0	1	Yellow	82	
+#078	Rapidash	Rapidash	Fire	Fire Horse	Run Away	Flash Fire	Flame Body	50/50	Field	1.70	95.00	0		65	100	70	80	80	105	60	1	2	128	20	70	0	1	Yellow	175	#077
+#079	Slowpoke	Slowpoke	Water/Psychic	Dopey	Oblivious	Own Tempo	Regenerator	50/50	Monster, Water 1	1.20	36.00	0	37 (or Slowking, trading with King's Rock)	90	65	65	40	40	15	190	0	1	1	20	70	0	1	Pink	63	
+#080	Slowbro	Slowbro	Water/Psychic	Hermit Crab	Oblivious	Own Tempo	Regenerator	50/50	Monster, Water 1	1.60	78.50	0		95	75	110	100	80	30	75	1	2	32	20	70	0	1	Pink	172	#079
+#081	Magnemite	Magnemite	Electric/Steel	Magnet	Magnet Pull	Sturdy	Analytic	N/A	Mineral	0.30	6.00	0	30	25	35	70	95	55	45	190	0	1	256	20	70	0	1	Gray	65	
+#082	Magneton	Magneton	Electric/Steel	Magnet	Magnet Pull	Sturdy	Analytic	N/A	Mineral	1.00	60.00	0	Evolve in Mt. Coronet or Chargestone Cave, Magnezone	50	60	95	120	70	70	60	0	2	512	20	70	0	1	Gray	163	#081
+#083	Farfetch'd	Farfetch'd	Normal/Flying	Wild Duck	Keen Eye	Inner Focus	Defiant	50/50	Field	0.80	15.00	0		52	65	55	58	62	60	45	1	2	4	20	70	0	1	Brown	123	
+#084	Doduo	Doduo	Normal/Flying	Twin Bird	Run Away	Early Bird	Tangled Feet	50/50	Field	1.40	39.20	0	31	35	85	45	35	35	75	190	0	1	4	20	70	0	1	Brown	62	
+#085	Dodrio	Dodrio	Normal/Flying	Triple Bird	Run Away	Early Bird	Tangled Feet	50/50	Field	1.80	85.20	0		60	110	70	60	60	100	45	1	2	8	20	70	0	1	Brown	161	#084
+#086	Seel	Seel	Water	Sea Lion	Thick Fat	Hydration	Ice Body	50/50	Water 1, Field	1.10	90.00	0	34	65	45	55	45	70	45	190	0	1	1024	20	70	0	1	White	65	
+#087	Dewgong	Dewgong	Water/Ice	Sea Lion	Thick Fat	Hydration	Ice Body	50/50	Water 1, Field	1.70	120.00	0		90	70	80	70	95	70	75	1	2	2048	20	70	0	1	White	166	#086
+#088	Grimer	Grimer	Poison	Sludge	Stench	Sticky Hold	Poison Touch	50/50	Indeterminate	0.90	30.00	0	38	80	80	50	40	50	25	190	0	1	1	20	70	0	1	Purple	65	
+#089	Muk	Muk	Poison	Sludge	Stench	Sticky Hold	Poison Touch	50/50	Indeterminate	1.20	30.00	0		105	105	75	65	100	50	75	1	2	5	20	70	0	1	Purple	175	#088
+#090	Shellder	Shellder	Water	Bivalve	Shell Armor	Skill Link	Overcoat	50/50	Water 3	0.30	4.00	0	Water Stone, Cloyster	30	65	100	45	25	40	190	0	1	16	20	70	5	1	Purple	61	
+#091	Cloyster	Cloyster	Water/Ice	Bivalve	Shell Armor	Skill Link	Overcoat	50/50	Water 3	1.50	132.50	0		50	95	180	85	45	70	60	1	2	32	20	70	5	1	Purple	184	#090
+#092	Gastly	Gastly	Ghost/Poison	Gas	Levitate			50/50	Indeterminate	1.30	0.10	0	25	30	35	30	100	35	80	190	0	1	256	20	70	3	1	Purple	62	
+#093	Haunter	Haunter	Ghost/Poison	Gas	Levitate			50/50	Indeterminate	1.60	0.10	0	Trading, Gengar	45	50	45	115	55	95	90	0	2	512	20	70	3	1	Purple	142	#092
+#094	Gengar	Gengar	Ghost/Poison	Shadow	Levitate			50/50	Indeterminate	1.50	40.50	0		60	65	60	130	75	110	45	1	3	768	20	70	3	1	Purple	225	#092 #093
+#095	Onix	Onix	Rock/Ground	Rock Snake	Rock Head	Sturdy	Weak Armor	50/50	Mineral	8.80	210.00	0	Trading with Metal Coat, Steelix	35	45	160	30	45	70	45	0	1	16	25	70	0	1	Gray	77	
+#096	Drowzee	Drowzee	Psychic	Hypnosis	Insomnia	Forewarn	Inner Focus	50/50	Humanshape	1.00	32.40	0	26	60	48	45	43	90	42	190	0	1	1024	20	70	0	1	Yellow	66	
+#097	Hypno	Hypno	Psychic	Hypnosis	Insomnia	Forewarn	Inner Focus	50/50	Humanshape	1.60	75.60	0		85	73	70	73	115	67	75	1	2	2048	20	70	0	1	Yellow	169	#096
+#098	Krabby	Krabby	Water	River Crab	Hyper Cutter	Shell Armor	Sheer Force	50/50	Water 3	0.40	6.50	0	28	30	105	90	25	25	50	225	0	1	4	20	70	0	1	Red	65	
+#099	Kingler	Kingler	Water	Pincer	Hyper Cutter	Shell Armor	Sheer Force	50/50	Water 3	1.30	60.00	0		55	130	115	50	50	75	60	1	2	8	20	70	0	1	Red	166	#098
+#100	Voltorb	Voltorb	Electric	Ball	Soundproof	Static	Aftermath	N/A	Mineral	0.50	10.40	0	30	40	30	50	55	55	100	190	0	1	64	20	70	0	1	Red	66	
+#101	Electrode	Electrode	Electric	Ball	Soundproof	Static	Aftermath	N/A	Mineral	1.20	66.60	0		60	50	70	80	80	140	60	1	2	128	20	70	0	1	Red	168	#100
+#102	Exeggcute	Exeggcute	Grass/Psychic	Egg	Chlorophyll		Harvest	50/50	Plant	0.40	2.50	0	Leaf Stone, Exeggutor	60	40	80	60	45	40	90	0	1	16	20	70	5	1	Pink	65	
+#103	Exeggutor	Exeggutor	Grass/Psychic	Coconut	Chlorophyll		Harvest	50/50	Plant	2.00	120.00	0		95	95	85	125	65	55	45	1	2	512	20	70	5	1	Yellow	182	#102
+#104	Cubone	Cubone	Ground	Lonely	Rock Head	Lightningrod	Battle Armor	50/50	Monster	0.40	6.50	0	28	50	50	95	40	50	35	190	0	1	16	20	70	0	1	Brown	64	
+#105	Marowak	Marowak	Ground	Bone Keeper	Rock Head	Lightningrod	Battle Armor	50/50	Monster	1.00	45.00	0		60	80	110	50	80	45	75	1	2	32	20	70	0	1	Brown	149	#104
+#106	Hitmonlee	Hitmonlee	Fighting	Kicking	Limber	Reckless	Unburden	100/0	Humanshape	1.50	49.80	0		50	120	53	35	110	87	45	1	2	8	25	70	0	1	Brown	159	#236
+#107	Hitmonchan	Hitmonchan	Fighting	Punching	Keen Eye	Iron Fist	Inner Focus	100/0	Humanshape	1.40	50.20	0		50	105	79	35	110	76	45	1	2	2048	25	70	0	1	Brown	159	#236
+#108	Lickitung	Lickitung	Normal	Licking	Own Tempo	Oblivious	Cloud Nine	50/50	Monster	1.20	65.50	0	When it learns Roll Out, Lickitung	90	55	75	60	75	30	45	0	1	2	20	70	0	1	Pink	77	
+#109	Koffing	Koffing	Poison	Poison Gas	Levitate			50/50	Indeterminate	0.60	1.00	0	35	40	65	95	60	45	35	190	0	1	16	20	70	0	1	Purple	68	
+#110	Weezing	Weezing	Poison	Poison Gas	Levitate			50/50	Indeterminate	1.20	9.50	0		65	90	120	85	70	60	60	1	2	32	20	70	0	1	Purple	172	#109
+#111	Rhyhorn	Rhyhorn	Ground/Rock	Spikes	Lightningrod	Rock Head	Reckless	50/50	Monster, Field	1.00	115.00	0	42	80	85	95	30	30	25	120	0	1	16	20	70	5	1	Gray	69	
+#112	Rhydon	Rhydon	Ground/Rock	Drill	Lightningrod	Rock Head	Reckless	50/50	Monster, Field	1.90	120.00	0	With Protector, Rhyperior	105	130	120	45	45	40	60	1	2	8	20	70	5	1	Gray	170	#111
+#113	Chansey	Chansey	Normal	Egg	Natural Cure	Serene Grace	Healer	0/100	Plant	1.10	34.60	0	Happiness Evolution, Blissey	250	5	5	35	105	50	30	0	2	2	40	140	4	1	Pink	395	#440
+#114	Tangela	Tangela	Grass	Vine	Chlorophyll	Leaf Guard	Regenerator	50/50	Plant	1.00	35.00	0	When it learns Ancient Power, Tangrowth	65	55	115	100	40	60	45	0	1	16	20	70	0	1	Blue	87	
+#115	Kangaskhan	Kangaskhan	Normal	Parent	Early Bird	Scrappy	Inner Focus	0/100	Monster	2.20	80.00	0		105	95	80	40	80	90	45	1	2	2	20	70	0	1	Brown	172	
+#116	Horsea	Horsea	Water	Dragon	Swift Swim	Sniper	Damp	50/50	Water 1, Monster	0.40	8.00	0	32	30	40	70	70	25	60	225	0	1	256	20	70	0	1	Blue	59	
+#117	Seadra	Seadra	Water	Dragon	Poison Point	Sniper	Damp	50/50	Water 1, Monster	1.20	25.00	0	Trading with Dragon Scale, Kingdra	55	65	95	95	45	85	75	0	2	272	20	70	0	1	Blue	154	#116
+#118	Goldeen	Goldeen	Water	Goldfish	Swift Swim	Water Veil	Lightningrod	50/50	Water 2	0.60	15.00	0	20	45	67	60	35	50	63	225	0	1	4	20	70	0	1	Red	64	
+#119	Seaking	Seaking	Water	Goldfish	Swift Swim	Water Veil	Lightningrod	50/50	Water 2	1.30	39.00	0		80	92	65	65	80	68	60	1	2	8	20	70	0	1	Red	158	#118
+#120	Staryu	Staryu	Water	Star Shape	Illuminate	Natural Cure	Analytic	N/A	Water 3	0.80	34.50	0	Water Stone, Starmie	30	45	55	70	55	85	225	0	1	64	20	70	5	1	Brown	68	
+#121	Starmie	Starmie	Water/Psychic	Mysterious	Illuminate	Natural Cure	Analytic	N/A	Water 3	1.10	80.00	0		60	75	85	100	85	115	60	1	2	128	20	70	5	1	Purple	182	#120
+#122	Mr. Mime	Mr. Mime	Psychic/Fairy	Barrier	Soundproof	Filter	Technician	50/50	Humanshape	1.30	54.50	0		40	45	65	100	120	90	45	1	2	2048	25	70	0	1	Pink	161	#439
+#123	Scyther	Scyther	Bug/Flying	Mantis	Swarm	Technician	Steadfast	50/50	Bug	1.50	56.00	0	Trading with Metal Coat, Scizor	70	110	80	55	80	105	45	0	1	4	25	70	0	1	Green	100	
+#124	Jynx	Jynx	Ice/Psychic	Human Shape	Oblivious	Forewarn	Dry Skin	0/100	Humanshape	1.40	40.60	0		65	50	35	115	95	95	45	1	2	512	25	70	0	1	Red	159	#238
+#125	Electabuzz	Electabuzz	Electric	Electric	Static		Vital Spirit	75/25	Humanshape	1.10	30.00	0	Trading with Electrizer, Electivire	65	83	57	95	85	105	45	0	2	128	25	70	0	1	Yellow	172	#239
+#126	Magmar	Magmar	Fire	Spitfire	Flame Body		Vital Spirit	75/25	Humanshape	1.30	44.50	0	Trading with Magmarizer, Magmortar	65	95	57	100	85	93	45	0	2	512	25	70	0	1	Red	173	#240
+#127	Pinsir	Pinsir	Bug	Stag Beetle	Hyper Cutter	Mold Breaker	Moxie	50/50	Bug	1.50	55.00	0		65	125	100	55	70	85	45	1	2	8	25	70	5	1	Brown	175	
+#128	Tauros	Tauros	Normal	Wild Bull	Intimidate	Anger Point	Sheer Force	100/0	Field	1.40	88.40	0		75	100	95	40	70	110	45	1	2	68	20	70	5	1	Brown	172	
+#129	Magikarp	Magikarp	Water	Fish	Swift Swim		Rattled	50/50	Water 2, Monster	0.90	10.00	0	20	20	10	55	15	20	80	255	0	1	64	5	70	5	1	Red	40	
+#130	Gyarados	Gyarados	Water/Flying	Atrocious	Intimidate		Moxie	50/50	Water 2, Monster	6.50	235.00	0		95	125	79	60	100	81	45	1	2	8	5	70	5	1	Blue	189	#129
+#131	Lapras	Lapras	Water/Ice	Transport	Water Absorb	Shell Armor	Hydration	50/50	Monster, Water 1	2.50	220.00	0		130	85	80	85	95	60	45	1	2	2	40	70	5	1	Blue	187	
+#132	Ditto	Ditto	Normal	Transform	Limber		Imposter	N/A	Ditto	0.30	4.00	0		48	48	48	48	48	48	35	1	2	1	20	70	0	1	Purple	101	
+#133	Eevee	Eevee	Normal	Evolution	Run Away	Adaptability	Anticipation	87.5/12.5	Field	0.30	6.50	0	Water Stone, Vaporeon; Thunder Stone, Jolteon; Fire Stone, Flareon; Happiness Evolution during the day, Espeon; Happiness Evolution during the night, Umbreon; At Moss Rock, Leafeon; Mt.Coronet, Glaceon	55	55	50	45	65	55	45	0	1	1024	35	70	0	1	Brown	65	
+#134	Vaporeon	Vaporeon	Water	Bubble Jet	Water Absorb		Hydration	87.5/12.5	Field	1.00	29.00	0		130	65	60	110	95	65	45	1	2	2	35	70	0	1	Blue	184	#133
+#135	Jolteon	Jolteon	Electric	Lightning	Volt Absorb		Quick Feet	87.5/12.5	Field	0.80	24.50	0		65	65	60	110	95	130	45	1	2	128	35	70	0	1	Yellow	184	#133
+#136	Flareon	Flareon	Fire	Flame	Flash Fire		Guts	87.5/12.5	Field	0.90	25.00	0		65	130	60	95	110	65	45	1	2	8	35	70	0	1	Red	184	#133
+#137	Porygon	Porygon	Normal	Virtual	Trace	Download	Analytic	N/A	Mineral	0.80	36.50	0	Trading with Up-Grade, Porygon 2	65	60	70	85	75	40	45	0	1	256	20	70	0	1	Pink	79	
+#138	Omanyte	Omanyte	Rock/Water	Spiral	Swift Swim	Shell Armor	Weak Armor	87.5/12.5	Water 1, Water 3	0.40	7.50	0	40	35	40	100	90	55	35	45	0	1	16	30	70	0	1	Blue	71	
+#139	Omastar	Omastar	Rock/Water	Spiral	Swift Swim	Shell Armor	Weak Armor	87.5/12.5	Water 1, Water 3	1.00	35.00	0		70	60	125	115	70	55	45	1	2	32	30	70	0	1	Blue	173	#138
+#140	Kabuto	Kabuto	Rock/Water	Shellfish	Swift Swim	Battle Armor	Weak Armor	87.5/12.5	Water 1, Water 3	0.50	11.50	0	40	30	80	90	55	45	55	45	0	1	16	30	70	0	1	Brown	71	
+#141	Kabutops	Kabutops	Rock/Water	Shellfish	Swift Swim	Battle Armor	Weak Armor	87.5/12.5	Water 1, Water 3	1.30	40.50	0		60	115	105	65	70	80	45	1	2	8	30	70	0	1	Brown	173	#140
+#142	Aerodactyl	Aerodactyl	Rock/Flying	Fossil	Rock Head	Pressure	Unnerve	87.5/12.5	Field	1.80	59.00	0		80	105	65	60	75	130	45	1	2	128	35	70	5	1	Purple	180	
+#143	Snorlax	Snorlax	Normal	Sleeping	Immunity	Thick Fat	Gluttony	87.5/12.5	Monster	2.10	460.00	0		160	110	65	65	110	30	25	1	2	2	40	70	5	1	Black	189	
+#144	Articuno	Articuno	Ice/Flying	Freeze	Pressure		Snow Cloak	N/A	Undiscovered	1.70	55.40	1		90	85	100	95	125	85	3	1	3	3072	80	35	5	1	Blue	261	
+#145	Zapdos	Zapdos	Electric/Flying	Electric	Pressure		Lightningrod	N/A	Undiscovered	1.60	52.60	1		90	90	85	125	90	100	3	1	3	768	80	35	5	1	Yellow	261	
+#146	Moltres	Moltres	Fire/Flying	Flame	Pressure		Flame Body	N/A	Undiscovered	2.00	60.00	1		90	100	90	125	85	90	3	1	3	768	80	35	5	1	Yellow	261	
+#147	Dratini	Dratini	Dragon	Dragon	Shed Skin		Marvel Scale	50/50	Water 1, Monster	1.80	3.30	0	30	41	64	45	50	50	50	45	0	1	4	40	35	5	1	Blue	60	
+#148	Dragonair	Dragonair	Dragon	Dragon	Shed Skin		Marvel Scale	50/50	Water 1, Monster	4.00	16.50	0	50	61	84	65	70	70	70	45	0	2	8	40	35	5	1	Blue	147	#147
+#149	Dragonite	Dragonite	Dragon/Flying	Dragon	Inner Focus		Multiscale	50/50	Water 1, Monster	2.20	210.00	0		91	134	95	100	100	80	45	1	3	12	40	35	5	1	Brown	270	#147 #148
+#150	Mewtwo	Mewtwo	Psychic	Genetic	Pressure		Unnerve	N/A	Undiscovered	2.00	122.00	1		106	110	90	154	90	130	3	1	3	768	120	0	5	1	Purple	306	
+#151	Mew	Mew	Psychic	New Species	Synchronize			N/A	Undiscovered	0.40	4.00	1		100	100	100	100	100	100	45	1	3	3	120	100	3	1	Pink	270	
+#152	Chikorita	Chikorita	Grass	Leaf	Overgrow		Leaf Guard	87.5/12.5	Monster, Plant	0.90	6.40	0	16	45	49	65	49	65	45	45	0	1	1024	20	70	3	1	Green	64	
+#153	Bayleef	Bayleef	Grass	Leaf	Overgrow		Leaf Guard	87.5/12.5	Monster, Plant	1.20	15.80	0	32	60	62	80	63	80	60	45	0	2	1040	20	70	3	1	Green	142	#152
+#154	Meganium	Meganium	Grass	Herb	Overgrow		Leaf Guard	87.5/12.5	Monster, Plant	1.80	100.50	0		80	82	100	83	100	80	45	1	3	2064	20	70	3	1	Green	236	#152 #153
+#155	Cyndaquil	Cyndaquil	Fire	Fire Mouse	Blaze		Flash Fire	87.5/12.5	Field	0.50	7.90	0	14	39	52	43	60	50	65	45	0	1	64	20	70	3	1	Yellow	62	
+#156	Quilava	Quilava	Fire	Volcano	Blaze		Flash Fire	87.5/12.5	Field	0.90	19.00	0	36	58	64	58	80	65	80	45	0	2	320	20	70	3	1	Yellow	142	#155
+#157	Typhlosion	Typhlosion	Fire	Volcano	Blaze		Flash Fire	87.5/12.5	Field	1.70	79.50	0		78	84	78	109	85	100	45	1	3	768	20	70	3	1	Yellow	240	#155 #156
+#158	Totodile	Totodile	Water	Big Jaw	Torrent		Sheer Force	87.5/12.5	Monster, Water 1	0.60	9.50	0	18	50	65	64	44	48	43	45	0	1	4	20	70	3	1	Blue	63	
+#159	Croconaw	Croconaw	Water	Big Jaw	Torrent		Sheer Force	87.5/12.5	Monster, Water 1	1.10	25.00	0	30	65	80	80	59	63	58	45	0	2	20	20	70	3	1	Blue	142	#158
+#160	Feraligatr	Feraligatr	Water	Big Jaw	Torrent		Sheer Force	87.5/12.5	Monster, Water 1	2.30	88.80	0		85	105	100	79	83	78	45	1	3	24	20	70	3	1	Blue	239	#158 #159
+#161	Sentret	Sentret	Normal	Scout	Run Away	Keen Eye	Frisk	50/50	Field	0.80	6.00	0	15	35	46	34	35	45	20	255	0	1	4	15	70	0	1	Brown	43	
+#162	Furret	Furret	Normal	Long Body	Run Away	Keen Eye	Frisk	50/50	Field	1.80	32.50	0		85	76	64	45	55	90	90	1	2	128	15	70	0	1	Brown	145	#161
+#163	Hoothoot	Hoothoot	Normal/Flying	Owl	Insomnia	Keen Eye	Tinted Lens	50/50	Field	0.70	21.20	0	20	60	30	30	36	56	50	255	0	1	1	15	70	0	1	Brown	52	
+#164	Noctowl	Noctowl	Normal/Flying	Owl	Insomnia	Keen Eye	Tinted Lens	50/50	Field	1.60	40.80	0		100	50	50	76	96	70	90	1	2	2	15	70	0	1	Brown	155	#163
+#165	Ledyba	Ledyba	Bug/Flying	Five Star	Swarm	Early Bird	Rattled	50/50	Bug	1.00	10.80	0	18	40	20	30	40	80	55	255	0	1	1024	15	70	4	1	Red	53	
+#166	Ledian	Ledian	Bug/Flying	Five Star	Swarm	Early Bird	Iron Fist	50/50	Bug	1.40	35.60	0		55	35	50	55	110	85	90	1	2	2048	15	70	4	1	Red	137	#165
+#167	Spinarak	Spinarak	Bug/Poison	String Spit	Swarm	Insomnia	Sniper	50/50	Bug	0.50	8.50	0	25	40	60	40	40	40	30	255	0	1	4	15	70	4	1	Green	50	
+#168	Ariados	Ariados	Bug/Poison	Long Leg	Swarm	Insomnia	Sniper	50/50	Bug	1.10	33.50	0		70	90	70	60	60	40	90	1	2	8	15	70	4	1	Red	137	#167
+#169	Crobat	Crobat	Poison/Flying	Bat	Inner Focus		Infiltrator	50/50	Field	1.80	75.00	0		85	90	80	70	80	130	90	1	3	192	15	70	0	1	Purple	241	#041 #042
+#170	Chinchou	Chinchou	Water/Electric	Angler	Volt Absorb	Illuminate	Water Absorb	50/50	Water 2	0.50	12.00	0	27	75	38	38	56	56	67	190	0	1	1	20	70	5	1	Blue	66	
+#171	Lanturn	Lanturn	Water/Electric	Light	Volt Absorb	Illuminate	Water Absorb	50/50	Water 2	1.20	22.50	0		125	58	58	76	76	67	75	1	2	2	20	70	5	1	Blue	161	#170
+#172	Pichu	Pichu	Electric	Tiny Mouse	Static		Lightningrod	50/50	Undiscovered	0.30	2.00	0	16	20	40	15	35	35	60	190	0	1	64	10	70	0	1	Yellow	41	
+#173	Cleffa	Cleffa	Normal/Fairy	Star Shape	Cute Charm	Magic Guard	Friend Guard	25/75	Undiscovered	0.30	3.00	0	Happiness Evolution, Clefairy	50	25	28	45	55	15	150	0	1	1024	10	140	4	1	Pink	44	
+#174	Igglybuff	Igglybuff	Fairy	Balloon	Cute Charm	Competitive	Friend Guard	25/75	Undiscovered	0.30	1.00	0	Happiness Evolution, Jigglypuff	90	30	15	40	20	15	170	0	1	1	10	70	4	1	Pink	42	
+#175	Togepi	Togepi	Fairy	Spike Ball	Hustle	Serene Grace	Super Luck	87.5/12.5	Undiscovered	0.30	1.50	0	Happiness Evolution, Togetic	35	20	65	40	65	20	190	0	1	1024	10	70	4	1	White	49	
+#176	Togetic	Togetic	Fairy/Flying	Happiness	Hustle	Serene Grace	Super Luck	87.5/12.5	Field, Plant	0.60	3.20	0	Shiny Stone, Togekiss	55	40	85	80	105	40	75	0	2	2048	10	70	4	1	White	142	#175
+#177	Natu	Natu	Psychic/Flying	Tiny Bird	Synchronize	Early Bird	Magic Bounce	50/50	Field	0.20	2.00	0	25	40	50	45	70	45	70	190	0	1	256	20	70	0	1	Green	64	
+#178	Xatu	Xatu	Psychic/Flying	Mystic	Synchronize	Early Bird	Magic Bounce	50/50	Field	1.50	15.00	0		65	75	70	95	70	95	75	1	2	320	20	70	0	1	Green	165	#177
+#179	Mareep	Mareep	Electric	Wool	Static		Plus	50/50	Monster, Field	0.60	7.80	0	15	55	40	40	65	45	35	235	0	1	256	20	70	3	1	White	56	
+#180	Flaaffy	Flaaffy	Electric	Wool	Static		Plus	50/50	Monster, Field	0.80	13.30	0	30	70	55	55	80	60	45	120	0	2	512	20	70	3	1	Pink	128	#179
+#181	Ampharos	Ampharos	Electric	Light	Static		Plus	50/50	Monster, Field	1.40	61.50	0		90	75	85	115	90	55	45	1	3	768	20	70	3	1	Yellow	225	#179 #180
+#182	Bellossom	Bellossom	Grass	Flower	Chlorophyll		Healer	50/50	Plant	0.40	5.80	0		75	80	95	90	100	50	45	1	3	3072	20	70	3	1	Green	216	#043 #044
+#183	Marill	Marill	Water/Fairy	Aqua Mouse	Thick Fat	Huge Power	Sap Sipper	50/50	Water 1, Plant	0.40	8.50	0	18	70	20	50	20	50	40	190	0	2	2	10	70	4	1	Blue	88	#298
+#184	Azumarill	Azumarill	Water/Fairy	Aqua Rabbit	Thick Fat	Huge Power	Sap Sipper	50/50	Water 1, Plant	0.80	28.50	0		100	50	80	60	80	50	75	1	3	3	10	70	4	1	Blue	185	#298 #183
+#185	Sudowoodo	Sudowoodo	Rock	Imitation	Sturdy	Rock Head	Rattled	50/50	Mineral	1.20	38.00	0		70	100	115	30	65	30	65	1	2	32	20	70	0	1	Brown	144	#438
+#186	Politoed	Politoed	Water	Frog	Water Absorb	Damp	Drizzle	50/50	Water 1	1.10	33.90	0		90	75	75	90	100	70	45	1	3	3072	20	70	3	1	Green	225	#060 #061
+#187	Hoppip	Hoppip	Grass/Flying	Cottonweed	Chlorophyll	Leaf Guard	Infiltrator	50/50	Plant	0.40	0.50	0	18	35	35	40	35	55	50	255	0	1	1024	20	70	3	1	Pink	50	
+#188	Skiploom	Skiploom	Grass/Flying	Cottonweed	Chlorophyll	Leaf Guard	Infiltrator	50/50	Plant	0.60	1.00	0	27	55	45	50	45	65	80	120	0	2	128	20	70	3	1	Green	119	#187
+#189	Jumpluff	Jumpluff	Grass/Flying	Cottonweed	Chlorophyll	Leaf Guard	Infiltrator	50/50	Plant	0.80	3.00	0		75	55	70	55	95	110	45	1	3	192	20	70	3	1	Blue	203	#187 #188
+#190	Aipom	Aipom	Normal	Long Tail	Run Away	Pickup	Skill Link	50/50	Field	0.80	11.50	0	When it learns Double Hit, Ambipom	55	70	55	40	55	85	45	0	1	64	20	70	4	1	Purple	72	
+#191	Sunkern	Sunkern	Grass	Seed	Chlorophyll	Solar Power	Early Bird	50/50	Plant	0.30	1.80	0	Sun Stone, Sunflora	30	30	30	30	30	30	235	0	1	256	20	70	3	1	Yellow	36	
+#192	Sunflora	Sunflora	Grass	Sun	Chlorophyll	Solar Power	Early Bird	50/50	Plant	0.80	8.50	0		75	75	55	105	85	30	120	1	2	512	20	70	3	1	Yellow	149	#191
+#193	Yanma	Yanma	Bug/Flying	Clear Wing	Speed Boost	Compoundeyes	Frisk	50/50	Bug	1.20	38.00	0	When it learns Ancient Power, Yanmega	65	65	45	75	45	95	75	0	1	64	20	70	0	1	Red	78	
+#194	Wooper	Wooper	Water/Ground	Water Fish	Damp	Water Absorb	Unaware	50/50	Water 1, Field	0.40	8.50	0	20	55	45	45	25	25	15	255	0	1	1	20	70	0	1	Blue	42	
+#195	Quagsire	Quagsire	Water/Ground	Water Fish	Damp	Water Absorb	Unaware	50/50	Water 1, Field	1.40	75.00	0		95	85	85	65	65	35	90	1	2	2	20	70	0	1	Blue	151	#194
+#196	Espeon	Espeon	Psychic	Sun	Synchronize		Magic Bounce	87.5/12.5	Field	0.90	26.50	0		65	65	60	130	95	110	45	1	2	512	35	70	0	1	Purple	184	#133
+#197	Umbreon	Umbreon	Dark	Moonlight	Synchronize		Inner Focus	87.5/12.5	Field	1.00	27.00	0		95	65	110	60	130	65	45	1	2	2048	35	35	0	1	Black	184	#133
+#198	Murkrow	Murkrow	Dark/Flying	Darkness	Insomnia	Super Luck	Prankster	50/50	Field	0.50	2.10	0	Dusk Stone, Honchkrow	60	85	42	85	42	91	30	0	1	64	20	35	3	1	Black	81	
+#199	Slowking	Slowking	Water/Psychic	Royal	Oblivious	Own Tempo	Regenerator	50/50	Monster, Water 1	2.00	79.50	0		95	75	80	100	110	30	70	1	2	3072	20	70	0	1	Pink	172	#080
+#200	Misdreavus	Misdreavus	Ghost	Screech	Levitate			50/50	Indeterminate	0.70	1.00	0	Dusk Stone, Mismagius	60	60	60	85	85	85	45	0	1	1024	25	35	4	1	Gray	87	
+#201	Unown	Unown A	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-1	Unown	Unown B	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-10	Unown	Unown K	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-11	Unown	Unown L	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-12	Unown	Unown M	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-13	Unown	Unown N	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-14	Unown	Unown O	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-15	Unown	Unown P	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-16	Unown	Unown Q	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-17	Unown	Unown R	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-18	Unown	Unown S	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-19	Unown	Unown T	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-2	Unown	Unown C	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-20	Unown	Unown U	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-21	Unown	Unown V	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-22	Unown	Unown W	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-23	Unown	Unown X	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-24	Unown	Unown Y	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-25	Unown	Unown Z	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-26	Unown	Unown !	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-27	Unown	Unown ?	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-3	Unown	Unown D	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-4	Unown	Unown E	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-5	Unown	Unown F	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-6	Unown	Unown G	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-7	Unown	Unown H	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-8	Unown	Unown I	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#201-9	Unown	Unown J	Psychic	Symbol	Levitate			N/A	Undiscovered	0.50	5.00	0		48	72	48	72	48	48	225	1	2	260	40	70	0	28	Black	118	
+#202	Wobbuffet	Wobbuffet	Psychic	Patient	Shadow Tag		Telepathy	50/50	Indeterminate	1.30	28.50	0		190	33	58	33	58	33	45	1	2	2	20	70	0	1	Blue	142	#360
+#203	Girafarig	Girafarig	Normal/Psychic	Long Neck	Inner Focus	Early Bird	Sap Sipper	50/50	Field	1.50	41.50	0		70	80	65	90	65	85	60	1	2	512	20	70	0	1	Yellow	159	
+#204	Pineco	Pineco	Bug	Bagworm	Sturdy		Overcoat	50/50	Bug	0.60	7.20	0	31	50	65	90	35	35	15	190	0	1	16	20	70	0	1	Gray	58	
+#205	Forretress	Forretress	Bug/Steel	Bagworm	Sturdy		Overcoat	50/50	Bug	1.20	125.80	0		75	90	140	60	60	40	75	1	2	32	20	70	0	1	Purple	163	#204
+#206	Dunsparce	Dunsparce	Normal	Land Snake	Serene Grace	Run Away	Rattled	50/50	Field	1.50	14.00	0		100	70	70	65	65	45	190	1	2	1	20	70	0	1	Yellow	145	
+#207	Gligar	Gligar	Ground/Flying	FlyScorpion	Hyper Cutter	Sand Veil	Immunity	50/50	Bug	1.10	64.80	0	With Razor Fang at night, Gliscor	65	75	105	35	65	85	60	0	1	16	20	70	3	1	Purple	86	
+#208	Steelix	Steelix	Steel/Ground	Iron Snake	Rock Head	Sturdy	Sheer Force	50/50	Mineral	9.20	400.00	0		75	85	200	55	65	30	25	1	2	32	25	70	0	1	Gray	179	#095
+#209	Snubbull	Snubbull	Fairy	Fairy	Intimidate	Run Away	Rattled	25/75	Field, Plant	0.60	7.80	0	23	60	80	50	40	40	30	190	0	1	4	20	70	4	1	Pink	60	
+#210	Granbull	Granbull	Fairy	Fairy	Intimidate	Quick Feet	Rattled	25/75	Field, Plant	1.40	48.70	0		90	120	75	60	60	45	75	1	2	8	20	70	4	1	Purple	158	#209
+#211	Qwilfish	Qwilfish	Water/Poison	Balloon	Poison Point	Swift Swim	Intimidate	50/50	Water 2	0.50	3.90	0		65	95	75	55	55	85	45	1	1	4	20	70	0	1	Gray	86	
+#212	Scizor	Scizor	Bug/Steel	Pincer	Swarm	Technician	Light Metal	50/50	Bug	1.80	118.00	0		70	130	100	55	80	65	25	1	2	8	25	70	0	1	Red	175	#123
+#213	Shuckle	Shuckle	Bug/Rock	Mold	Sturdy	Gluttony	Contrary	50/50	Bug	0.60	20.50	0		20	10	230	10	230	5	190	1	2	1040	20	70	3	1	Yellow	177	
+#214	Heracross	Heracross	Bug/Fighting	Single Horn	Swarm	Guts	Moxie	50/50	Bug	1.50	54.00	0		80	125	75	40	95	85	45	1	2	8	25	70	5	1	Blue	175	
+#215	Sneasel	Sneasel	Dark/Ice	Sharp Claw	Inner Focus	Keen Eye	Pickpocket	50/50	Field	0.90	28.00	0	With Razor Claw at night, Weavile	55	95	55	35	75	115	60	0	1	64	20	35	3	1	Black	86	
+#216	Teddiursa	Teddiursa	Normal	Little Bear	Pickup	Quick Feet	Honey Gather	50/50	Field	0.60	8.80	0	30	60	80	50	50	50	40	120	0	1	4	20	70	0	1	Brown	66	
+#217	Ursaring	Ursaring	Normal	Hibernator	Guts	Quick Feet	Unnerve	50/50	Field	1.80	125.80	0		90	130	75	75	75	55	60	1	2	8	20	70	0	1	Brown	175	#216
+#218	Slugma	Slugma	Fire	Lava	Magma Armor	Flame Body	Weak Armor	50/50	Indeterminate	0.70	35.00	0	38	40	40	40	70	40	20	190	0	1	256	20	70	0	1	Red	50	
+#219	Magcargo	Magcargo	Fire/Rock	Lava	Magma Armor	Flame Body	Weak Armor	50/50	Indeterminate	0.80	55.00	0		50	50	120	80	80	30	75	1	2	32	20	70	0	1	Red	144	#218
+#220	Swinub	Swinub	Ice/Ground	Pig	Oblivious	Snow Cloak	Thick Fat	50/50	Field	0.40	6.50	0	33	50	50	40	30	30	50	225	0	1	4	20	70	5	1	Brown	50	
+#221	Piloswine	Piloswine	Ice/Ground	Swine	Oblivious	Snow Cloak	Thick Fat	50/50	Field	1.10	55.80	0	When it learns Ancient Power, Mamoswine	100	100	80	60	60	50	75	0	2	5	20	70	5	1	Brown	158	#220
+#222	Corsola	Corsola	Water/Rock	Coral	Hustle	Natural Cure	Regenerator	25/75	Water 1, Water 3	0.60	5.00	0		55	55	85	65	85	35	60	1	2	1040	20	70	4	1	Pink	133	
+#223	Remoraid	Remoraid	Water	Jet	Hustle	Sniper	Moody	50/50	Water 1, Water 2	0.60	12.00	0	32	35	65	35	65	35	65	190	0	1	256	20	70	0	1	Gray	60	
+#224	Octillery	Octillery	Water	Jet	Suction Cups	Sniper	Moody	50/50	Water 1, Water 2	0.90	28.50	0		75	105	75	105	75	45	75	1	2	260	20	70	0	1	Red	168	#223
+#225	Delibird	Delibird	Ice/Flying	Delivery	Vital Spirit	Hustle	Insomnia	50/50	Water 1, Field	0.90	16.00	0		45	55	45	65	45	75	45	1	2	64	20	70	4	1	Red	116	
+#226	Mantine	Mantine	Water/Flying	Kite	Swift Swim	Water Absorb	Water Veil	50/50	Water 1	2.10	220.00	0		65	40	70	80	140	70	25	1	2	2048	25	70	5	1	Purple	163	#458
+#227	Skarmory	Skarmory	Steel/Flying	Armor Bird	Keen Eye	Sturdy	Weak Armor	50/50	Field	1.70	50.50	0		65	80	140	40	70	70	25	1	2	32	25	70	5	1	Gray	163	
+#228	Houndour	Houndour	Dark/Fire	Dark	Early Bird	Flash Fire	Unnerve	50/50	Field	0.60	10.80	0	24	45	60	30	80	50	65	120	0	1	256	20	35	5	1	Black	66	
+#229	Houndoom	Houndoom	Dark/Fire	Dark	Early Bird	Flash Fire	Unnerve	50/50	Field	1.40	35.00	0		75	90	50	110	80	95	45	1	2	512	20	35	5	1	Black	175	#228
+#230	Kingdra	Kingdra	Water/Dragon	Dragon	Swift Swim	Sniper	Damp	50/50	Water 1, Monster	1.80	152.00	0		75	95	95	95	95	85	45	1	3	1284	20	70	0	1	Blue	243	#117
+#231	Phanpy	Phanpy	Ground	Long Nose	Pickup		Sand Veil	50/50	Field	0.50	33.50	0	25	90	60	60	40	40	40	120	0	1	1	20	70	0	1	Blue	66	
+#232	Donphan	Donphan	Ground	Armor	Sturdy		Sand Veil	50/50	Field	1.10	120.00	0		90	120	120	60	60	50	60	1	2	20	20	70	0	1	Gray	175	#231
+#233	Porygon2	Porygon2	Normal	Virtual	Trace	Download	Analytic	N/A	Mineral	0.60	32.50	0	Trade with Dubious Disc, Polygon-Z	85	80	90	105	95	60	45	0	2	512	20	70	0	1	Red	180	#137
+#234	Stantler	Stantler	Normal	Big Horn	Intimidate	Frisk	Sap Sipper	50/50	Field	1.40	71.20	0		73	95	62	85	65	85	45	1	2	4	20	70	5	1	Brown	163	
+#235	Smeargle	Smeargle	Normal	Painter	Own Tempo	Technician	Moody	50/50	Field	1.20	58.00	0		55	20	35	20	45	75	45	1	2	64	20	70	4	1	White	88	
+#236	Tyrogue	Tyrogue	Fighting	Scuffle	Guts	Steadfast	Vital Spirit	100/0	Undiscovered	0.70	21.00	0	20 (Atk>Def, Hitmonlee; Atk<Def, Hitmonchan; Atk=Def, Hitmontop)	35	35	35	35	35	35	75	0	1	4	25	70	0	1	Purple	42	
+#237	Hitmontop	Hitmontop	Fighting	Handstand	Intimidate	Technician	Steadfast	100/0	Humanshape	1.40	48.00	0		50	95	95	35	110	70	45	1	2	2048	25	70	0	1	Brown	159	#236
+#238	Smoochum	Smoochum	Ice/Psychic	Kiss	Oblivious	Forewarn	Hydration	0/100	Undiscovered	0.40	6.00	0	30	45	30	15	85	65	65	45	0	1	256	25	70	0	1	Pink	61	
+#239	Elekid	Elekid	Electric	Electric	Static		Vital Spirit	75/25	Undiscovered	0.60	23.50	0	30	45	63	37	65	55	95	45	0	1	64	25	70	0	1	Yellow	72	
+#240	Magby	Magby	Fire	Live Coal	Flame Body		Vital Spirit	75/25	Undiscovered	0.70	21.40	0	30	45	75	37	70	55	83	45	0	1	64	25	70	0	1	Red	73	
+#241	Miltank	Miltank	Normal	Milk Cow	Thick Fat	Scrappy	Sap Sipper	0/100	Field	1.20	75.50	0		95	80	105	40	70	100	45	1	2	32	20	70	5	1	Pink	172	
+#242	Blissey	Blissey	Normal	Happiness	Natural Cure	Serene Grace	Healer	0/100	Plant	1.50	46.80	0		255	10	10	75	135	55	30	1	3	3	40	140	4	1	Pink	608	#113
+#243	Raikou	Raikou	Electric	Thunder	Pressure		Volt Absorb	N/A	Undiscovered	1.90	178.00	1		90	85	75	115	100	115	3	1	3	384	80	35	5	1	Yellow	261	
+#244	Entei	Entei	Fire	Volcano	Pressure		Flash Fire	N/A	Undiscovered	2.10	198.00	1		115	115	85	90	75	100	3	1	3	9	80	35	5	1	Brown	261	
+#245	Suicune	Suicune	Water	Aurora	Pressure		Water Absorb	N/A	Undiscovered	2.00	187.00	1		100	75	115	90	115	85	3	1	3	2064	80	35	5	1	Blue	261	
+#246	Larvitar	Larvitar	Rock/Ground	Rock Skin	Guts		Sand Veil	50/50	Monster	0.60	72.00	0	30	50	64	50	45	50	41	45	0	1	4	40	35	5	1	Green	60	
+#247	Pupitar	Pupitar	Rock/Ground	Hard Shell	Shed Skin		Shed Skin	50/50	Monster	1.20	152.00	0	55	70	84	70	65	70	51	45	0	2	8	40	35	5	1	Gray	144	#246
+#248	Tyranitar	Tyranitar	Rock/Dark	Armor	Sand Stream		Unnerve	50/50	Monster	2.00	202.00	0		100	134	110	95	100	61	45	1	3	12	40	35	5	1	Green	270	#246 #247
+#249	Lugia	Lugia	Psychic/Flying	Diving	Pressure		Multiscale	N/A	Undiscovered	5.20	216.00	1		106	90	130	90	154	110	3	1	3	3072	120	0	5	1	White	306	
+#250	Ho-oh	Ho-oh	Fire/Flying	Rainbow	Pressure		Regenerator	N/A	Undiscovered	3.80	199.00	1		106	130	90	110	154	90	3	1	3	3072	120	0	5	1	Red	306	
+#251	Celebi	Celebi	Psychic/Grass	Time Travel	Natural Cure			N/A	Undiscovered	0.60	5.00	1		100	100	100	100	100	100	45	1	3	3	120	100	3	1	Green	270	
