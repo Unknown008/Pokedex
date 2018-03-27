@@ -1,407 +1,403 @@
-### Run only when sourced
-if {[info exists argv0] && [file tail $argv0] ne "main.tcl"} {
-  tk_messageBox -title Error \
-    -message "This script should be run from the main.tcl script"
-  exit
-}
-
 ### Load database and create it
 sqlite3 dex pokedexdb
 
-### Populate database if files were updated
-proc create_database {pokeDir gen poke move ability match movesetupdate} {
-  set pokeDetails "pokeDetails$gen"
-  set moveDetails "moveDetails$gen"
-  set abilDetails "abilDetails$gen"
-  set matcDetails "matcDetails$gen"
-  if {$poke} {
-    dex eval "DROP TABLE IF EXISTS $pokeDetails"
-    dex eval "
-      CREATE TABLE IF NOT EXISTS ${pokeDetails}(
-        id text PRIMARY KEY ASC ON CONFLICT ABORT UNIQUE,
-        pokemon text,
-        formname text,
-        type text,
-        genus text,
-        ability1 text,
-        ability2 text,
-        hability text,
-        gender text,
-        egggroup text,
-        height float,
-        weight float,
-        legend bool,
-        evolve_cond text,
-        hp int,
-        atk int,
-        def int,
-        spatk int,
-        spdef int,
-        spd int,
-        capture int,
-        final bool,
-        stage int,
-        effort int,
-        hatch_counter int,
-        happiness int,
-        exp int,
-        forms int,
-        colour text,
-        base_exp int
-      )
-    "
-    set pokefile [file join $pokeDir data gen$gen info]
-    if {[file exists $pokefile]} {
-      set f [open $pokefile r]
-      set code "dex eval {
-        INSERT INTO $pokeDetails VALUES(
-          \$id,
-          \$pokemon,
-          \$formname,
-          \$type,
-          \$genus,
-          \$ability1,
-          \$ability2,
-          \$hability,
-          \$gender,
-          \$egggroup,
-          \$height,
-          \$weight,
-          \$legend,
-          \$evolve_cond,
-          \$hp,
-          \$atk,
-          \$def,
-          \$spatk,
-          \$spdef,
-          \$spd,
-          \$capture,
-          \$final,
-          \$stage,
-          \$effort,
-          \$hatch_counter,
-          \$happiness,
-          \$exp,
-          \$forms,
-          \$colour,
-          \$base_exp
-        )
-      }"
-      while {[gets $f line] != -1} {
-        lassign [split $line "\t"] id pokemon formname type genus ability1 \
-          ability2 hability gender egggroup height weight legend evolve_cond hp \
-          atk def spatk spdef spd capture final stage effort hatch_counter \
-          happiness exp forms colour base_exp
-        eval $code
-      }
-      close $f
-      #dex copy ignore $pokeDetails $pokefile "\t"
-      set mtime [file mtime $pokefile]
-      dex eval {INSERT INTO config VALUES($pokefile, $mtime)}
-    }
-  }
-  if {$move} {
-    dex eval "DROP TABLE IF EXISTS $moveDetails"
-    dex eval "
-      CREATE TABLE IF NOT EXISTS ${moveDetails}(
-        id text PRIMARY KEY ASC ON CONFLICT ABORT UNIQUE,
-        name text,
-        type text,
-        class text,
-        pp int,
-        basepower int,
-        accuracy int,
-        priority int,
-        effect text,
-        contact bool,
-        charging bool,
-        recharge bool,
-        detectprotect bool,
-        reflectable bool,
-        snatchable bool,
-        mirrormove bool,
-        punchbased bool,
-        sound bool,
-        gravity bool,
-        defrosts bool,
-        range int,
-        heal bool,
-        infiltrate bool
-      )
-    "
-    set pokefile [file join $pokeDir data gen$gen moves]
-    if {[file exists $pokefile]} {
-      set f [open $pokefile r]
-      set code "dex eval {
-        INSERT INTO $moveDetails VALUES(
-          \$id,
-          \$name,
-          \$type,
-          \$class,
-          \$pp,
-          \$basepower,
-          \$accuracy,
-          \$priority,
-          \$effect,
-          \$contact,
-          \$charging,
-          \$recharge,
-          \$detectprotect,
-          \$reflectable,
-          \$snatchable,
-          \$mirrormove,
-          \$punchbased,
-          \$sound,
-          \$gravity,
-          \$defrosts,
-          \$range,
-          \$heal,
-          \$infiltrate
-        )
-      }"
-      while {[gets $f line] != -1} {
-        lassign [split $line "\t"] id name type class pp basepower accuracy priority \
-          effect contact charging recharge detectprotect reflectable snatchable \
-          mirrormove punchbased sound gravity defrosts range heal infiltrate
-        eval $code
-      }
-      close $f
-      #dex copy ignore $moveDetails $pokefile "\t"
-      set mtime [file mtime $pokefile]
-      dex eval {INSERT INTO config VALUES($pokefile, $mtime)}
-    }
-  }
-  
-  if {$ability} {
-    dex eval "DROP TABLE IF EXISTS $abilDetails"
-    dex eval "
-      CREATE TABLE IF NOT EXISTS ${abilDetails}(
-        id text PRIMARY KEY ASC ON CONFLICT ABORT UNIQUE,
-        description text
-      )
-    "
-    set pokefile [file join $pokeDir data gen$gen abilities]
-    if {[file exists $pokefile]} {
-      set f [open $pokefile r]
-      set code "dex eval {
-        INSERT INTO $abilDetails VALUES(
-          \$id,
-          \$description
-        )
-      }"
-      while {[gets $f line] != -1} {
-        lassign [split $line "\t"] id description
-        eval $code
-      }
-      close $f
-      #dex copy ignore $abilDetails $pokefile "\t"
-      
-      set mtime [file mtime $pokefile]
-      dex eval {INSERT INTO config VALUES($pokefile, $mtime)}
-    }
-  }
-  
-  if {$match} {
-    dex eval "DROP TABLE IF EXISTS $matcDetails"
-    dex eval "
-      CREATE TABLE IF NOT EXISTS ${matcDetails}(
-        type1 text,
-        type2 text,
-        effectiveness float
-      )
-    "
-    set pokefile [file join $pokeDir data gen$gen matchup]
-    if {[file exists $pokefile]} {
-      set f [open $pokefile r]
-      set code "dex eval {
-        INSERT INTO $matcDetails VALUES(
-          \$type1,
-          \$type2,
-          \$effectiveness
-        )
-      }"
-      while {[gets $f line] != -1} {
-        lassign [split $line "\t"] type1 type2 effectiveness
-        eval $code
-      }
-      close $f
-      #dex copy ignore $matcDetails $pokefile "\t"
-      set mtime [file mtime $pokefile]
-      dex eval {INSERT INTO config VALUES($pokefile, $mtime)}
-    }
-  }
-  
-  if {$movesetupdate != ""} {
-    foreach moveset [glob -nocomplain "[file join $pokeDir data gen$gen moves?]*"] {
-      set tablename [file tail $moveset]
-      if {$tablename ni $movesetupdate && $movesetupdate ne "all"} {continue}
-      set f [open $moveset r]
-      set table "$tablename$gen"
-      dex eval "DROP TABLE IF EXISTS $table"
-      dex eval "
-        CREATE TABLE IF NOT EXISTS ${table}(
-          id text PRIMARY KEY ASC ON CONFLICT ABORT UNIQUE,
-          moves text
-        )
-      "
-      set code "dex eval {
-        INSERT INTO $table VALUES(
-          \$id,
-          \$moves
-        )
-      }"
-      while {[gets $f line] != -1} {
-        set group [split $line \t]
-        set id [lindex $group 0]
-        set moves [join [lrange $group 1 end] \t]
-        eval $code
-      }
-      close $f
-      set mtime [file mtime $moveset]
-      dex eval {INSERT INTO config VALUES($moveset, $mtime)}
-    }
-  }
-}
-
-proc db_init {} {
-  global currentGen pokeDir generations
-  upvar note note menu menu
-  dex eval {
-    CREATE TABLE IF NOT EXISTS config (
-      param text PRIMARY KEY ON CONFLICT ABORT UNIQUE,
-      value text
-    )
-  }
-
-  if {![dex exists {SELECT 1 FROM config}]} {
-    # Configuration table
-    # abilitydef - def-ault mode of ability tab
-    #    0 - description
-    #    1 - pokemon list
-    # gen - default generation to open to
-    # language - default language
-    # matchup - basic or extended mode
-    #    0 - basic
-    #    1 - extended
-    # matchuphide - default hiding of illegal typings
-    #    0 - show all typings
-    #    1 - hide illegal typings
+namespace eval pokedb {
+  ### Create config file and check if other tables need to be created/updated
+  proc db_init {} {
+    upvar note note menu menu
     dex eval {
-      INSERT INTO config (param, value) VALUES
-        ('abilitydef', 0),
-        ('gen', $currentGen),
-        ('language', 'English'),
-        ('matchup', 0),
-        ('matchuphide', 1)
+      CREATE TABLE IF NOT EXISTS config (
+        param text PRIMARY KEY ON CONFLICT ABORT UNIQUE,
+        value text
+      )
     }
-       
+    
+    dex eval {
+      CREATE TABLE IF NOT EXISTS mtimes (
+        filename text PRIMARY KEY ON CONFLICT ABORT UNIQUE,
+        mtime text
+      )
+    }
+
+    if {![dex exists {SELECT 1 FROM config}]} {
+      # Configuration table
+      # abilitydef - def-ault mode of ability tab
+      #    0 - description
+      #    1 - pokemon list
+      # movedef - def-ault mode of move tab
+      #    0 - description
+      #    1 - pokemon list
+      # gen - default generation to open to
+      # genN game - default game to open to
+      # language - default language
+      # matchup - basic or extended mode
+      #    0 - basic
+      #    1 - extended
+      # matchuphide - default hiding of illegal typings
+      #    0 - show all typings
+      #    1 - hide illegal typings
+      dex eval {
+        INSERT INTO config (param, value) VALUES
+          ('abilitydef', 0),
+          ('movedef', 0),
+          ('gen', $pokedex::current(gen)),
+          ('gen1 game', 2),
+          ('gen2 game', 2),
+          ('gen3 game', 3),
+          ('gen4 game', 3),
+          ('gen5 game', 2),
+          ('gen6 game', 2),
+          ('gen7 game', 2),
+          ('language', 'English'),
+          ('matchup', 0),
+          ('matchuphide', 1)
+      }
+    }
+    
     ### Buiding database
     # progress bar
+
     
-    # Building main tables
-    foreach gen $generations {
-      create_database $pokeDir $gen 1 1 1 1 "all"
-    }
-    
-    # Buikding types
-    dex eval {
-      CREATE TABLE types(
-        type text,
-        gen int,
-        colour text
-      )
-    }
-    set f [open [file join $pokeDir data types] r]
-    while {[gets $f line] != -1} {
-      lassign [split $line "\t"] type gen colour
+    array set mtimes [dex eval {SELECT * FROM mtimes}]
+
+    # Building types
+    set mtime [file mtime [file join data types]]
+    if {![info exists mtimes(types)]} {
       dex eval {
-          INSERT INTO types VALUES(
-            $type,
-            $gen,
-            $colour
+        CREATE TABLE types(
+          type text,
+          gen int,
+          colour text
         )
       }
+      dex eval {INSERT INTO mtimes (filename, mtime) VALUES ('types', '')}
+      set mtimes(types) ""
     }
-    close $f
-    #dex copy ignore types [file join $pokeDir data types] "\t"
+    if {$mtimes(types) != $mtime} {
+      import {data types} types {type gen colour}
+      dex eval {UPDATE mtimes SET mtime = :mtime WHERE filename = 'types'}
+    }
     
     # Building itypes - introduced double typings
-    dex eval {
-      CREATE TABLE itypes(
-        type1 text,
-        type2 text,
-        gen int
-      )
-    }
-    set f [open [file join $pokeDir data itypes] r]
-    while {[gets $f line] != -1} {
-      lassign [split $line "\t"] type1 type2 gen
+    set mtime [file mtime [file join data itypes]]
+    if {![info exists mtimes(itypes)]} {
       dex eval {
-        INSERT INTO itypes VALUES(
-          $type1,
-          $type2,
-          $gen
+        CREATE TABLE itypes(
+          type1 text,
+          type2 text,
+          gen int
         )
       }
+      dex eval {INSERT INTO mtimes (filename, mtime) VALUES ('itypes', '')}
+      set mtimes(itypes) ""
     }
-    close $f
-    #dex copy ignore itypes [file join $pokeDir data itypes] "\t"
+    if {$mtimes(itypes) != $mtime} {
+      import {data itypes} itypes {type1 type2 gen}
+      dex eval {UPDATE mtimes SET mtime = :mtime WHERE filename = 'itypes'}
+    }
     
     # Building natures
-    dex eval {
-      CREATE TABLE nature(
-        name text,
-        boost text,
-        nerf text
-      )
-    }
-    set f [open [file join $pokeDir data nature] r]
-    while {[gets $f line] != -1} {
-      lassign [split $line "\t"] name boost nerf
+    set mtime [file mtime [file join data nature]]
+    if {![info exists mtimes(nature)]} {
       dex eval {
-          INSERT INTO nature VALUES(
-            $name,
-            $boost,
-            $nerf
+        CREATE TABLE nature(
+          name text,
+          boost text,
+          nerf text
         )
       }
+      dex eval {INSERT INTO mtimes (filename, mtime) VALUES ('nature', '')}
+      set mtimes(nature) ""
     }
-    close $f
-    #dex copy ignore itypes [file join $pokeDir data nature] "\t"
+    if {$mtimes(nature) != $mtime} {
+      import {data nature} nature {name boost nerf}
+      dex eval {UPDATE mtimes SET mtime = :mtime WHERE filename = 'nature'}
+    }
     
-    $note select [expr {$currentGen-1}]
-  } else {
-    array set mtimes [dex eval {SELECT * FROM config WHERE param LIKE '%data_gen%'}]
-    
-    foreach gen $generations {
-      lassign [list 0 0 0 0 ""] poke move ability matchup moveset
-      set files [glob -nocomplain -type f "[file join $pokeDir data gen$gen]/*"]
-      foreach file $files {
-        set newmtime [file mtime $file]
-        set table [file tail $file]
-        if {![info exists mtimes($file)]} {
-          # If there are new movesets
-          if {[regexp {moves[A-Z]} $file]} {
-            dex eval {INSERT INTO config VALUES($file, $mtime)}
-            lappend moveset $table
-          }
-        } elseif {$mtimes($file) != $newmtime} {
-          dex eval {UPDATE config SET value = $pokeDate WHERE param = $file}
-          switch -regexp $table {
-            {^info} {set poke 1}
-            {^moves} {set move 1}
-            {^abilities} {set ability 1}
-            {^matchup} {set matchup 1}
-            {^moves[A-Z]} {lappend moveset $table}
-          }
-        }
+    # Building abilities language
+    set mtime [file mtime [file join data abilities]]
+    if {![info exists mtimes(abilities)]} {
+      dex eval {
+        CREATE TABLE abilities(
+          id text PRIMARY KEY ASC ON CONFLICT ABORT UNIQUE,
+          english text,
+          japanese text,
+          korean text,
+          german text,
+          french text
+        )
       }
-      create_database $pokeDir $gen $poke $move $ability $matchup $moveset
+      dex eval {INSERT INTO mtimes (filename, mtime) VALUES ('abilities', '')}
+      set mtimes(abilities) ""
+    }
+    if {$mtimes(abilities) != $mtime} {
+      import {data abilities} abilities {id english japanese korean german french}
+      dex eval {UPDATE mtimes SET mtime = :mtime WHERE filename = 'abilities'}
+    }
+    
+    # Building moves language
+    set mtime [file mtime [file join data moves]]
+    if {![info exists mtimes(moves)]} {
+      dex eval {
+        CREATE TABLE moves(
+          id text PRIMARY KEY ASC ON CONFLICT ABORT UNIQUE,
+          english text,
+          japanese text,
+          korean text,
+          german text,
+          french text
+        )
+      }
+      dex eval {INSERT INTO mtimes (filename, mtime) VALUES ('moves', '')}
+      set mtimes(moves) ""
+    }
+    if {$mtimes(moves) != $mtime} {
+      import {data moves} moves {id english japanese korean german french}
+      dex eval {UPDATE mtimes SET mtime = :mtime WHERE filename = 'moves'}
+    }
+    
+    # Building main tables
+    foreach gen $pokedex::generations {
+      create_database $gen
+    }
+    
+    set pokedex::current(gen) [dex eval {SELECT value FROM config WHERE param = 'gen'}]
+    $note select [expr {$pokedex::current(gen)-1}]
+    
+    foreach i $pokedex::generations {
+      set pokedex::current(game$i) [dex eval "SELECT value FROM config WHERE param = 'gen$i game'"]
+      $menu.file.gen.game$i invoke [expr {$pokedex::current(game$i)}]
+      $note.gen$i.move.game select [expr {$pokedex::current(game$i)}]
     }
   }
-  set gen [dex eval {SELECT value FROM config WHERE param = 'gen'}]
-  $menu.file.gen invoke [expr {$gen-1}]
-  $note select [expr {$gen-1}]
-}
 
-db_init
+  ### Populate database if files were updated
+  proc create_database {gen} {
+    array set mtimes [dex eval {SELECT * FROM mtimes}]
+    
+    set mtime [file mtime [file join data gen$gen info]]
+    if {![info exists mtimes([file join gen$gen info])]} {
+      dex eval "
+        CREATE TABLE pokeDetails${gen}(
+          id text PRIMARY KEY ASC ON CONFLICT ABORT UNIQUE,
+          pokemon text,
+          formname text,
+          type text,
+          genus text,
+          ability1 text,
+          ability2 text,
+          hability text,
+          gender text,
+          egggroup text,
+          height float,
+          weight float,
+          legend bool,
+          evolve_cond text,
+          hp int,
+          atk int,
+          def int,
+          spatk int,
+          spdef int,
+          spd int,
+          capture int,
+          final bool,
+          stage int,
+          effort int,
+          hatch_counter int,
+          happiness int,
+          exp int,
+          forms int,
+          colour text,
+          base_exp int,
+          pre_evos text
+        )
+      "
+      dex eval "INSERT INTO mtimes (filename, mtime) VALUES ('[file join gen$gen info]', '')"
+      set mtimes([file join gen$gen info]) ""
+    }
+    if {$mtimes([file join gen$gen info]) != $mtime} {
+      import [list data gen$gen info] pokeDetails$gen {
+        id
+        pokemon
+        formname
+        type
+        genus
+        ability1
+        ability2
+        hability
+        gender
+        egggroup
+        height
+        weight
+        legend
+        evolve_cond
+        hp
+        atk
+        def
+        spatk
+        spdef
+        spd
+        capture
+        final
+        stage
+        effort
+        hatch_counter
+        happiness
+        exp
+        forms
+        colour
+        base_exp
+        pre_evos
+      }
+      dex eval "UPDATE mtimes SET mtime = :mtime WHERE filename = '[file join gen$gen info]'"
+    }
+    
+    set mtime [file mtime [file join data gen$gen moves]]
+    if {![info exists mtimes([file join gen$gen moves])]} {
+      dex eval "
+        CREATE TABLE moveDetails${gen}(
+          id text PRIMARY KEY ASC ON CONFLICT ABORT UNIQUE,
+          type text,
+          class text,
+          pp int,
+          basepower int,
+          accuracy int,
+          priority int,
+          effect text,
+          contact bool,
+          charging bool,
+          recharge bool,
+          detectprotect bool,
+          reflectable bool,
+          snatchable bool,
+          mirrormove bool,
+          punchbased bool,
+          sound bool,
+          gravity bool,
+          defrosts bool,
+          range int,
+          heal bool,
+          infiltrate bool
+        )
+      "
+      dex eval "INSERT INTO mtimes (filename, mtime) VALUES ('[file join gen$gen moves]', '')"
+      set mtimes([file join gen$gen moves]) ""
+    }
+    if {$mtimes([file join gen$gen moves]) != $mtime} {
+      import [list data gen$gen moves] moveDetails${gen} {
+        id
+        type
+        class
+        pp
+        basepower
+        accuracy
+        priority
+        effect
+        contact
+        charging
+        recharge
+        detectprotect
+        reflectable
+        snatchable
+        mirrormove
+        punchbased
+        sound
+        gravity
+        defrosts
+        range
+        heal
+        infiltrate
+      }
+      dex eval "UPDATE mtimes SET mtime = :mtime WHERE filename = '[file join gen$gen moves]'"
+    }
+    
+    if {$gen > 2} {
+      set mtime [file mtime [file join data gen$gen abilities]]
+      if {![info exists mtimes([file join gen$gen abilities])]} {
+        dex eval "
+          CREATE TABLE abilDetails${gen}(
+            id text PRIMARY KEY ASC ON CONFLICT ABORT UNIQUE,
+            flavour text,
+            description text
+          )
+        "
+        dex eval "INSERT INTO mtimes (filename, mtime) VALUES ('[file join gen$gen abilities]', '')"
+        set mtimes([file join gen$gen abilities]) ""
+      }
+      if {$mtimes([file join gen$gen abilities]) != $mtime} {
+        import [list data gen$gen abilities] abilDetails$gen {
+          id
+          flavour
+          description
+        }
+        dex eval "UPDATE mtimes SET mtime = :mtime WHERE filename = '[file join gen$gen abilities]'"
+      }
+    }
+    
+    set mtime [file mtime [file join data gen$gen matchup]]
+    if {![info exists mtimes([file join gen$gen matchup])]} {
+      dex eval "
+        CREATE TABLE matchDetails${gen}(
+          type1 text,
+          type2 text,
+          effectiveness float
+        )
+      "
+      dex eval "INSERT INTO mtimes (filename, mtime) VALUES ('[file join gen$gen matchup]', '')"
+      set mtimes([file join gen$gen matchup]) ""
+    }
+    if {$mtimes([file join gen$gen matchup]) != $mtime} {
+      import [list data gen$gen matchup] matchDetails$gen {
+        type1
+        type2
+        effectiveness
+      }
+      dex eval "UPDATE mtimes SET mtime = :mtime WHERE filename = '[file join gen$gen matchup]'"
+    }
+    
+    foreach movefile [glob -nocomplain [file join data gen$gen ver* *]] {
+      set tablename [join [lrange [file split $movefile] end-1 end] _]
+      set mtime [file mtime $movefile]
+      set value [file join {*}[lrange [file split $movefile] 1 end]]
+      if {![info exists mtimes($value)]} {
+        dex eval "
+          CREATE TABLE ${tablename}(
+            id text PRIMARY KEY ASC ON CONFLICT ABORT UNIQUE,
+            moves text
+          )
+        "
+        dex eval "INSERT INTO mtimes (filename, mtime) VALUES ('$value', '')"
+        set mtimes($value) ""
+      }
+      
+      if {$mtimes($value) != $mtime} {
+        import [file split $movefile] $tablename {id moves}
+        dex eval {UPDATE mtimes SET mtime = :mtime WHERE filename = :value}
+      }
+    }
+  }
+
+  proc import {filepath table fields} {
+    dex eval "DELETE FROM $table"
+    try {
+      dex copy ignore $table [file join {*}$filepath] "\t"
+    } on error {result options} {
+      set f [open [file join {*}$filepath] r]
+      fconfigure $f -encoding utf-8
+      while {[gets $f line] != -1} {
+        lassign [split $line "\t"] {*}$fields
+        set values [join [lmap x $fields {
+          set x [regsub -all {\'} [set $x] {''}]
+          if {![string is integer $x] || $x eq ""} {set x '$x'} else {set x}
+        }] ","]
+        if {[catch {dex eval "INSERT INTO $table ([join $fields ,]) VALUES($values)"}]} {
+          tk_messageBox -title test -message "INSERT INTO $table ([join $fields ,]) VALUES($values)"
+          dex close
+          file delete -force pokedexdb
+          exit
+        }
+      }
+      close $f
+    }
+  }
+}
