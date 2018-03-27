@@ -1,0 +1,25 @@
+Hardy	Atk	Atk
+Bold	Def	Atk
+Modest	Sp. Atk	Atk
+Calm	Sp. Def	Atk
+Timid	Spd	Atk
+Lonely	Atk	Def
+Docile	Def	Def
+Mild	Sp. Atk	Def
+Gentle	Sp. Def	Def
+Hasty	Spd	Def
+Adamant	Atk	Sp. Atk
+Impish	Def	Sp. Atk
+Bashful	Sp. Atk	Sp. Atk
+Careful	Sp. Def	Sp. Atk
+Jolly	Spd	Sp. Atk
+Naughty	Atk	Sp. Def
+Lax	Def	Sp. Def
+Rash	Sp. Atk	Sp. Def
+Quirky	Sp. Def	Sp. Def
+Naïve	Spd	Sp. Def
+Brave	Atk	Spd
+Relaxed	Def	Spd
+Quiet	Sp. Atk	Spd
+Sassy	Sp. Def	Spd
+Serious	Spd	Spd
