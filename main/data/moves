@@ -1,0 +1,719 @@
+1	Pound	はたく	막치기	Pfund	Écras'Face
+2	Karate Chop	からてチョップ	태권당수	Karateschlag	Poing-Karaté
+3	Double Slap	おうふくビンタ	연속뺨치기	Duplexhieb	Torgnoles
+4	Comet Punch	れんぞくパンチ	연속펀치	Kometenhieb	Poing Comète
+5	Mega Punch	メガトンパンチ	메가톤펀치	Megahieb	Ultimapoing
+6	Pay Day	ネコにこばん	고양이돈받기	Zahltag	Jackpot
+7	Fire Punch	ほのおのパンチ	불꽃펀치	Feuerschlag	Poing de Feu
+8	Ice Punch	れいとうパンチ	냉동펀치	Eishieb	Poing-Glace
+9	Thunder Punch	かみなりパンチ	번개펀치	Donnerschlag	Poing-Éclair
+10	Scratch	ひっかく	할퀴기	Kratzer	Griffe
+11	Vice Grip	はさむ	찝기	Klammer	Force Poigne
+12	Guillotine	ハサミギロチン	가위자르기	Guillotine	Guillotine
+13	Razor Wind	かまいたち	칼바람	Klingensturm	Coupe-Vent
+14	Swords Dance	つるぎのまい	칼춤	Schwerttanz	Danse-Lames
+15	Cut	いあいぎり	풀베기	Zerschneider	Coupe
+16	Gust	かぜおこし	바람일으키기	Windstoß	Tornade
+17	Wing Attack	つばさでうつ	날개치기	Flügelschlag	Cru-Aile
+18	Whirlwind	ふきとばし	날려버리기	Wirbelwind	Cyclone
+19	Fly	そらをとぶ	공중날기	Fliegen	Vol
+20	Bind	しめつける	조이기	Klammergriff	Étreinte
+21	Slam	たたきつける	힘껏치기	Slam	Souplesse
+22	Vine Whip	つるのムチ	덩굴채찍	Rankenhieb	Fouet Lianes
+23	Stomp	ふみつけ	짓밟기	Stampfer	Écrasement
+24	Double Kick	にどげり	두번치기	Doppelkick	Double Pied
+25	Mega Kick	メガトンキック	메가톤킥	Megakick	Ultimawashi
+26	Jump Kick	とびげり	점프킥	Sprungkick	Pied Sauté
+27	Rolling Kick	まわしげり	돌려차기	Fegekick	Mawashi Geri
+28	Sand Attack	すなかけ	모래뿌리기	Sandwirbel	Jet de Sable
+29	Headbutt	ずつき	박치기	Kopfnuss	Coup d'Boule
+30	Horn Attack	つのでつく	뿔찌르기	Hornattacke	Koud'Korne
+31	Fury Attack	みだれづき	마구찌르기	Furienschlag	Furie
+32	Horn Drill	つのドリル	뿔드릴	Hornbohrer	Empal'Korne
+33	Tackle	たいあたり	몸통박치기	Tackle	Charge
+34	Body Slam	のしかかり	누르기	Bodyslam	Plaquage
+35	Wrap	まきつく	김밥말이	Wickel	Ligotage
+36	Take Down	とっしん	돌진	Bodycheck	Bélier
+37	Thrash	あばれる	난동부리기	Fuchtler	Mania
+38	Double-Edge	すてみタックル	이판사판태클	Risikotackle	Damoclès
+39	Tail Whip	しっぽをふる	꼬리흔들기	Rutenschlag	Mimi-Queue
+40	Poison Sting	どくばり	독침	Giftstachel	Dard-Venin
+41	Twineedle	ダブルニードル	더블니들	Duonadel	Double-Dard
+42	Pin Missile	ミサイルばり	바늘미사일	Nadelrakete	Dard-Nuée
+43	Leer	にらみつける	째려보기	Silberblick	Groz'Yeux
+44	Bite	かみつく	물기	Biss	Morsure
+45	Growl	なきごえ	울음소리	Heuler	Rugissement
+46	Roar	ほえる	울부짖기	Brüller	Hurlement
+47	Sing	うたう	노래하기	Gesang	Berceuse
+48	Supersonic	ちょうおんぱ	초음파	Superschall	Ultrason
+49	Sonic Boom	ソニックブーム	소닉붐	Ultraschall	Sonicboom
+50	Disable	かなしばり	사슬묶기	Aussetzer	Entrave
+51	Acid	ようかいえき	용해액	Säure	Acide
+52	Ember	ひのこ	불꽃세례	Glut	Flammèche
+53	Flamethrower	かえんほうしゃ	화염방사	Flammenwurf	Lance-Flammes
+54	Mist	しろいきり	흰안개	Weißnebel	Brume
+55	Water Gun	みずでっぽう	물대포	Aquaknarre	Pistolet à O
+56	Hydro Pump	ハイドロポンプ	하이드로펌프	Hydropumpe	Hydrocanon
+57	Surf	なみのり	파도타기	Surfer	Surf
+58	Ice Beam	れいとうビーム	냉동빔	Eisstrahl	Laser Glace
+59	Blizzard	ふぶき	눈보라	Blizzard	Blizzard
+60	Psybeam	サイケこうせん	환상빔	Psystrahl	Rafale Psy
+61	Bubble Beam	バブルこうせん	거품광선	Blubbstrahl	Bulles d'O
+62	Aurora Beam	オーロラビーム	오로라빔	Aurorastrahl	Onde Boréale
+63	Hyper Beam	はかいこうせん	파괴광선	Hyperstrahl	Ultralaser
+64	Peck	つつく	쪼기	Schnabel	Picpic
+65	Drill Peck	ドリルくちばし	회전부리	Bohrschnabel	Bec Vrille
+66	Submission	じごくぐるま	지옥의바퀴	Überroller	Sacrifice
+67	Low Kick	けたぐり	안다리걸기	Fußkick	Balayage
+68	Counter	カウンター	카운터	Konter	Riposte
+69	Seismic Toss	ちきゅうなげ	지구던지기	Geowurf	Frappe Atlas
+70	Strength	かいりき	괴력	Stärke	Force
+71	Absorb	すいとる	흡수	Absorber	Vol-Vie
+72	Mega Drain	メガドレイン	메가드레인	Megasauger	Méga-Sangsue
+73	Leech Seed	やどりぎのタネ	씨뿌리기	Egelsamen	Vampigraine
+74	Growth	せいちょう	성장	Wachstum	Croissance
+75	Razor Leaf	はっぱカッター	잎날가르기	Rasierblatt	Tranch'Herbe
+76	Solar Beam	ソーラービーム	솔라빔	Solarstrahl	Lance-Soleil
+77	Poison Powder	どくのこな	독가루	Giftpuder	Poudre Toxik
+78	Stun Spore	しびれごな	저리가루	Stachelspore	Para-Spore
+79	Sleep Powder	ねむりごな	수면가루	Schlafpuder	Poudre Dodo
+80	Petal Dance	はなびらのまい	꽃잎댄스	Blättertanz	Danse-Fleur
+81	String Shot	いとをはく	실뿜기	Fadenschuss	Sécrétion
+82	Dragon Rage	りゅうのいかり	용의분노	Drachenwut	Draco-Rage
+83	Fire Spin	ほのおのうず	회오리불꽃	Feuerwirbel	Danse Flamme
+84	Thunder Shock	でんきショック	전기쇼크	Donnerschock	Éclair
+85	Thunderbolt	１０まんボルト	10만볼트	Donnerblitz	Tonnerre
+86	Thunder Wave	でんじは	전기자석파	Donnerwelle	Cage-Éclair
+87	Thunder	かみなり	번개	Donner	Fatal-Foudre
+88	Rock Throw	いわおとし	돌떨구기	Steinwurf	Jet-Pierres
+89	Earthquake	じしん	지진	Erdbeben	Séisme
+90	Fissure	じわれ	땅가르기	Geofissur	Abîme
+91	Dig	あなをほる	구멍파기	Schaufler	Tunnel
+92	Toxic	どくどく	맹독	Toxin	Toxik
+93	Confusion	ねんりき	염동력	Konfusion	Choc Mental
+94	Psychic	サイコキネシス	사이코키네시스	Psychokinese	Psyko
+95	Hypnosis	さいみんじゅつ	최면술	Hypnose	Hypnose
+96	Meditate	ヨガのポーズ	요가포즈	Meditation	Yoga
+97	Agility	こうそくいどう	고속이동	Agilität	Hâte
+98	Quick Attack	でんこうせっか	전광석화	Ruckzuckhieb	Vive-Attaque
+99	Rage	いかり	분노	Raserei	Frénésie
+100	Teleport	テレポート	순간이동	Teleport	Téléport
+101	Night Shade	ナイトヘッド	나이트헤드	Nachtnebel	Ombre Nocturne
+102	Mimic	ものまね	흉내내기	Mimikry	Copie
+103	Screech	いやなおと	싫은소리	Kreideschrei	Grincement
+104	Double Team	かげぶんしん	그림자분신	Doppelteam	Reflet
+105	Recover	じこさいせい	HP회복	Genesung	Soin
+106	Harden	かたくなる	단단해지기	Härtner	Armure
+107	Minimize	ちいさくなる	작아지기	Komprimator	Lilliput
+108	Smokescreen	えんまく	연막	Rauchwolke	Brouillard
+109	Confuse Ray	あやしいひかり	이상한빛	Konfustrahl	Onde Folie
+110	Withdraw	からにこもる	껍질에숨기	Panzerschutz	Repli
+111	Defense Curl	まるくなる	웅크리기	Einigler	Boul'Armure
+112	Barrier	バリアー	배리어	Barriere	Bouclier
+113	Light Screen	ひかりのかべ	빛의장막	Lichtschild	Mur Lumière
+114	Haze	くろいきり	흑안개	Dunkelnebel	Buée Noire
+115	Reflect	リフレクター	리플렉터	Reflektor	Protection
+116	Focus Energy	きあいだめ	기충전	Energiefokus	Puissance
+117	Bide	がまん	참기	Geduld	Patience
+118	Metronome	ゆびをふる	손가락흔들기	Metronom	Métronome
+119	Mirror Move	オウムがえし	따라하기	Spiegeltrick	Mimique
+120	Self-Destruct	じばく	자폭	Finale	Destruction
+121	Egg Bomb	タマゴばくだん	알폭탄	Eierbombe	Bomb'Œuf
+122	Lick	したでなめる	핥기	Schlecker	Léchouille
+123	Smog	スモッグ	스모그	Smog	Purédpois
+124	Sludge	ヘドロこうげき	오물공격	Schlammbad	Détritus
+125	Bone Club	ホネこんぼう	뼈다귀치기	Knochenkeule	Massd'Os
+126	Fire Blast	だいもんじ	불대문자	Feuersturm	Déflagration
+127	Waterfall	たきのぼり	폭포오르기	Kaskade	Cascade
+128	Clamp	からではさむ	껍질끼우기	Schnapper	Claquoir
+129	Swift	スピードスター	스피드스타	Sternschauer	Météores
+130	Skull Bash	ロケットずつき	로케트박치기	Schädelwumme	Coud'Krâne
+131	Spike Cannon	とげキャノン	가시대포	Dornkanone	Picanon
+132	Constrict	からみつく	휘감기	Umklammerung	Constriction
+133	Amnesia	ドわすれ	망각술	Amnesie	Amnésie
+134	Kinesis	スプーンまげ	숟가락휘기	Psykraft	Télékinésie
+135	Soft-Boiled	タマゴうみ	알낳기	Weichei	E-Coque
+136	High Jump Kick	とびひざげり	무릎차기	Turmkick	Pied Voltige
+137	Glare	へびにらみ	뱀눈초리	Giftblick	Regard Médusant
+138	Dream Eater	ゆめくい	꿈먹기	Traumfresser	Dévorêve
+139	Poison Gas	どくガス	독가스	Giftwolke	Gaz Toxik
+140	Barrage	たまなげ	구슬던지기	Stakkato	Pilonnage
+141	Leech Life	きゅうけつ	흡혈	Blutsauger	Vampirisme
+142	Lovely Kiss	あくまのキッス	악마의키스	Todeskuss	Grobisou
+143	Sky Attack	ゴッドバード	불새	Himmelsfeger	Piqué
+144	Transform	へんしん	변신	Wandler	Morphing
+145	Bubble	あわ	거품	Blubber	Écume
+146	Dizzy Punch	ピヨピヨパンチ	잼잼펀치	Irrschlag	Uppercut
+147	Spore	キノコのほうし	버섯포자	Pilzspore	Spore
+148	Flash	フラッシュ	플래시	Blitz	Flash
+149	Psywave	サイコウェーブ	사이코웨이브	Psywelle	Vague Psy
+150	Splash	はねる	튀어오르기	Platscher	Trempette
+151	Acid Armor	とける	녹기	Säurepanzer	Acidarmure
+152	Crabhammer	クラブハンマー	찝게햄머	Krabbhammer	Pince-Masse
+153	Explosion	だいばくはつ	대폭발	Explosion	Explosion
+154	Fury Swipes	みだれひっかき	마구할퀴기	Kratzfurie	Combo-Griffe
+155	Bonemerang	ホネブーメラン	뼈다귀부메랑	Knochmerang	Osmerang
+156	Rest	ねむる	잠자기	Erholung	Repos
+157	Rock Slide	いわなだれ	스톤샤워	Steinhagel	Éboulement
+158	Hyper Fang	ひっさつまえば	필살앞니	Hyperzahn	Croc de Mort
+159	Sharpen	かくばる	각지기	Schärfer	Affûtage
+160	Conversion	テクスチャー	텍스처	Umwandlung	Conversion
+161	Tri Attack	トライアタック	트라이어택	Triplette	Triplattaque
+162	Super Fang	いかりのまえば	분노의앞니	Superzahn	Croc Fatal
+163	Slash	きりさく	베어가르기	Schlitzer	Tranche
+164	Substitute	みがわり	대타출동	Delegator	Clonage
+165	Struggle	わるあがき	발버둥	Verzweifler	Lutte
+166	Sketch	スケッチ	스케치	Nachahmer	Gribouille
+167	Triple Kick	トリプルキック	트리플킥	Dreifachkick	Triple Pied
+168	Thief	どろぼう	도둑질	Raub	Larcin
+169	Spider Web	クモのす	거미집	Spinnennetz	Toile
+170	Mind Reader	こころのめ	마음의눈	Willensleser	Lire-Esprit
+171	Nightmare	あくむ	악몽	Nachtmahr	Cauchemar
+172	Flame Wheel	かえんぐるま	화염자동차	Flammenrad	Roue de Feu
+173	Snore	いびき	코골기	Schnarcher	Ronflement
+174	Curse	のろい	저주	Fluch	Malédiction
+175	Flail	じたばた	바둥바둥	Dreschflegel	Fléau
+176	Conversion 2	テクスチャー２	텍스처2	Umwandlung2	Conversion 2
+177	Aeroblast	エアロブラスト	에어로블라스트	Luftstoß	Aéroblast
+178	Cotton Spore	わたほうし	목화포자	Baumwollsaat	Spore Coton
+179	Reversal	きしかいせい	기사회생	Gegenschlag	Contre
+180	Spite	うらみ	원한	Groll	Dépit
+181	Powder Snow	こなゆき	눈싸라기	Pulverschnee	Poudreuse
+182	Protect	まもる	방어	Schutzschild	Abri
+183	Mach Punch	マッハパンチ	마하펀치	Tempohieb	Mach Punch
+184	Scary Face	こわいかお	겁나는얼굴	Grimasse	Grimace
+185	Feint Attack	だましうち	속여때리기	Finte	Feinte
+186	Sweet Kiss	てんしのキッス	천사의키스	Bitterkuss	Doux Baiser
+187	Belly Drum	はらだいこ	배북	Bauchtrommel	Cognobidon
+188	Sludge Bomb	ヘドロばくだん	오물폭탄	Matschbombe	Bomb-Beurk
+189	Mud-Slap	どろかけ	진흙뿌리기	Lehmschelle	Coud'Boue
+190	Octazooka	オクタンほう	대포무노포	Octazooka	Octazooka
+191	Spikes	まきびし	압정뿌리기	Stachler	Picots
+192	Zap Cannon	でんじほう	전자포	Blitzkanone	Élecanon
+193	Foresight	みやぶる	꿰뚫어보기	Gesichte	Clairvoyance
+194	Destiny Bond	みちづれ	길동무	Abgangsbund	Prélèvem. Destin
+195	Perish Song	ほろびのうた	멸망의노래	Abgesang	Requiem
+196	Icy Wind	こごえるかぜ	얼다바람	Eissturm	Vent Glace
+197	Detect	みきり	판별	Scanner	Détection
+198	Bone Rush	ボーンラッシュ	본러쉬	Knochenhatz	Charge-Os
+199	Lock-On	ロックオン	록온	Zielschuss	Verrouillage
+200	Outrage	げきりん	역린	Wutanfall	Colère
+201	Sandstorm	すなあらし	모래바람	Sandsturm	Tempête de Sable
+202	Giga Drain	ギガドレイン	기가드레인	Gigasauger	Giga-Sangsue
+203	Endure	こらえる	버티기	Ausdauer	Ténacité
+204	Charm	あまえる	애교부리기	Charme	Charme
+205	Rollout	ころがる	구르기	Walzer	Roulade
+206	False Swipe	みねうち	칼등치기	Trugschlag	Faux-Chage
+207	Swagger	いばる	뽐내기	Angeberei	Vantardise
+208	Milk Drink	ミルクのみ	우유마시기	Milchgetränk	Lait à Boire
+209	Spark	スパーク	스파크	Funkensprung	Étincelle
+210	Fury Cutter	れんぞくぎり	연속자르기	Zornklinge	Taillade
+211	Steel Wing	はがねのつばさ	강철날개	Stahlflügel	Aile d'Acier
+212	Mean Look	くろいまなざし	검은눈빛	Horrorblick	Regard Noir
+213	Attract	メロメロ	헤롱헤롱	Anziehung	Attraction
+214	Sleep Talk	ねごと	잠꼬대	Schlafrede	Blabla Dodo
+215	Heal Bell	いやしのすず	치료방울	Vitalglocke	Glas de Soin
+216	Return	おんがえし	은혜갚기	Rückkehr	Retour
+217	Present	プレゼント	프레젠트	Geschenk	Cadeau
+218	Frustration	やつあたり	화풀이	Frustration	Frustration
+219	Safeguard	しんぴのまもり	신비의부적	Bodyguard	Rune Protect
+220	Pain Split	いたみわけ	아픔나누기	Leidteiler	Balance
+221	Sacred Fire	せいなるほのお	성스러운불꽃	Läuterfeuer	Feu Sacré
+222	Magnitude	マグニチュード	매그니튜드	Intensität	Ampleur
+223	Dynamic Punch	ばくれつパンチ	폭발펀치	Wuchtschlag	Dynamopoing
+224	Megahorn	メガホーン	메가폰	Vielender	Mégacorne
+225	Dragon Breath	りゅうのいぶき	용의숨결	Feuerodem	Dracosouffle
+226	Baton Pass	バトンタッチ	바톤터치	Staffette	Relais
+227	Encore	アンコール	앵콜	Zugabe	Encore
+228	Pursuit	おいうち	따라가때리기	Verfolgung	Poursuite
+229	Rapid Spin	こうそくスピン	고속스핀	Turbodreher	Tour Rapide
+230	Sweet Scent	あまいかおり	달콤한향기	Lockduft	Doux Parfum
+231	Iron Tail	アイアンテール	아이언테일	Eisenschweif	Queue de Fer
+232	Metal Claw	メタルクロー	메탈크로우	Metallklaue	Griffe Acier
+233	Vital Throw	あてみなげ	받아던지기	Überwurf	Corps Perdu
+234	Morning Sun	あさのひざし	아침햇살	Morgengrauen	Aurore
+235	Synthesis	こうごうせい	광합성	Synthese	Synthèse
+236	Moonlight	つきのひかり	달의불빛	Mondschein	Rayon Lune
+237	Hidden Power	めざめるパワー	잠재파워	Kraftreserve	Puissance Cachée
+238	Cross Chop	クロスチョップ	크로스촙	Kreuzhieb	Coup-Croix
+239	Twister	たつまき	회오리	Windhose	Ouragan
+240	Rain Dance	あまごい	비바라기	Regentanz	Danse Pluie
+241	Sunny Day	にほんばれ	쾌청	Sonnentag	Zénith
+242	Crunch	かみくだく	깨물어부수기	Knirscher	Mâchouille
+243	Mirror Coat	ミラーコート	미러코트	Spiegelcape	Voile Miroir
+244	Psych Up	じこあんじ	자기암시	Psycho-Plus	Boost
+245	Extreme Speed	しんそく	신속	Turbotempo	Vitesse Extrême
+246	Ancient Power	げんしのちから	원시의힘	Antik-Kraft	Pouvoir Antique
+247	Shadow Ball	シャドーボール	섀도볼	Spukball	Ball'Ombre
+248	Future Sight	みらいよち	미래예지	Seher	Prescience
+249	Rock Smash	いわくだき	바위깨기	Zertrümmerer	Éclate-Roc
+250	Whirlpool	うずしお	바다회오리	Whirlpool	Siphon
+251	Beat Up	ふくろだたき	집단구타	Prügler	Baston
+252	Fake Out	ねこだまし	속이다	Mogelhieb	Bluff
+253	Uproar	さわぐ	소란피기	Aufruhr	Brouhaha
+254	Stockpile	たくわえる	비축하기	Horter	Stockage
+255	Spit Up	はきだす	토해내기	Entfessler	Relâche
+256	Swallow	のみこむ	꿀꺽	Verzehrer	Avale
+257	Heat Wave	ねっぷう	열풍	Hitzewelle	Canicule
+258	Hail	あられ	싸라기눈	Hagelsturm	Grêle
+259	Torment	いちゃもん	트집	Folterknecht	Tourmente
+260	Flatter	おだてる	부추기기	Schmeichler	Flatterie
+261	Will-O-Wisp	おにび	도깨비불	Irrlicht	Feu Follet
+262	Memento	おきみやげ	추억의선물	Memento-Mori	Souvenir
+263	Facade	からげんき	객기	Fassade	Façade
+264	Focus Punch	きあいパンチ	힘껏펀치	Power-Punch	Mitra-Poing
+265	Smelling Salts	きつけ	정신차리기	Riechsalz	Stimulant
+266	Follow Me	このゆびとまれ	날따름	Spotlight	Par Ici
+267	Nature Power	しぜんのちから	자연의힘	Natur-Kraft	Force-Nature
+268	Charge	じゅうでん	충전	Ladevorgang	Chargeur
+269	Taunt	ちょうはつ	도발	Verhöhner	Provoc
+270	Helping Hand	てだすけ	도우미	Rechte Hand	Coup d'Main
+271	Trick	トリック	트릭	Trickbetrug	Tourmagik
+272	Role Play	なりきり	역할	Rollentausch	Imitation
+273	Wish	ねがいごと	희망사항	Wunschtraum	Vœu
+274	Assist	ねこのて	조수	Zuschuss	Assistance
+275	Ingrain	ねをはる	뿌리박기	Verwurzler	Racines
+276	Superpower	ばかぢから	엄청난힘	Kraftkoloss	Surpuissance
+277	Magic Coat	マジックコート	매직코트	Magiemantel	Reflet Magik
+278	Recycle	リサイクル	리사이클	Aufbereitung	Recyclage
+279	Revenge	リベンジ	리벤지	Vergeltung	Vendetta
+280	Brick Break	かわらわり	깨트리다	Durchbruch	Casse-Brique
+281	Yawn	あくび	하품	Gähner	Bâillement
+282	Knock Off	はたきおとす	탁쳐서떨구기	Abschlag	Sabotage
+283	Endeavor	がむしゃら	죽기살기	Notsituation	Effort
+284	Eruption	ふんか	분화	Eruption	Éruption
+285	Skill Swap	スキルスワップ	스킬스웹	Wertewechsel	Échange
+286	Imprison	ふういん	봉인	Begrenzer	Possessif
+287	Refresh	リフレッシュ	리프레쉬	Heilung	Régénération
+288	Grudge	おんねん	원념	Nachspiel	Rancune
+289	Snatch	よこどり	가로챔	Übernahme	Saisie
+290	Secret Power	ひみつのちから	비밀의힘	Geheimpower	Force Cachée
+291	Dive	ダイビング	다이빙	Taucher	Plongée
+292	Arm Thrust	つっぱり	손바닥치기	Armstoß	Cogne
+293	Camouflage	ほごしょく	보호색	Tarnung	Camouflage
+294	Tail Glow	ほたるび	반딧불	Schweifglanz	Lumiqueue
+295	Luster Purge	ラスターパージ	라스트버지	Scheinwerfer	Lumi-Éclat
+296	Mist Ball	ミストボール	미스트볼	Nebelball	Ball'Brume
+297	Feather Dance	フェザーダンス	깃털댄스	Daunenreigen	Danse-Plume
+298	Teeter Dance	フラフラダンス	흔들흔들댄스	Taumeltanz	Danse-Folle
+299	Blaze Kick	ブレイズキック	브레이즈킥	Feuerfeger	Pied Brûleur
+300	Mud Sport	どろあそび	흙놀이	Lehmsuhler	Lance-Boue
+301	Ice Ball	アイスボール	아이스볼	Frostbeule	Ball'Glace
+302	Needle Arm	ニードルアーム	바늘팔	Nietenranke	Poing Dard
+303	Slack Off	なまける	태만함	Tagedieb	Paresse
+304	Hyper Voice	ハイパーボイス	하이퍼보이스	Schallwelle	Mégaphone
+305	Poison Fang	どくどくのキバ	독엄니	Giftzahn	Crochet Venin
+306	Crush Claw	ブレイククロー	브레이크크루	Zermalmklaue	Éclate Griffe
+307	Blast Burn	ブラストバーン	블러스트번	Lohekanonade	Rafale Feu
+308	Hydro Cannon	ハイドロカノン	하이드로캐논	Aquahaubitze	Hydroblast
+309	Meteor Mash	コメットパンチ	코멧펀치	Sternenhieb	Poing Météor
+310	Astonish	おどろかす	놀래키기	Erstauner	Étonnement
+311	Weather Ball	ウェザーボール	웨더볼	Meteorologe	Ball'Météo
+312	Aromatherapy	アロマセラピー	아로마테라피	Aromakur	Aromathérapie
+313	Fake Tears	うそなき	거짓울음	Trugträne	Croco Larme
+314	Air Cutter	エアカッター	에어컷터	Windschnitt	Tranch'Air
+315	Overheat	オーバーヒート	오버히트	Hitzekoller	Surchauffe
+316	Odor Sleuth	かぎわける	냄새구별	Schnüffler	Flair
+317	Rock Tomb	がんせきふうじ	암석봉인	Felsgrab	Tomberoche
+318	Silver Wind	ぎんいろのかぜ	은빛바람	Silberhauch	Vent Argenté
+319	Metal Sound	きんぞくおん	금속음	Metallsound	Strido-Son
+320	Grass Whistle	くさぶえ	풀피리	Grasflöte	Siffl'Herbe
+321	Tickle	くすぐる	간지르기	Spaßkanone	Chatouille
+322	Cosmic Power	コスモパワー	코스믹파워	Kosmik-Kraft	Force Cosmik
+323	Water Spout	しおふき	해수스파우팅	Fontränen	Giclédo
+324	Signal Beam	シグナルビーム	시그널빔	Ampelleuchte	Rayon Signal
+325	Shadow Punch	シャドーパンチ	섀도펀치	Finsterfaust	Poing Ombre
+326	Extrasensory	じんつうりき	신통력	Sondersensor	Extrasenseur
+327	Sky Uppercut	スカイアッパー	스카이업퍼	Himmelhieb	Stratopercut
+328	Sand Tomb	すなじごく	모래지옥	Sandgrab	Tourbi-Sable
+329	Sheer Cold	ぜったいれいど	절대영도	Eiseskälte	Glaciation
+330	Muddy Water	だくりゅう	탁류	Lehmbrühe	Ocroupi
+331	Bullet Seed	タネマシンガン	기관총	Kugelsaat	Balle Graine
+332	Aerial Ace	つばめがえし	제비반환	Aero-Ass	Aéropique
+333	Icicle Spear	つららばり	고드름침	Eisspeer	Stalagtite
+334	Iron Defense	てっぺき	철벽	Eisenabwehr	Mur de Fer
+335	Block	とおせんぼう	블록	Rückentzug	Barrage
+336	Howl	とおぼえ	멀리짖음	Jauler	Grondement
+337	Dragon Claw	ドラゴンクロー	드래곤크루	Drachenklaue	Dracogriffe
+338	Frenzy Plant	ハードプラント	하드플랜트	Fauna-Statue	Végé-Attak
+339	Bulk Up	ビルドアップ	벌크업	Protzer	Gonflette
+340	Bounce	とびはねる	뛰어오르다	Sprungfeder	Rebond
+341	Mud Shot	マッドショット	머드숏	Lehmschuss	Tir de Boue
+342	Poison Tail	ポイズンテール	포이즌테일	Giftschweif	Queue-Poison
+343	Covet	ほしがる	탐내다	Bezirzer	Implore
+344	Volt Tackle	ボルテッカー	볼트태클	Volttackle	Électacle
+345	Magical Leaf	マジカルリーフ	메지컬리프	Zauberblatt	Feuille Magik
+346	Water Sport	みずあそび	물놀이	Nassmacher	Tourniquet
+347	Calm Mind	めいそう	명상	Gedankengut	Plénitude
+348	Leaf Blade	リーフブレード	리프블레이드	Laubklinge	Lame-Feuille
+349	Dragon Dance	りゅうのまい	용의춤	Drachentanz	Danse Draco
+350	Rock Blast	ロックブラスト	락블레스트	Felswurf	Boule Roc
+351	Shock Wave	でんげきは	전격파	Schockwelle	Onde de Choc
+352	Water Pulse	みずのはどう	물의파동	Aquawelle	Vibraqua
+353	Doom Desire	はめつのねがい	파멸의소원	Kismetwunsch	Carnareket
+354	Psycho Boost	サイコブースト	사이코부스트	Psyschub	Psycho Boost
+355	Roost	はねやすめ	날개쉬기	Ruheort	Atterrissage
+356	Gravity	じゅうりょく	중력	Erdanziehung	Gravité
+357	Miracle Eye	ミラクルアイ	미라클아이	Wunderauge	Œil Miracle
+358	Wake-Up Slap	めざましビンタ	잠깨움뺨치기	Weckruf	Réveil Forcé
+359	Hammer Arm	アームハンマー	암해머	Hammerarm	Marto-Poing
+360	Gyro Ball	ジャイロボール	자이로볼	Gyroball	Gyroballe
+361	Healing Wish	いやしのねがい	치유소원	Heilopfer	Vœu Soin
+362	Brine	しおみず	소금물	Lake	Saumure
+363	Natural Gift	しぜんのめぐみ	자연의은혜	Beerenkräfte	Don Naturel
+364	Feint	フェイント	페인트	Offenlegung	Ruse
+365	Pluck	ついばむ	쪼아대기	Pflücker	Picore
+366	Tailwind	おいかぜ	순풍	Rückenwind	Vent Arrière
+367	Acupressure	つぼをつく	경혈찌르기	Akupressur	Acupression
+368	Metal Burst	メタルバースト	메탈버스트	Metallstoß	Fulmifer
+369	U-turn	とんぼがえり	유턴	Kehrtwende	Demi-Tour
+370	Close Combat	インファイト	인파이트	Nahkampf	Close Combat
+371	Payback	しっぺがえし	보복	Gegenstoß	Représailles
+372	Assurance	ダメおし	승부굳히기	Gewissheit	Assurance
+373	Embargo	さしおさえ	금제	Itemsperre	Embargo
+374	Fling	なげつける	내던지기	Schleuder	Dégommage
+375	Psycho Shift	サイコシフト	사이코시프트	Psybann	Échange Psy
+376	Trump Card	きりふだ	마지막수단	Trumpfkarte	Atout
+377	Heal Block	かいふくふうじ	회복봉인	Heilblockade	Anti-Soin
+378	Wring Out	しぼりとる	쥐어짜기	Auswringen	Essorage
+379	Power Trick	パワートリック	파워트릭	Krafttrick	Astuce Force
+380	Gastro Acid	いえき	위액	Magensäfte	Suc Digestif
+381	Lucky Chant	おまじない	주술	Beschwörung	Air Veinard
+382	Me First	さきどり	선취	Egotrip	Moi d'Abord
+383	Copycat	まねっこ	흉내쟁이	Imitator	Photocopie
+384	Power Swap	パワースワップ	파워스웹	Krafttausch	Permuforce
+385	Guard Swap	ガードスワップ	가드스웹	Schutztausch	Permugarde
+386	Punishment	おしおき	혼내기	Strafattacke	Punition
+387	Last Resort	とっておき	뒀다쓰기	Zuflucht	Dernier Recours
+388	Worry Seed	なやみのタネ	고민씨	Sorgensamen	Soucigraine
+389	Sucker Punch	ふいうち	기습	Tiefschlag	Coup Bas
+390	Toxic Spikes	どくびし	독압정	Giftspitzen	Pics Toxik
+391	Heart Swap	ハートスワップ	하트스웹	Statustausch	Permucœur
+392	Aqua Ring	アクアリング	아쿠아링	Wasserring	Anneau Hydro
+393	Magnet Rise	でんじふゆう	전자부유	Magnetflug	Vol Magnétik
+394	Flare Blitz	フレアドライブ	플레어드라이브	Flammenblitz	Boutefeu
+395	Force Palm	はっけい	발경	Kraftwelle	Forte-Paume
+396	Aura Sphere	はどうだん	파동탄	Aurasphäre	Aurasphère
+397	Rock Polish	ロックカット	록커트	Steinpolitur	Poliroche
+398	Poison Jab	どくづき	독찌르기	Gifthieb	Direct Toxik
+399	Dark Pulse	あくのはどう	악의파동	Finsteraura	Vibrobscur
+400	Night Slash	つじぎり	깜짝베기	Nachthieb	Tranche-Nuit
+401	Aqua Tail	アクアテール	아쿠아테일	Nassschweif	Hydroqueue
+402	Seed Bomb	タネばくだん	씨폭탄	Samenbomben	Canon Graine
+403	Air Slash	エアスラッシュ	에어슬래시	Luftschnitt	Lame d'Air
+404	X-Scissor	シザークロス	시저크로스	Kreuzschere	Plaie-Croix
+405	Bug Buzz	むしのさざめき	벌레의야단법석	Käfergebrumm	Bourdon
+406	Dragon Pulse	りゅうのはどう	용의파동	Drachenpuls	Dracochoc
+407	Dragon Rush	ドラゴンダイブ	드래곤다이브	Drachenstoß	Dracocharge
+408	Power Gem	パワージェム	파워젬	Juwelenkraft	Rayon Gemme
+409	Drain Punch	ドレインパンチ	드레인펀치	Ableithieb	Vampipoing
+410	Vacuum Wave	しんくうは	진공파	Vakuumwelle	Onde Vide
+411	Focus Blast	きあいだま	기합구슬	Fokusstoß	Exploforce
+412	Energy Ball	エナジーボール	에너지볼	Energieball	Éco-Sphère
+413	Brave Bird	ブレイブバード	브레이브버드	Sturzflug	Rapace
+414	Earth Power	だいちのちから	대지의힘	Erdkräfte	Telluriforce
+415	Switcheroo	すりかえ	바꿔치기	Wechseldich	Passe-Passe
+416	Giga Impact	ギガインパクト	기가임팩트	Gigastoß	Giga Impact
+417	Nasty Plot	わるだくみ	나쁜음모	Ränkeschmied	Machination
+418	Bullet Punch	バレットパンチ	불릿펀치	Patronenhieb	Pisto-Poing
+419	Avalanche	ゆきなだれ	눈사태	Lawine	Avalanche
+420	Ice Shard	こおりのつぶて	얼음뭉치	Eissplitter	Éclats Glace
+421	Shadow Claw	シャドークロー	섀도크루	Dunkelklaue	Griffe Ombre
+422	Thunder Fang	かみなりのキバ	번개엄니	Donnerzahn	Crocs Éclair
+423	Ice Fang	こおりのキバ	얼음엄니	Eiszahn	Crocs Givre
+424	Fire Fang	ほのおのキバ	불꽃엄니	Feuerzahn	Crocs Feu
+425	Shadow Sneak	かげうち	야습	Schattenstoß	Ombre Portée
+426	Mud Bomb	どろばくだん	진흙폭탄	Schlammbombe	Boue-Bombe
+427	Psycho Cut	サイコカッター	사이코커터	Psychoklinge	Coupe Psycho
+428	Zen Headbutt	しねんのずつき	사념의박치기	Zen-Kopfstoß	Psykoud'Boul
+429	Mirror Shot	ミラーショット	미러숏	Spiegelsalve	Miroi-Tir
+430	Flash Cannon	ラスターカノン	러스터캐논	Lichtkanone	Luminocanon
+431	Rock Climb	ロッククライム	락클라임	Kraxler	Escalade
+432	Defog	きりばらい	안개제거	Auflockern	Anti-Brume
+433	Trick Room	トリックルーム	트릭룸	Bizarroraum	Distorsion
+434	Draco Meteor	りゅうせいぐん	용성군	Draco Meteor	Draco Météor
+435	Discharge	ほうでん	방전	Ladungsstoß	Coup d'Jus
+436	Lava Plume	ふんえん	분연	Flammensturm	Ébullilave
+437	Leaf Storm	リーフストーム	리프스톰	Blättersturm	Tempête Verte
+438	Power Whip	パワーウィップ	파워휩	Blattgeißel	Mégafouet
+439	Rock Wrecker	がんせきほう	암석포	Felswerfer	Roc-Boulet
+440	Cross Poison	クロスポイズン	크로스포이즌	Giftstreich	Poison-Croix
+441	Gunk Shot	ダストシュート	더스트슈트	Mülltreffer	Détricanon
+442	Iron Head	アイアンヘッド	아이언헤드	Eisenschädel	Tête de Fer
+443	Magnet Bomb	マグネットボム	마그넷봄	Magnetbombe	Bombaimant
+444	Stone Edge	ストーンエッジ	스톤에지	Steinkante	Lame de Roc
+445	Captivate	ゆうわく	유혹	Liebreiz	Séduction
+446	Stealth Rock	ステルスロック	스텔스록	Tarnsteine	Piège de Roc
+447	Grass Knot	くさむすび	풀묶기	Strauchler	Nœud Herbe
+448	Chatter	おしゃべり	수다	Geschwätz	Babil
+449	Judgment	さばきのつぶて	심판의뭉치	Urteilskraft	Jugement
+450	Bug Bite	むしくい	벌레먹음	Käferbiss	Piqûre
+451	Charge Beam	チャージビーム	차지빔	Ladestrahl	Rayon Chargé
+452	Wood Hammer	ウッドハンマー	우드해머	Holzhammer	Martobois
+453	Aqua Jet	アクアジェット	아쿠아제트	Wasserdüse	Aqua-Jet
+454	Attack Order	こうげきしれい	공격지령	Schlagbefehl	Appel Attak
+455	Defend Order	ぼうぎょしれい	방어지령	Blockbefehl	Appel Défense
+456	Heal Order	かいふくしれい	회복지령	Heilbefehl	Appel Soins
+457	Head Smash	もろはのずつき	양날박치기	Kopfstoß	Fracass'Tête
+458	Double Hit	ダブルアタック	더블어택	Doppelschlag	Coup Double
+459	Roar of Time	ときのほうこう	시간의포효	Zeitenlärm	Hurle-Temps
+460	Spacial Rend	あくうせつだん	공간절단	Raumschlag	Spatio-Rift
+461	Lunar Dance	みかづきのまい	초승달춤	Lunartanz	Danse-Lune
+462	Crush Grip	にぎりつぶす	묵사발	Quetschgriff	Presse
+463	Magma Storm	マグマストーム	마그마스톰	Lavasturm	Vortex Magma
+464	Dark Void	ダークホール	다크홀	Schlummerort	Trou Noir
+465	Seed Flare	シードフレア	시드플레어	Schocksamen	Fulmigraine
+466	Ominous Wind	あやしいかぜ	괴상한바람	Unheilböen	Vent Mauvais
+467	Shadow Force	シャドーダイブ	섀도다이브	Schemenkraft	Revenant
+468	Hone Claws	つめとぎ	손톱갈기	Klauenwetzer	Aiguisage
+469	Wide Guard	ワイドガード	와이드가드	Rundumschutz	Garde Large
+470	Guard Split	ガードシェア	가드셰어	Schutzteiler	Partage Garde
+471	Power Split	パワーシェア	파워셰어	Kraftteiler	Partage Force
+472	Wonder Room	ワンダールーム	원더룸	Wunderraum	Zone Étrange
+473	Psyshock	サイコショック	사이코쇼크	Psychoschock	Choc Psy
+474	Venoshock	ベノムショック	베놈쇼크	Giftschock	Choc Venin
+475	Autotomize	ボディパージ	바디퍼지	Autotomie	Allègement
+476	Rage Powder	いかりのこな	분노가루	Wutpulver	Poudre Fureur
+477	Telekinesis	テレキネシス	텔레키네시스	Telekinese	Lévikinésie
+478	Magic Room	マジックルーム	매직룸	Magieraum	Zone Magique
+479	Smack Down	うちおとす	떨어뜨리기	Katapult	Anti-Air
+480	Storm Throw	やまあらし	업어후리기	Bergsturm	Yama Arashi
+481	Flame Burst	はじけるほのお	불꽃튀기기	Funkenflug	Rebondifeu
+482	Sludge Wave	ヘドロウェーブ	오물웨이브	Schlammwoge	Cradovague
+483	Quiver Dance	ちょうのまい	나비춤	Falterreigen	Papillodanse
+484	Heavy Slam	ヘビーボンバー	헤비봄버	Rammboss	Tacle Lourd
+485	Synchronoise	シンクロノイズ	싱크로노이즈	Synchrolärm	Synchropeine
+486	Electro Ball	エレキボール	일렉트릭볼	Elektroball	Boule Élek
+487	Soak	みずびたし	물붓기	Überflutung	Détrempage
+488	Flame Charge	ニトロチャージ	니트로차지	Nitroladung	Nitrocharge
+489	Coil	とぐろをまく	똬리틀기	Einrollen	Enroulement
+490	Low Sweep	ローキック	로킥	Fußtritt	Balayette
+491	Acid Spray	アシッドボム	애시드봄	Säurespeier	Bombe Acide
+492	Foul Play	イカサマ	속임수	Schmarotzer	Tricherie
+493	Simple Beam	シンプルビーム	심플빔	Wankelstrahl	Rayon Simple
+494	Entrainment	なかまづくり	동료만들기	Zwango	Ten-danse
+495	After You	おさきにどうぞ	당신먼저	Galanterie	Après Vous
+496	Round	りんしょう	돌림노래	Kanon	Chant Canon
+497	Echoed Voice	エコーボイス	에코보이스	Widerhall	Écho
+498	Chip Away	なしくずし	야금야금	Zermürben	Attrition
+499	Clear Smog	クリアスモッグ	클리어스모그	Klärsmog	Bain de Smog
+500	Stored Power	アシストパワー	어시스트파워	Kraftvorrat	Force Ajoutée
+501	Quick Guard	ファストガード	퍼스트가드	Rapidschutz	Prévention
+502	Ally Switch	サイドチェンジ	사이드체인지	Seitentausch	Interversion
+503	Scald	ねっとう	열탕	Siedewasser	Ébullition
+504	Shell Smash	からをやぶる	껍질깨기	Hausbruch	Exuviation
+505	Heal Pulse	いやしのはどう	치유파동	Heilwoge	Vibra Soin
+506	Hex	たたりめ	병상첨병	Bürde	Châtiment
+507	Sky Drop	フリーフォール	프리폴	Freier Fall	Chute Libre
+508	Shift Gear	ギアチェンジ	기어체인지	Gangwechsel	Chgt Vitesse
+509	Circle Throw	ともえなげ	배대뒤치기	Überkopfwurf	Projection
+510	Incinerate	やきつくす	불태우기	Einäschern	Calcination
+511	Quash	さきおくり	순서미루기	Verzögerung	À la Queue
+512	Acrobatics	アクロバット	애크러뱃	Akrobatik	Acrobatie
+513	Reflect Type	ミラータイプ	미러타입	Typenspiegel	Copie Type
+514	Retaliate	かたきうち	원수갚기	Heimzahlung	Vengeance
+515	Final Gambit	いのちがけ	목숨걸기	Wagemut	Tout ou Rien
+516	Bestow	ギフトパス	기프트패스	Offerte	Passe-Cadeau
+517	Inferno	れんごく	연옥	Inferno	Feu d'Enfer
+518	Water Pledge	みずのちかい	물의맹세	Wassersäulen	Aire d'Eau
+519	Fire Pledge	ほのおのちかい	불꽃의맹세	Feuersäulen	Aire de Feu
+520	Grass Pledge	くさのちかい	풀의맹세	Pflanzsäulen	Aire d'Herbe
+521	Volt Switch	ボルトチェンジ	볼트체인지	Voltwechsel	Change Éclair
+522	Struggle Bug	むしのていこう	벌레의저항	Käfertrutz	Survinsecte
+523	Bulldoze	じならし	땅고르기	Dampfwalze	Piétisol
+524	Frost Breath	こおりのいぶき	얼음숨결	Eisesodem	Souffle Glacé
+525	Dragon Tail	ドラゴンテール	드래곤테일	Drachenrute	Draco-Queue
+526	Work Up	ふるいたてる	분발	Kraftschub	Rengorgement
+527	Electroweb	エレキネット	일렉트릭네트	Elektronetz	Toile Élek
+528	Wild Charge	ワイルドボルト	와일드볼트	Stromstoß	Éclair Fou
+529	Drill Run	ドリルライナー	드릴라이너	Schlagbohrer	Tunnelier
+530	Dual Chop	ダブルチョップ	더블촙	Doppelhieb	Double Baffe
+531	Heart Stamp	ハートスタンプ	하트스탬프	Herzstempel	Crève-Cœur
+532	Horn Leech	ウッドホーン	우드호른	Holzgeweih	Encornebois
+533	Sacred Sword	せいなるつるぎ	성스러운칼	Sanctoklinge	Lame Sainte
+534	Razor Shell	シェルブレード	셸블레이드	Kalkklinge	Coquilame
+535	Heat Crash	ヒートスタンプ	히트스탬프	Brandstempel	Tacle Feu
+536	Leaf Tornado	グラスミキサー	그래스믹서	Grasmixer	Phytomixeur
+537	Steamroller	ハードローラー	하드롤러	Quetschwalze	Bulldoboule
+538	Cotton Guard	コットンガード	코튼가드	Watteschild	Cotogarde
+539	Night Daze	ナイトバースト	나이트버스트	Nachtflut	Explonuit
+540	Psystrike	サイコブレイク	사이코브레이크	Psychostoß	Frappe Psy
+541	Tail Slap	スイープビンタ	스위프뺨치기	Kehrschelle	Plumo-Queue
+542	Hurricane	ぼうふう	폭풍	Orkan	Vent Violent
+543	Head Charge	アフロブレイク	아프로브레이크	Steinschädel	Peignée
+544	Gear Grind	ギアソーサー	기어소서	Klikkdiskus	Lancécrou
+545	Searing Shot	かえんだん	화염탄	Flammenball	Incendie
+546	Techno Blast	テクノバスター	테크노버스터	Techblaster	TechnoBuster
+547	Relic Song	いにしえのうた	옛노래	Urgesang	Chant Antique
+548	Secret Sword	しんぴのつるぎ	신비의칼	Mystoschwert	Lame Ointe
+549	Glaciate	こごえるせかい	얼다세계	Eiszeit	Ère Glaciaire
+550	Bolt Strike	らいげき	뇌격	Blitzschlag	Charge Foudre
+551	Blue Flare	あおいほのお	푸른불꽃	Blauflammen	Flamme Bleue
+552	Fiery Dance	ほのおのまい	불꽃춤	Feuerreigen	Danse du Feu
+553	Freeze Shock	フリーズボルト	프리즈볼트	Frostvolt	Éclair Gelé
+554	Ice Burn	コールドフレア	콜드플레어	Frosthauch	Feu Glacé
+555	Snarl	バークアウト	바크아웃	Standpauke	Aboiement
+556	Icicle Crash	つららおとし	고드름떨구기	Eiszapfhagel	Chute Glace
+557	V-Create	Ｖジェネレート	V제너레이트	V-Generator	Coup Victoire
+558	Fusion Flare	クロスフレイム	크로스플레임	Kreuzflamme	Flamme Croix
+559	Fusion Bolt	クロスサンダー	크로스썬더	Kreuzdonner	Éclair Croix
+560	Flying Press	フライングプレス	플라잉프레스	Flying Press	Flying Press
+561	Mat Block	たたみがえし	마룻바닥세워막기	Tatami-Schild	Tatamigaeshi
+562	Belch	ゲップ	트림	Rülpser	Éructation
+563	Rototiller	たがやす	일구기	Pflüger	Fertilisation
+564	Sticky Web	ねばねばネット	끈적끈적네트	Klebenetz	Toile Gluante
+565	Fell Stinger	とどめばり	마지막일침	Stachelfinale	Dard Mortel
+566	Phantom Force	ゴーストダイブ	고스트다이브	Phantomkraft	Hantise
+567	Trick-or-Treat	ハロウィン	핼러윈	Halloween	Halloween
+568	Noble Roar	おたけび	부르짖기	Kampfgebrüll	Râle Mâle
+569	Ion Deluge	プラズマシャワー	플라스마샤워	Plasmaschauer	DélugePlasmique
+570	Parabolic Charge	パラボラチャージ	파라볼라차지	Parabolladung	Parabocharge
+571	Forest's Curse	もりののろい	숲의저주	Waldesfluch	Maléfice Sylvain
+572	Petal Blizzard	はなふぶき	꽃보라	Blütenwirbel	Tempête Florale
+573	Freeze-Dry	フリーズドライ	프리즈드라이	Gefriertrockner	Lyophilisation
+574	Disarming Voice	チャームボイス	차밍보이스	Säuselstimme	Voix Enjôleuse
+575	Parting Shot	すてゼリフ	막말내뱉기	Abgangstirade	Dernier Mot
+576	Topsy-Turvy	ひっくりかえす	뒤집어엎기	Invertigo	Renversement
+577	Draining Kiss	ドレインキッス	드레인키스	Diebeskuss	Vampibaiser
+578	Crafty Shield	トリックガード	트릭가드	Trickschutz	Vigilance
+579	Flower Shield	フラワーガード	플라워가드	Floraschutz	Garde Florale
+580	Grassy Terrain	グラスフィールド	그래스필드	Grasfeld	Champ Herbu
+581	Misty Terrain	ミストフィールド	미스트필드	Nebelfeld	Champ Brumeux
+582	Electrify	そうでん	송전	Elektrifizierung	Électrisation
+583	Play Rough	じゃれつく	치근거리기	Knuddler	Câlinerie
+584	Fairy Wind	ようせいのかぜ	요정의바람	Feenbrise	Vent Féérique
+585	Moonblast	ムーンフォース	문포스	Mondgewalt	Pouvoir Lunaire
+586	Boomburst	ばくおんぱ	폭음파	Überschallknall	Bang Sonique
+587	Fairy Lock	フェアリーロック	페어리록	Feenschloss	Verrou Enchanté
+588	King's Shield	キングシールド	킹실드	Königsschild	Bouclier Royal
+589	Play Nice	なかよくする	친해지기	Kameradschaft	Camaraderie
+590	Confide	ないしょばなし	비밀이야기	Vertrauenssache	Confidence
+591	Diamond Storm	ダイヤストーム	다이아스톰	Diamantsturm	Orage Adamantin
+592	Steam Eruption	スチームバースト	스팀버스트	Dampfschwall	Jet de Vapeur
+593	Hyperspace Hole	いじげんホール	다른차원홀	Dimensionsloch	TrouDimensionnel
+594	Water Shuriken	みずしゅりけん	물수리검	Wasser-Shuriken	Sheauriken
+595	Mystical Fire	マジカルフレイム	매지컬플레임	Magieflamme	Feu Ensorcelé
+596	Spiky Shield	ニードルガード	니들가드	Schutzstacheln	Pico-Défense
+597	Aromatic Mist	アロマミスト	아로마미스트	Duftwolke	Brume Capiteuse
+598	Eerie Impulse	かいでんぱ	괴전파	Mystowellen	Ondes Étranges
+599	Venom Drench	ベノムトラップ	베놈트랩	Giftfalle	Piège de Venin
+600	Powder	ふんじん	분진	Pulverschleuder	Nuée de Poudre
+601	Geomancy	ジオコントロール	지오컨트롤	Geokontrolle	Géo-Contrôle
+602	Magnetic Flux	じばそうさ	자기장조작	Magnetregler	Magné-Contrôle
+603	Happy Hour	ハッピータイム	해피타임	Goldene Zeiten	Étrennes
+604	Electric Terrain	エレキフィールド	일렉트릭필드	Elektrofeld	Champ Électrifié
+605	Dazzling Gleam	マジカルシャイン	매지컬샤인	Zauberschein	Éclat Magique
+606	Celebrate	おいわい	축하	Ehrentag	Célébration
+607	Hold Hands	てをつなぐ	손에손잡기	Händchenhalten	Mains Jointes
+608	Baby-Doll Eyes	つぶらなひとみ	초롱초롱눈동자	Kulleraugen	Regard Touchant
+609	Nuzzle	ほっぺすりすり	볼부비부비	Wangenrubbler	Frotte-Frimousse
+610	Hold Back	てかげん	적당히손봐주기	Zurückhaltung	Retenue
+611	Infestation	まとわりつく	엉겨붙기	Plage	Harcèlement
+612	Power-Up Punch	グロウパンチ	그로우펀치	Steigerungshieb	Poing Boost
+613	Oblivion Wing	デスウイング	데스윙	Unheilsschwingen	Mort-Ailes
+614	Thousand Arrows	サウザンアロー	사우전드애로	Tausend Pfeile	Myria-Flèches
+615	Thousand Waves	サウザンウェーブ	사우전드웨이브	Tausend Wellen	Myria-Vagues
+616	Land's Wrath	グランドフォース	그라운드포스	Bodengewalt	Force Chtonienne
+617	Light of Ruin	はめつのひかり	파멸의빛	Lux Calamitatis	Lumière du Néant
+618	Origin Pulse	こんげんのはどう	근원의파동	Ursprungswoge	Onde Originelle
+619	Precipice Blades	だんがいのつるぎ	단애의칼	Abgrundsklinge	Lame Pangéenne
+620	Dragon Ascent	ガリョウテンセイ	화룡점정	Zenitstürmer	Draco Ascension
+621	Hyperspace Fury	いじげんラッシュ	다른차원러시	Dimensionswahn	Furie Dimension
+622	Breakneck Blitz	ウルトラダッシュアタック	울트라대시어택	Hyper-Sprintangriff	Turbo-Charge Bulldozer
+623	Breakneck Blitz	ウルトラダッシュアタック	울트라대시어택	Hyper-Sprintangriff	Turbo-Charge Bulldozer
+624	All-Out Pummeling	ぜんりょくむそうげきれつけん	전력무쌍격렬권	Fulminante Faustschläge	Combo Hyper-Furie
+625	All-Out Pummeling	ぜんりょくむそうげきれつけん	전력무쌍격렬권	Fulminante Faustschläge	Combo Hyper-Furie
+626	Supersonic Skystrike	ファイナルダイブクラッシュ	파이널다이브클래시	Finaler Steilflug	Piqué Supersonique
+627	Supersonic Skystrike	ファイナルダイブクラッシュ	파이널다이브클래시	Finaler Steilflug	Piqué Supersonique
+628	Acid Downpour	アシッドポイズンデリート	애시드포이즌딜리트	Vernichtender Säureregen	Déluge Causti-Toxique
+629	Acid Downpour	アシッドポイズンデリート	애시드포이즌딜리트	Vernichtender Säureregen	Déluge Causti-Toxique
+630	Tectonic Rage	ライジングランドオーバー	라이징랜드오버	Seismische Eruption	Éruption Géo-Sismique
+631	Tectonic Rage	ライジングランドオーバー	라이징랜드오버	Seismische Eruption	Éruption Géo-Sismique
+632	Continental Crush	ワールズエンドフォール	월즈엔드폴	Apokalyptische Steinpresse	Apocalypse Gigalithique
+633	Continental Crush	ワールズエンドフォール	월즈엔드폴	Apokalyptische Steinpresse	Apocalypse Gigalithique
+634	Savage Spin-Out	ぜったいほしょくかいてんざん	절대포식회전참	Wirbelnder Insektenhieb	Cocon Fatal
+635	Savage Spin-Out	ぜったいほしょくかいてんざん	절대포식회전참	Wirbelnder Insektenhieb	Cocon Fatal
+636	Never-Ending Nightmare	むげんあんやへのいざない	무한암야로의유인	Ewige Nacht	Appel des Ombres Éternelles
+637	Never-Ending Nightmare	むげんあんやへのいざない	무한암야로의유인	Ewige Nacht	Appel des Ombres Éternelles
+638	Corkscrew Crash	ちょうぜつらせんれんげき	초월나선연격	Turbo-Spiralkombo	Vrille Maximum
+639	Corkscrew Crash	ちょうぜつらせんれんげき	초월나선연격	Turbo-Spiralkombo	Vrille Maximum
+640	Inferno Overdrive	ダイナミックフルフレイム	다이내믹풀플레임	Dynamische Maxiflamme	Pyro-Explosion Cataclysmique
+641	Inferno Overdrive	ダイナミックフルフレイム	다이내믹풀플레임	Dynamische Maxiflamme	Pyro-Explosion Cataclysmique
+642	Hydro Vortex	スーパーアクアトルネード	슈퍼아쿠아토네이도	Super-Wassertornado	Super Tourbillon Abyssal
+643	Hydro Vortex	スーパーアクアトルネード	슈퍼아쿠아토네이도	Super-Wassertornado	Super Tourbillon Abyssal
+644	Bloom Doom	ブルームシャインエクストラ	블룸샤인엑스트라	Brillante Blütenpracht	Pétalexplosion Éblouissante
+645	Bloom Doom	ブルームシャインエクストラ	블룸샤인엑스트라	Brillante Blütenpracht	Pétalexplosion Éblouissante
+646	Gigavolt Havoc	スパーキングギガボルト	스파킹기가볼트	Gigavolt-Funkensalve	Fulguro-Lance Gigavolt
+647	Gigavolt Havoc	スパーキングギガボルト	스파킹기가볼트	Gigavolt-Funkensalve	Fulguro-Lance Gigavolt
+648	Shattered Psyche	マキシマムサイブレイカー	맥시멈사이브레이커	Psycho-Schmetterschlag	Psycho-Pulvérisation EX
+649	Shattered Psyche	マキシマムサイブレイカー	맥시멈사이브레이커	Psycho-Schmetterschlag	Psycho-Pulvérisation EX
+650	Subzero Slammer	レイジングジオフリーズ	레이징지오프리즈	Tobender Geofrost	Laser Cryogénique
+651	Subzero Slammer	レイジングジオフリーズ	레이징지오프리즈	Tobender Geofrost	Laser Cryogénique
+652	Devastating Drake	アルティメットドラゴンバーン	얼티메이트드래곤번	Drastisches Drachendröhnen	Chaos Draconique
+653	Devastating Drake	アルティメットドラゴンバーン	얼티메이트드래곤번	Drastisches Drachendröhnen	Chaos Draconique
+654	Black Hole Eclipse	ブラックホールイクリプス	블랙홀이클립스	Schwarzes Loch des Grauens	Trou Noir des Ombres
+655	Black Hole Eclipse	ブラックホールイクリプス	블랙홀이클립스	Schwarzes Loch des Grauens	Trou Noir des Ombres
+656	Twinkle Tackle	ラブリースターインパクト	러블리스타임팩트	Entzückender Sternenstoß	Impact Choupinova
+657	Twinkle Tackle	ラブリースターインパクト	러블리스타임팩트	Entzückender Sternenstoß	Impact Choupinova
+658	Catastropika	ひっさつのピカチュート	필살피카슛	Perfektes Pika-Projektil	Pikachute Foudroyante
+659	Shore Up	すなあつめ	모래모으기	Sandsammler	Amass’Sable
+660	First Impression	であいがしら	만나자마자	Überrumpler	Escarmouche
+661	Baneful Bunker	トーチカ	토치카	Bunker	Blockhaus
+662	Spirit Shackle	かげぬい	그림자꿰매기	Schattenfessel	Tisse Ombre
+663	Darkest Lariat	ＤＤラリアット	DD래리어트	Dark Lariat	Dark Lariat
+664	Sparkling Aria	うたかたのアリア	물거품아리아	Schaumserenade	Aria de l’Écume
+665	Ice Hammer	アイスハンマー	아이스해머	Eishammer	Marteau de Glace
+666	Floral Healing	フラワーヒール	플라워힐	Florakur	Soin Floral
+667	High Horsepower	１０まんばりき	10만마력	Pferdestärke	Cavalerie Lourde
+668	Strength Sap	ちからをすいとる	힘흡수	Kraftabsorber	Vol-Force
+669	Solar Blade	ソーラーブレード	솔라블레이드	Solarklinge	Lame Solaire
+670	Leafage	このは	나뭇잎	Blattwerk	Feuillage
+671	Spotlight	スポットライト	스포트라이트	Rampenlicht	Projecteur
+672	Toxic Thread	どくのいと	독실	Giftfaden	Fil Toxique
+673	Laser Focus	とぎすます	예민해지기	Konzentration	Affilage
+674	Gear Up	アシストギア	어시스트기어	Hilfsmechanik	Engrenage
+675	Throat Chop	じごくづき	지옥찌르기	Neck Strike	Exécu-Son
+676	Pollen Puff	かふんだんご	꽃가루경단	Pollenknödel	Boule Pollen
+677	Anchor Shot	アンカーショット	앵커숏	Ankerschuss	Ancrage
+678	Psychic Terrain	サイコフィールド	사이코필드	Psychofeld	Champ Psychique
+679	Lunge	とびかかる	덤벼들기	Anfallen	Furie-Bond
+680	Fire Lash	ほのおのムチ	불꽃채찍	Feuerpeitsche	Fouet de Feu
+681	Power Trip	つけあがる	기어오르기	Überheblichkeit	Arrogance
+682	Burn Up	もえつきる	불사르기	Ausbrennen	Flamme Ultime
+683	Speed Swap	スピードスワップ	스피드스웹	Initiativetausch	Permuvitesse
+684	Smart Strike	スマートホーン	스마트호른	Schmalhorn	Estocorne
+685	Purify	じょうか	정화	Läuterung	Purification
+686	Revelation Dance	めざめるダンス	잠재댄스	Wecktanz	Danse Éveil
+687	Core Enforcer	コアパニッシャー	코어퍼니셔	Sanktionskern	Sanction Suprême
+688	Trop Kick	トロピカルキック	트로피컬킥	Tropenkick	Botte Sucrette
+689	Instruct	さいはい	지휘	Kommando	Sommation
+690	Beak Blast	くちばしキャノン	부리캐논	Schnabelkanone	Bec-Canon
+691	Clanging Scales	スケイルノイズ	스케일노이즈	Schuppenrasseln	Vibrécaille
+692	Dragon Hammer	ドラゴンハンマー	드래곤해머	Drachenhammer	Draco-Marteau
+693	Brutal Swing	ぶんまわす	세차게휘두르기	Wirbler	Centrifugifle
+694	Aurora Veil	オーロラベール	오로라베일	Auroraschleier	Voile Aurore
+695	Sinister Arrow Raid	シャドーアローズストライク	섀도애로우즈스트라이크	Schatten-Pfeilregen	Fureur des Plumes Spectrales
+696	Malicious Moonsault	ハイパーダーククラッシャー	하이퍼다크크러셔	Hyper Dark Crusher	Dark Body Press
+697	Oceanic Operetta	わだつみのシンフォニア	바다의심포니	Grandiose Meeressymphonie	Symphonie des Ondines
+698	Guardian of Alola	ガーディアン・デ・アローラ	알로라의수호자	Alolas Wächter	Colère du Gardien d’Alola
+699	Soul-Stealing 7-Star Strike	しちせいだっこんたい	칠성탈혼퇴	Sternbild des Seelenraubes	Fauche-Âme des Sept Étoiles
+700	Stoked Sparksurfer	ライトニングサーフライド	라이트닝서프라이드	Blitz-Wellenritt	Électro-Surf Survolté
+701	Pulverizing Pancake	ほんきをだす　こうげき	진심의공격	Schluss mit lustig	Gare au Ronflex
+702	Extreme Evoboost	ナインエボルブースト	나인이볼부스트	Macht der Neun	Neuf pour Un
+703	Genesis Supernova	オリジンズスーパーノヴァ	오리진즈슈퍼노바	Supernova des Ursprungs	Supernova Originelle
+704	Shell Trap	トラップシェル	트랩셸	Panzerfalle	Carapiège
+705	Fleur Cannon	フルールカノン	플뢰르캐논	Kanonenbouquet	Canon Floral
+706	Psychic Fangs	サイコファング	사이코팽	Psychobeißer	Psycho-Croc
+707	Stomping Tantrum	じだんだ	분함의발구르기	Fruststampfer	Trépignement
+708	Shadow Bone	シャドーボーン	섀도본	Schattenknochen	Os’Ombre
+709	Accelerock	アクセルロック	액셀록	Turbofelsen	Vif Roc
+710	Liquidation	アクアブレイク	아쿠아브레이크	Aquadurchstoß	Aqua-Brèche
+711	Prismatic Laser	プリズムレーザー	프리즘레이저	Prisma-Laser	Laser Prisme
+712	Spectral Thief	シャドースチール	섀도스틸	Diebesschatten	Clepto-Mânes
+713	Sunsteel Strike	メテオドライブ	메테오드라이브	Stahlgestirn	Choc Météore
+714	Moongeist Beam	シャドーレイ	섀도레이	Schattenstrahl	Rayon Spectral
+715	Tearful Look	なみだめ	눈물그렁그렁	Tränendrüse	Larme à l’Œil
+716	Zing Zap	びりびりちくちく	찌리리따끔따끔	Elektropikser	Électrikipik
+717	Nature's Madness	しぜんのいかり	자연의분노	Naturzorn	Ire de la Nature
+718	Multi-Attack	マルチアタック	멀티어택	Multi-Angriff	Coup Varia-Type
+719	10,000,000 Volt Thunderbolt	１０００まんボルト	1000만볼트	Tausendfacher Donnerblitz	Giga-Tonnerre
